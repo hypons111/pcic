@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity BidOversee.
+    -->
+    <changeSet id="20220719141314-1" author="jhipster">
+        <createTable tableName="bid_oversee">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="seq_no" type="varchar(11)">
+                <constraints nullable="false" />
+            </column>
+            <column name="seq_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="seq_flag" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrname" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usraddr" type="varchar(120)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrtel" type="varchar(30)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrfax" type="varchar(30)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrmail" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_01" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_02" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_03" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_04" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_05" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_06" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_07" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrmaster" type="varchar(150)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrmemo" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="engcode" type="varchar(60)">
+                <constraints nullable="true" />
+            </column>
+            <column name="engflag" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="engzon" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="engaddr" type="varchar(120)">
+                <constraints nullable="true" />
+            </column>
+            <column name="comcode" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="commail" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="comtel" type="varchar(30)">
+                <constraints nullable="true" />
+            </column>
+            <column name="comman" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+            <column name="comusr" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="engname" type="varchar(180)">
+                <constraints nullable="true" />
+            </column>
+            <column name="deal_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="end_close" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="end_date_p" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="end_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="end_no" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="view_num" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="projflag" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="delay_memo" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="end_memo" type="varchar(500)">
+                <constraints nullable="true" />
+            </column>
+            <column name="send_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="eend_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="wkut" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="prjno" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="usrflag_08" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="se" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="iengpx" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="iengpy" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ipeo_what" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ipeo_prjno" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_date" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="bid_oversee" columnName="create_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="bid_oversee" columnName="update_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220719141314-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/bid_oversee.csv"
+                  separator=";"
+                  tableName="bid_oversee"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="seq_no" type="string"/>
+            <column name="seq_date" type="date"/>
+            <column name="seq_flag" type="string"/>
+            <column name="usrname" type="string"/>
+            <column name="usraddr" type="string"/>
+            <column name="usrtel" type="string"/>
+            <column name="usrfax" type="string"/>
+            <column name="usrmail" type="string"/>
+            <column name="usrflag_01" type="string"/>
+            <column name="usrflag_02" type="string"/>
+            <column name="usrflag_03" type="string"/>
+            <column name="usrflag_04" type="string"/>
+            <column name="usrflag_05" type="string"/>
+            <column name="usrflag_06" type="string"/>
+            <column name="usrflag_07" type="string"/>
+            <column name="usrmaster" type="string"/>
+            <column name="usrmemo" type="string"/>
+            <column name="engcode" type="string"/>
+            <column name="engflag" type="string"/>
+            <column name="engzon" type="string"/>
+            <column name="engaddr" type="string"/>
+            <column name="comcode" type="string"/>
+            <column name="commail" type="string"/>
+            <column name="comtel" type="string"/>
+            <column name="comman" type="string"/>
+            <column name="comusr" type="string"/>
+            <column name="engname" type="string"/>
+            <column name="deal_date" type="date"/>
+            <column name="end_close" type="string"/>
+            <column name="end_date_p" type="date"/>
+            <column name="end_date" type="date"/>
+            <column name="end_no" type="string"/>
+            <column name="view_num" type="numeric"/>
+            <column name="projflag" type="string"/>
+            <column name="delay_memo" type="string"/>
+            <column name="end_memo" type="string"/>
+            <column name="send_date" type="date"/>
+            <column name="eend_date" type="date"/>
+            <column name="wkut" type="string"/>
+            <column name="prjno" type="string"/>
+            <column name="usrflag_08" type="string"/>
+            <column name="se" type="string"/>
+            <column name="iengpx" type="numeric"/>
+            <column name="iengpy" type="numeric"/>
+            <column name="ipeo_what" type="string"/>
+            <column name="ipeo_prjno" type="string"/>
+            <column name="create_date" type="date"/>
+            <column name="create_user" type="string"/>
+            <column name="update_date" type="date"/>
+            <column name="update_user" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

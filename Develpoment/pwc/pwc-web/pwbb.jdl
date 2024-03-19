@@ -1,0 +1,10 @@
+ entity PwbUsualfunction(PWB_USUALFUNCTION) {
+	@id id Long required,
+	userId String required maxlength(20),
+    functionId String required maxlength(20),
+	createUser String required maxlength(20),
+	createTime Instant required,
+}
+
+ use mapstruct for *
+

@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity BidProject.
+    -->
+    <changeSet id="20220418082547-1" author="jhipster">
+        <createTable tableName="bid_project">
+            <column name="wkut" type="varchar(21)">
+                <constraints nullable="false" />
+            </column>
+            <column name="prjno" type="varchar(40)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(180)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_add_92" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pnt_ctrl" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type_code" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_union" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="place_code" type="varchar(4)">
+                <constraints nullable="true" />
+            </column>
+            <column name="place" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_code" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dep_code" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_bg" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pln_code" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pln_no" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pln_unicod" type="varchar(30)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_code" type="varchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_b_code" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_b_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_c_code" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_c_ate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_d_code" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bos_2_d_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_code" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccnt_2" type="varchar(180)">
+                <constraints nullable="true" />
+            </column>
+            <column name="man" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tel" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="e_mail" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="wrate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="contain" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pfunc" type="varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="benf" type="varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pstand" type="varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pqty" type="varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="untnd" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_spcw" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_01" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_02" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_03" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_04" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_05" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_06" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_07" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_08" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_09" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_10" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_11" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_12" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_01_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_01_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_02_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_02_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_03_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_03_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_04_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_04_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_05_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_05_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_06_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_06_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_07_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_07_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_08_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_08_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_09_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_09_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_10_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_10_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_11_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_11_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_12_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_12_nm" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_01_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_02_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_03_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_04_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_05_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_06_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_07_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_08_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_09_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_10_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_11_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_12_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_13_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="job_14_type" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="semset" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_rcb" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_5" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1_b" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1_c" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1_d" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_c" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_e" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_a" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_6" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_5" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_c_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_use" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_8" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_use_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_use_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="open_yn" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="w_kind" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="w_days" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="w_remk" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="b_code" type="varchar(26)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tot_amt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bdgt_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="igtct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="othct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="rsvct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="poll" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="poll_no" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="oth_mon" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="drut" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="drct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsut" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsut_2" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsct_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsut_3" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsct_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsut_4" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsct_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsrm" type="varchar(300)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scut" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="scut_2" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scct_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="scut_3" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scct_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="scut_4" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scct_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="scrm" type="varchar(300)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scrr" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scnum" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="pcmut" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccut_1" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="crat_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_1_a" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_1_b" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_1_c" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccut_2" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="crat_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_2_a" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_2_b" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_2_c" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccut_3" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="crat_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_3_a" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_3_b" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccwk_3_c" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccnum" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="iss_start_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="iss_end_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="iss_cost" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="iss_no" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="iss_rmk" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pds_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ds_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ads_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="getl_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="agetl_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_spay" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ipe" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ipe_y" type="varchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ipe_n" type="varchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_nlic" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_dlic" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lic_no" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lic_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="alic_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="opdt" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="aop_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="pck_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ack_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="psc_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="asc_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="pct_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="act_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ctmeth" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="actmth" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spec_purch" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_intl" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tctmth" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bdgt_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bdgt_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="mctmth" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccnt_3" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_per" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ct_sum" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ct_sum_f" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ct_sum_u" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ctmo" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ct_sum_d" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="cntid" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pays" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="pms_sum_t" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="pms_type" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="paymth" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="foreign_yn" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cs_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="as_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="asu_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ce_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ce_date_f" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ae_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="fcost_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="fcs_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="afcs_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="fcost" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_ckp" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_ckp_2" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_ckp_3" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckp_money" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckp_unit" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckp_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckp_cnt" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckp_num" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cka_unit" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cka_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="cka_cnt" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cka_num" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckd_unit" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckd_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckd_cnt" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ckd_num" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_memo" type="varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="hot_line" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_code_2" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_code_3" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_no_2" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ccnt_1" type="varchar(180)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type_code_2" type="varchar(4)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dept_name" type="varchar(60)">
+                <constraints nullable="true" />
+            </column>
+            <column name="aop_cnt" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="unique_key" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_bidstr" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_engineer" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="name_0" type="varchar(180)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ct_sum_0" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bdgt_10" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="start_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="end_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="batch" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nocnt_day" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="status" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="aok_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="fcost_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="fin_ways" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="awork_day" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="fast_day" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="over_day" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="over_day_y" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="over_fee" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="other_fee" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="punsh_fee" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="tm_2_x" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tm_2_y" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tm_2_x_2" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tm_2_y_2" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tm_2_x_3" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tm_2_y_3" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_date" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_date" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="dsts" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="conf_out" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="u_ip" type="varchar(60)">
+                <constraints nullable="true" />
+            </column>
+            <column name="can" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="srut" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="anoct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="cepd_no" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sub_no" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scnt" type="varchar(60)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsdm" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="gy_resn" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="preson" type="varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="psign_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="asign_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="tr_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="conf_in" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="u_key" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tpcoth" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pcmct" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="wkut_old" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pcc_memo" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bgb_sumt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bgb_date" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="main_item" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="m_desc" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="m_rmk" type="varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pmr_sumt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="pmr_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="pmr_resm" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="bid_project" columnName="create_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="bid_project" columnName="update_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220418082547-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/bid_project.csv"
+                  separator=";"
+                  tableName="bid_project"
+                  usePreparedStatements="true">
+            <column name="wkut" type="string"/>
+            <column name="prjno" type="string"/>
+            <column name="name" type="string"/>
+            <column name="is_add_92" type="string"/>
+            <column name="pnt_ctrl" type="string"/>
+            <column name="type_code" type="string"/>
+            <column name="is_union" type="string"/>
+            <column name="place_code" type="string"/>
+            <column name="place" type="string"/>
+            <column name="bos_code" type="string"/>
+            <column name="dep_code" type="string"/>
+            <column name="is_bg" type="string"/>
+            <column name="pln_code" type="string"/>
+            <column name="pln_no" type="string"/>
+            <column name="pln_unicod" type="string"/>
+            <column name="bos_2_code" type="string"/>
+            <column name="bos_2_rate" type="numeric"/>
+            <column name="bos_2_b_code" type="string"/>
+            <column name="bos_2_b_rate" type="numeric"/>
+            <column name="bos_2_c_code" type="string"/>
+            <column name="bos_2_c_ate" type="numeric"/>
+            <column name="bos_2_d_code" type="string"/>
+            <column name="bos_2_d_rate" type="numeric"/>
+            <column name="lnk_code" type="string"/>
+            <column name="ccnt_2" type="string"/>
+            <column name="man" type="string"/>
+            <column name="tel" type="string"/>
+            <column name="e_mail" type="string"/>
+            <column name="wrate" type="numeric"/>
+            <column name="contain" type="string"/>
+            <column name="pfunc" type="string"/>
+            <column name="benf" type="string"/>
+            <column name="pstand" type="string"/>
+            <column name="pqty" type="string"/>
+            <column name="untnd" type="string"/>
+            <column name="is_spcw" type="string"/>
+            <column name="spcw_01" type="string"/>
+            <column name="spcw_02" type="string"/>
+            <column name="spcw_03" type="string"/>
+            <column name="spcw_04" type="string"/>
+            <column name="spcw_05" type="string"/>
+            <column name="spcw_06" type="string"/>
+            <column name="spcw_07" type="string"/>
+            <column name="spcw_08" type="string"/>
+            <column name="spcw_09" type="string"/>
+            <column name="spcw_10" type="string"/>
+            <column name="spcw_11" type="string"/>
+            <column name="spcw_12" type="string"/>
+            <column name="spcw_01_amt" type="numeric"/>
+            <column name="spcw_01_nm" type="numeric"/>
+            <column name="spcw_02_amt" type="numeric"/>
+            <column name="spcw_02_nm" type="numeric"/>
+            <column name="spcw_03_amt" type="numeric"/>
+            <column name="spcw_03_nm" type="numeric"/>
+            <column name="spcw_04_amt" type="numeric"/>
+            <column name="spcw_04_nm" type="numeric"/>
+            <column name="spcw_05_amt" type="numeric"/>
+            <column name="spcw_05_nm" type="numeric"/>
+            <column name="spcw_06_amt" type="numeric"/>
+            <column name="spcw_06_nm" type="numeric"/>
+            <column name="spcw_07_amt" type="numeric"/>
+            <column name="spcw_07_nm" type="numeric"/>
+            <column name="spcw_08_amt" type="numeric"/>
+            <column name="spcw_08_nm" type="numeric"/>
+            <column name="spcw_09_amt" type="numeric"/>
+            <column name="spcw_09_nm" type="numeric"/>
+            <column name="spcw_10_amt" type="numeric"/>
+            <column name="spcw_10_nm" type="numeric"/>
+            <column name="spcw_11_amt" type="numeric"/>
+            <column name="spcw_11_nm" type="numeric"/>
+            <column name="spcw_12_amt" type="numeric"/>
+            <column name="spcw_12_nm" type="numeric"/>
+            <column name="job_01_type" type="numeric"/>
+            <column name="job_02_type" type="numeric"/>
+            <column name="job_03_type" type="numeric"/>
+            <column name="job_04_type" type="numeric"/>
+            <column name="job_05_type" type="numeric"/>
+            <column name="job_06_type" type="numeric"/>
+            <column name="job_07_type" type="numeric"/>
+            <column name="job_08_type" type="numeric"/>
+            <column name="job_09_type" type="numeric"/>
+            <column name="job_10_type" type="numeric"/>
+            <column name="job_11_type" type="numeric"/>
+            <column name="job_12_type" type="numeric"/>
+            <column name="job_13_type" type="numeric"/>
+            <column name="job_14_type" type="numeric"/>
+            <column name="semset" type="string"/>
+            <column name="is_rcb" type="string"/>
+            <column name="sorc_1" type="numeric"/>
+            <column name="sorc_2" type="numeric"/>
+            <column name="sorc_3" type="numeric"/>
+            <column name="sorc_4" type="numeric"/>
+            <column name="sorc_5" type="numeric"/>
+            <column name="sorc_1_b" type="numeric"/>
+            <column name="sorc_1_c" type="numeric"/>
+            <column name="sorc_1_d" type="numeric"/>
+            <column name="sorc_3_b" type="numeric"/>
+            <column name="sorc_3_c" type="numeric"/>
+            <column name="sorc_3_d" type="numeric"/>
+            <column name="sorc_3_e" type="numeric"/>
+            <column name="sorc_3_a" type="numeric"/>
+            <column name="sorc_6" type="numeric"/>
+            <column name="sorc_3_b_2" type="numeric"/>
+            <column name="sorc_3_b_3" type="numeric"/>
+            <column name="sorc_3_b_4" type="numeric"/>
+            <column name="sorc_3_b_5" type="numeric"/>
+            <column name="sorc_3_c_1" type="numeric"/>
+            <column name="sorc_3_d_1" type="numeric"/>
+            <column name="sorc_3_d_3" type="numeric"/>
+            <column name="sorc_3_d_4" type="numeric"/>
+            <column name="sorc_7" type="numeric"/>
+            <column name="sorc_7_use" type="numeric"/>
+            <column name="sorc_8" type="numeric"/>
+            <column name="sorc_7_use_2" type="numeric"/>
+            <column name="sorc_7_use_3" type="numeric"/>
+            <column name="open_yn" type="string"/>
+            <column name="w_kind" type="string"/>
+            <column name="w_days" type="numeric"/>
+            <column name="w_remk" type="string"/>
+            <column name="b_code" type="string"/>
+            <column name="tot_amt" type="numeric"/>
+            <column name="bdgt_1" type="numeric"/>
+            <column name="igtct" type="numeric"/>
+            <column name="othct" type="numeric"/>
+            <column name="rsvct" type="numeric"/>
+            <column name="poll" type="numeric"/>
+            <column name="poll_no" type="string"/>
+            <column name="oth_mon" type="numeric"/>
+            <column name="drut" type="string"/>
+            <column name="drct" type="numeric"/>
+            <column name="dsut" type="string"/>
+            <column name="dsct" type="numeric"/>
+            <column name="dsut_2" type="string"/>
+            <column name="dsct_2" type="numeric"/>
+            <column name="dsut_3" type="string"/>
+            <column name="dsct_3" type="numeric"/>
+            <column name="dsut_4" type="string"/>
+            <column name="dsct_4" type="numeric"/>
+            <column name="dsrm" type="string"/>
+            <column name="scut" type="string"/>
+            <column name="scct" type="numeric"/>
+            <column name="scut_2" type="string"/>
+            <column name="scct_2" type="numeric"/>
+            <column name="scut_3" type="string"/>
+            <column name="scct_3" type="numeric"/>
+            <column name="scut_4" type="string"/>
+            <column name="scct_4" type="numeric"/>
+            <column name="scrm" type="string"/>
+            <column name="scrr" type="string"/>
+            <column name="scnum" type="numeric"/>
+            <column name="pcmut" type="string"/>
+            <column name="ccut_1" type="string"/>
+            <column name="crat_1" type="numeric"/>
+            <column name="ccwk_1_a" type="string"/>
+            <column name="ccwk_1_b" type="string"/>
+            <column name="ccwk_1_c" type="string"/>
+            <column name="ccut_2" type="string"/>
+            <column name="crat_2" type="numeric"/>
+            <column name="ccwk_2_a" type="string"/>
+            <column name="ccwk_2_b" type="string"/>
+            <column name="ccwk_2_c" type="string"/>
+            <column name="ccut_3" type="string"/>
+            <column name="crat_3" type="numeric"/>
+            <column name="ccwk_3_a" type="string"/>
+            <column name="ccwk_3_b" type="string"/>
+            <column name="ccwk_3_c" type="string"/>
+            <column name="ccnum" type="numeric"/>
+            <column name="iss_start_date" type="date"/>
+            <column name="iss_end_date" type="date"/>
+            <column name="iss_cost" type="numeric"/>
+            <column name="iss_no" type="string"/>
+            <column name="iss_rmk" type="string"/>
+            <column name="pds_date" type="date"/>
+            <column name="ds_date" type="date"/>
+            <column name="ads_date" type="date"/>
+            <column name="getl_date" type="date"/>
+            <column name="agetl_date" type="date"/>
+            <column name="is_spay" type="string"/>
+            <column name="ipe" type="string"/>
+            <column name="ipe_y" type="string"/>
+            <column name="ipe_n" type="string"/>
+            <column name="is_nlic" type="string"/>
+            <column name="is_dlic" type="string"/>
+            <column name="lic_no" type="string"/>
+            <column name="lic_date" type="date"/>
+            <column name="alic_date" type="date"/>
+            <column name="opdt" type="string"/>
+            <column name="aop_date" type="date"/>
+            <column name="pck_date" type="date"/>
+            <column name="ack_date" type="date"/>
+            <column name="psc_date" type="date"/>
+            <column name="asc_date" type="date"/>
+            <column name="pct_date" type="date"/>
+            <column name="act_date" type="date"/>
+            <column name="ctmeth" type="string"/>
+            <column name="actmth" type="string"/>
+            <column name="spec_purch" type="string"/>
+            <column name="is_intl" type="string"/>
+            <column name="tctmth" type="string"/>
+            <column name="bdgt_2" type="numeric"/>
+            <column name="bdgt_3" type="numeric"/>
+            <column name="mctmth" type="string"/>
+            <column name="ccnt_3" type="string"/>
+            <column name="is_per" type="string"/>
+            <column name="ct_sum" type="numeric"/>
+            <column name="ct_sum_f" type="numeric"/>
+            <column name="ct_sum_u" type="numeric"/>
+            <column name="ctmo" type="string"/>
+            <column name="ct_sum_d" type="numeric"/>
+            <column name="cntid" type="string"/>
+            <column name="pays" type="numeric"/>
+            <column name="pms_sum_t" type="numeric"/>
+            <column name="pms_type" type="string"/>
+            <column name="paymth" type="string"/>
+            <column name="foreign_yn" type="string"/>
+            <column name="cs_date" type="date"/>
+            <column name="as_date" type="date"/>
+            <column name="asu_date" type="date"/>
+            <column name="ce_date" type="date"/>
+            <column name="ce_date_f" type="date"/>
+            <column name="ae_date" type="date"/>
+            <column name="fcost_2" type="numeric"/>
+            <column name="fcs_date" type="date"/>
+            <column name="afcs_date" type="date"/>
+            <column name="fcost" type="numeric"/>
+            <column name="is_ckp" type="string"/>
+            <column name="is_ckp_2" type="string"/>
+            <column name="is_ckp_3" type="string"/>
+            <column name="ckp_money" type="numeric"/>
+            <column name="ckp_unit" type="string"/>
+            <column name="ckp_date" type="date"/>
+            <column name="ckp_cnt" type="numeric"/>
+            <column name="ckp_num" type="string"/>
+            <column name="cka_unit" type="string"/>
+            <column name="cka_date" type="date"/>
+            <column name="cka_cnt" type="numeric"/>
+            <column name="cka_num" type="string"/>
+            <column name="ckd_unit" type="string"/>
+            <column name="ckd_date" type="date"/>
+            <column name="ckd_cnt" type="numeric"/>
+            <column name="ckd_num" type="string"/>
+            <column name="work_memo" type="string"/>
+            <column name="hot_line" type="string"/>
+            <column name="lnk_code_2" type="string"/>
+            <column name="lnk_code_3" type="string"/>
+            <column name="lnk_no_2" type="string"/>
+            <column name="ccnt_1" type="string"/>
+            <column name="type_code_2" type="string"/>
+            <column name="dept_name" type="string"/>
+            <column name="aop_cnt" type="string"/>
+            <column name="unique_key" type="string"/>
+            <column name="is_bidstr" type="string"/>
+            <column name="is_engineer" type="string"/>
+            <column name="name_0" type="string"/>
+            <column name="ct_sum_0" type="numeric"/>
+            <column name="bdgt_10" type="numeric"/>
+            <column name="start_date" type="date"/>
+            <column name="end_date" type="date"/>
+            <column name="batch" type="string"/>
+            <column name="nocnt_day" type="numeric"/>
+            <column name="status" type="string"/>
+            <column name="aok_date" type="date"/>
+            <column name="fcost_3" type="numeric"/>
+            <column name="fin_ways" type="numeric"/>
+            <column name="awork_day" type="numeric"/>
+            <column name="fast_day" type="numeric"/>
+            <column name="over_day" type="numeric"/>
+            <column name="over_day_y" type="numeric"/>
+            <column name="over_fee" type="numeric"/>
+            <column name="other_fee" type="numeric"/>
+            <column name="punsh_fee" type="numeric"/>
+            <column name="tm_2_x" type="string"/>
+            <column name="tm_2_y" type="string"/>
+            <column name="tm_2_x_2" type="string"/>
+            <column name="tm_2_y_2" type="string"/>
+            <column name="tm_2_x_3" type="string"/>
+            <column name="tm_2_y_3" type="string"/>
+            <column name="create_date" type="date"/>
+            <column name="create_user" type="string"/>
+            <column name="update_date" type="date"/>
+            <column name="update_user" type="string"/>
+            <column name="dsts" type="string"/>
+            <column name="conf_out" type="numeric"/>
+            <column name="u_ip" type="string"/>
+            <column name="can" type="string"/>
+            <column name="srut" type="string"/>
+            <column name="anoct" type="numeric"/>
+            <column name="cepd_no" type="string"/>
+            <column name="sub_no" type="string"/>
+            <column name="scnt" type="string"/>
+            <column name="dsdm" type="string"/>
+            <column name="gy_resn" type="string"/>
+            <column name="preson" type="string"/>
+            <column name="psign_date" type="date"/>
+            <column name="asign_date" type="date"/>
+            <column name="tr_date" type="date"/>
+            <column name="conf_in" type="numeric"/>
+            <column name="u_key" type="string"/>
+            <column name="tpcoth" type="string"/>
+            <column name="pcmct" type="numeric"/>
+            <column name="wkut_old" type="string"/>
+            <column name="pcc_memo" type="string"/>
+            <column name="bgb_sumt" type="numeric"/>
+            <column name="bgb_date" type="string"/>
+            <column name="main_item" type="string"/>
+            <column name="m_desc" type="string"/>
+            <column name="m_rmk" type="string"/>
+            <column name="pmr_sumt" type="numeric"/>
+            <column name="pmr_date" type="date"/>
+            <column name="pmr_resm" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

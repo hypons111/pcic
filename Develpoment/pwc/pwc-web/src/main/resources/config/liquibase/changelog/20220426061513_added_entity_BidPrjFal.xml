@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity BidPrjFal.
+    -->
+    <changeSet id="20220426061513-1" author="jhipster">
+        <createTable tableName="bid_prj_fal">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="wkut" type="varchar(21)">
+                <constraints nullable="false" />
+            </column>
+            <column name="prjno" type="varchar(40)">
+                <constraints nullable="false" />
+            </column>
+            <column name="year" type="varchar(3)">
+                <constraints nullable="false" />
+            </column>
+            <column name="month" type="varchar(2)">
+                <constraints nullable="false" />
+            </column>
+            <column name="syr" type="varchar(3)">
+                <constraints nullable="false" />
+            </column>
+            <column name="mft" type="varchar(3)">
+                <constraints nullable="false" />
+            </column>
+            <column name="mfas" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mfrt" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ok_date" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="d_status" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_date" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="u_ip" type="varchar(60)">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="mfru" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mfrs" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fal_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="respons" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mether" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_1" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_2" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_3" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_4" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_5" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_6" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_7" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_8" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_9" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="bid_prj_fal" columnName="create_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="bid_prj_fal" columnName="update_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220426061513-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/bid_prj_fal.csv"
+                  separator=";"
+                  tableName="bid_prj_fal"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="wkut" type="string"/>
+            <column name="prjno" type="string"/>
+            <column name="year" type="string"/>
+            <column name="month" type="string"/>
+            <column name="syr" type="string"/>
+            <column name="mft" type="string"/>
+            <column name="mfas" type="string"/>
+            <column name="mfrt" type="string"/>
+            <column name="ok_date" type="string"/>
+            <column name="d_status" type="string"/>
+            <column name="create_user" type="string"/>
+            <column name="create_date" type="date"/>
+            <column name="u_ip" type="string"/>
+            <column name="update_user" type="string"/>
+            <column name="update_date" type="date"/>
+            <column name="mfru" type="string"/>
+            <column name="mfrs" type="string"/>
+            <column name="fal_rate" type="numeric"/>
+            <column name="respons" type="string"/>
+            <column name="mether" type="string"/>
+            <column name="column_1" type="string"/>
+            <column name="column_2" type="string"/>
+            <column name="column_3" type="string"/>
+            <column name="column_4" type="string"/>
+            <column name="column_5" type="string"/>
+            <column name="column_6" type="string"/>
+            <column name="column_7" type="string"/>
+            <column name="column_8" type="string"/>
+            <column name="column_9" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

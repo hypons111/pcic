@@ -1,0 +1,20 @@
+entity BidPrjFals(Bid_Prj_Fals) {
+	wkut String maxlength(21),
+	prjno String maxlength(40),
+   	year String maxlength(3),
+    month String maxlength(2),
+   	syr String maxlength(3),
+    mft String maxlength(3),
+    mfas String maxlength(2000),
+    mfrt String maxlength(2000),
+    mfru String maxlength(2000),
+    oldDate LocalDate,
+    newDate LocalDate,
+    createDate Instant,
+    createUser String maxlength(20),
+    updateDate Instant,
+    updateUser String maxlength(20),
+	dsts String maxlength(1),
+    uIp String maxlength(60)
+}
+use mapstruct for *

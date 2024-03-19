@@ -1,0 +1,17 @@
+entity BidPrjMilestone(Bid_Prj_Milestone) {
+	wkut String maxlength(21),
+	prjno String maxlength(40),
+	applyDate LocalDate,
+    milestoneNo String maxlength(4),
+    milestoneName String maxlength(200),
+    milestoneType String maxlength(2),
+    milestoneStatus String maxlength(1),
+    estimateDate LocalDate,
+	actualDate LocalDate,
+	remark String maxlength(2000),
+    createDate Instant,
+	createUser String maxlength(20),
+	updateDate Instant,
+	updateUser String maxlength(20),
+}
+use mapstruct for *

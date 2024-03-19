@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity BidPrjDelete.
+    -->
+    <changeSet id="20220622071013-1" author="jhipster">
+        <createTable tableName="bid_prj_delete">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="wkut" type="varchar(21)">
+                <constraints nullable="false" />
+            </column>
+            <column name="prjno" type="varchar(40)">
+                <constraints nullable="false" />
+            </column>
+            <column name="name" type="varchar(280)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pln_code" type="varchar(21)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pln_no" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type_code" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tot_amt" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bdgt_1" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="op_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="aop_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="pct_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="act_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="ct_sum" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cntid" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pays" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ctmeth" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="actmth" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="w_kind" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="w_days" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="place_code" type="varchar(4)">
+                <constraints nullable="true" />
+            </column>
+            <column name="man" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tel" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_user" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="u_ip" type="varchar(60)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_no_2" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fcost_2" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_code" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_code_2" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lnk_code_3" type="varchar(40)">
+                <constraints nullable="true" />
+            </column>
+            <column name="del_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="del_resn" type="varchar(500)">
+                <constraints nullable="true" />
+            </column>
+            <column name="uniquekey" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="bid_prj_delete" columnName="create_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="bid_prj_delete" columnName="update_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220622071013-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/bid_prj_delete.csv"
+                  separator=";"
+                  tableName="bid_prj_delete"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="wkut" type="string"/>
+            <column name="prjno" type="string"/>
+            <column name="name" type="string"/>
+            <column name="pln_code" type="string"/>
+            <column name="pln_no" type="string"/>
+            <column name="type_code" type="string"/>
+            <column name="tot_amt" type="numeric"/>
+            <column name="bdgt_1" type="numeric"/>
+            <column name="op_date" type="date"/>
+            <column name="aop_date" type="date"/>
+            <column name="pct_date" type="date"/>
+            <column name="act_date" type="date"/>
+            <column name="ct_sum" type="numeric"/>
+            <column name="cntid" type="string"/>
+            <column name="pays" type="numeric"/>
+            <column name="ctmeth" type="string"/>
+            <column name="actmth" type="string"/>
+            <column name="w_kind" type="string"/>
+            <column name="w_days" type="numeric"/>
+            <column name="place_code" type="string"/>
+            <column name="man" type="string"/>
+            <column name="tel" type="string"/>
+            <column name="create_date" type="date"/>
+            <column name="create_user" type="string"/>
+            <column name="update_date" type="date"/>
+            <column name="update_user" type="string"/>
+            <column name="u_ip" type="string"/>
+            <column name="lnk_no_2" type="string"/>
+            <column name="fcost_2" type="numeric"/>
+            <column name="lnk_code" type="string"/>
+            <column name="lnk_code_2" type="string"/>
+            <column name="lnk_code_3" type="string"/>
+            <column name="del_date" type="date"/>
+            <column name="del_resn" type="string"/>
+            <column name="uniquekey" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

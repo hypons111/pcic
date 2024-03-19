@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmFunctionUsedRecord.
+    -->
+    <changeSet id="20211230071006-1" author="jhipster">
+        <createTable tableName="adm_function_used_record">
+            <column name="id" type="bigint" remarks="type: bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="sys_category" type="varchar(10)" remarks="type: varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="function_id" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="function_extend_id" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="record_content" type="varchar(100)" remarks="type: varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_user_sys" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_function_used_record" columnName="create_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+    <changeSet id="20211230071006-2" author="2004012">
+       <addColumn tableName="adm_function_used_record">
+           <column name="jwt_token" type="varchar(Max)" remarks="type: varchar(Max)">
+               <constraints nullable="true" />
+           </column>
+           <column name="jwt_token" type="varchar(Max)" remarks="type: varchar(Max)">
+               <constraints nullable="false" />
+           </column>
+           <column name="table_name" type="varchar(500)" remarks="type: varchar(500)">
+               <constraints nullable="false" />
+           </column>
+           <column name="table_key" type="varchar(100)" remarks="type: varchar(100)">
+               <constraints nullable="false" />
+           </column>
+       </addColumn>
+        <modifyDataType tableName="adm_function_used_record" columnName="record_content" newDataType="varchar(500)"/>
+    </changeSet>
+
+</databaseChangeLog>

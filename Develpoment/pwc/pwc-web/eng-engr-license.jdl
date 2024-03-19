@@ -1,0 +1,70 @@
+entity EngEngrLicense(ENG_ENGR_LICENSE) {
+   @Id engEngrLicenseId String maxlength(20) required
+   engEngrLicenseVersion BigDecimal required
+   engEngrLicenseNo String maxlength(20)
+   receiveDate LocalDate
+   engrLicenseDocNo String maxlength(20)
+   engrId String maxlength(20)
+   identityType String maxlength(3)
+   idno String maxlength(20)
+   chName String maxlength(50)
+   chNameRome String maxlength(50)
+   enName String maxlength(100)
+   birthDate LocalDate
+   sex Boolean
+   mobileTel String maxlength(50)
+   email String maxlength(50)
+   permanentAddrZip String maxlength(10)
+   permanentAddrCity String maxlength(5)
+   permanentAddrTown String maxlength(3)
+   permanentAddrOther String maxlength(100)
+   contactAddrZip String maxlength(10)
+   contactAddrCity String maxlength(5)
+   contactAddrTown String maxlength(3)
+   contactAddrOther String maxlength(100)
+   execType String maxlength(3)
+   compId String maxlength(20)
+   compType String maxlength(3)
+   compIdno String maxlength(20)
+   compChName String maxlength(100)
+   compEnName String maxlength(200)
+   compTel1 String maxlength(20)
+   compTel2 String maxlength(20)
+   compFax String maxlength(20)
+   compAddrZip String maxlength(10)
+   compAddrCity String maxlength(5)
+   compAddrTown String maxlength(3)
+   compAddrOther String maxlength(100)
+   compAddrEn String maxlength(200)
+   applyItem String maxlength(20)
+   applyType String maxlength(3)
+   receiveNo String maxlength(20)
+   publicDate LocalDate
+   effectDateStart LocalDate
+   effectDateEnd LocalDate
+   remark String maxlength(2000)
+   receiveType String maxlength(3)
+   receiveAddrZip String maxlength(10)
+   receiveAddrCity String maxlength(5)
+   receiveAddrTown String maxlength(3)
+   receiveAddrOther String maxlength(100)
+   certificateIdList String maxlength(200)
+   subjectList String maxlength(100)
+   isMore7year Boolean
+   isXcaCert Boolean
+   changeItems String maxlength(100)
+   changeItemsDesc String maxlength(400)
+   contractorId String maxlength(20)
+   status String maxlength(3)
+   reviewStaff String maxlength(20)
+   reviewTime Instant
+   reviewDesc String maxlength(2000)
+   createUser String maxlength(20)
+   createTime Instant
+   updateUser String maxlength(20)
+   updateTime Instant
+   transferFrom String maxlength(100)
+   transferTime Instant
+
+}
+use mapstruct for *

@@ -1,0 +1,36 @@
+ entity GeoMember(GEO_MEMBER) {
+   @Id geoMemberId Long required
+   userName String maxlength(510)
+   workTel String maxlength(510)
+   contactAddr String maxlength(510)
+   idn String maxlength(510)
+   userId String maxlength(510)
+   applyDate Instant
+   jobDemand String maxlength(510)
+   sex Boolean
+   birthday String maxlength(510)
+   email String maxlength(510)
+   homeTel String maxlength(510)
+   fax String maxlength(510)
+   mobileTel String maxlength(510)
+   examineeDegree String maxlength(510)
+   highestDegree String maxlength(510)
+   firstexamDate String maxlength(510)
+   firstexamCertNo String maxlength(510)
+   firstexamSubject String maxlength(510)
+   isApprove Boolean
+   jobType String maxlength(100)
+   salaryRange String maxlength(100)
+   workPlace String maxlength(510)
+   remark String maxlength(510)
+   isEnable Boolean
+   ranking String maxlength(100)
+   serialNo String maxlength(100)
+   updateTime Instant
+   updateUser String maxlength(40)
+   createTime Instant
+   createUser String maxlength(40)
+   transferFrom String maxlength(100)
+   transferTime Instant
+   }
+use mapstruct for *

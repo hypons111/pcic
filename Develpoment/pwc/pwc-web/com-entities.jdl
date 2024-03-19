@@ -1,0 +1,16 @@
+entity AdmCompany(Adm_Company) {
+    @Id ban String maxlength(8) required /** type: varchar(8) */
+    rpName String maxlength(50) /** type: nvarchar(50) */
+    name String maxlength(50) /** type: nvarchar(50) */
+    addressCity String maxlength(10) /** type: nvarchar(10) */
+    addressTown String maxlength(10) /** type: nvarchar(10) */
+    addressVillage String maxlength(10) /** type: nvarchar(10) */
+    addressLin String maxlength(10) /** type: nvarchar(10) */
+    addressRoad String maxlength(10) /** type: nvarchar(10) */
+    amount BigDecimal min(0) /** type: decimal(20,0) */
+    conDate Instant /** type: date */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+use mapstruct for *

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmCompany.
+    -->
+    <changeSet id="20211230070954-1" author="jhipster">
+        <createTable tableName="adm_company">
+            <column name="ban" type="varchar(8)" remarks="type: varchar(8)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="rp_name" type="varchar(50)" remarks="type: nvarchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="name" type="varchar(50)" remarks="type: nvarchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="address_city" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="address_town" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="address_village" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="address_lin" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="address_road" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="amount" type="decimal(21,2)" remarks="type: decimal(20,0)">
+                <constraints nullable="true" />
+            </column>
+            <column name="con_date" type="${datetimeType}" remarks="type: date">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_company" columnName="con_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="adm_company" columnName="update_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+</databaseChangeLog>

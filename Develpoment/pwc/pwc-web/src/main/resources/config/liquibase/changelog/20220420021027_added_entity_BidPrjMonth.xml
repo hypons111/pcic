@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity BidPrjMonth.
+    -->
+    <changeSet id="20220420021027-1" author="jhipster">
+        <createTable tableName="bid_prj_month">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="wkut" type="varchar(21)">
+                <constraints nullable="false" />
+            </column>
+            <column name="prjno" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="yr" type="varchar(3)">
+                <constraints nullable="false" />
+            </column>
+            <column name="mnth" type="varchar(2)">
+                <constraints nullable="false" />
+            </column>
+            <column name="syr" type="varchar(3)">
+                <constraints nullable="false" />
+            </column>
+            <column name="item" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ptrate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="pexp" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ypexp" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="yaexp" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="arat" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="aexp" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="atrate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="remark" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sumt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="stus" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mdsts" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sumdat" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nopayamt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="nopayresn" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="resumt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="trdt" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nopaydetel" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="meet_cnt" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="meter_chk" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="meter_chk_f" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_chk" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_chk_f" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="repl_meth" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="teckind_3" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="envi_cnt" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="envi_fee" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="wsafe_cnt" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="wsafe_fee" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1_b" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1_c" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_1_d" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_5" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_01" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_02" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_03" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_04" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_05" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_06" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_07" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_08" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_09" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_10" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_11" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="spcw_12" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_01" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_02" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_03" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_04" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_05" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_06" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_07" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_08" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_09" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_10" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="equp_11" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cosend" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="a_trate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="wdayeds" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_c" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_e" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_a" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_6" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_b_5" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_c_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_3_d_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="teckind_4" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_use" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_oth" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_tac" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_self" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_8" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="pay_arr" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_use_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_7_use_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sfr_wkr" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorc_9" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsts" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="conf_out" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="conf_out_2" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_date" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="bid_prj_month" columnName="create_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="bid_prj_month" columnName="update_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220420021027-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/bid_prj_month.csv"
+                  separator=";"
+                  tableName="bid_prj_month"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="wkut" type="string"/>
+            <column name="prjno" type="string"/>
+            <column name="yr" type="string"/>
+            <column name="mnth" type="string"/>
+            <column name="syr" type="string"/>
+            <column name="item" type="string"/>
+            <column name="ptrate" type="numeric"/>
+            <column name="pexp" type="numeric"/>
+            <column name="rate" type="numeric"/>
+            <column name="ypexp" type="numeric"/>
+            <column name="yaexp" type="numeric"/>
+            <column name="arat" type="numeric"/>
+            <column name="aexp" type="numeric"/>
+            <column name="atrate" type="numeric"/>
+            <column name="remark" type="string"/>
+            <column name="sumt" type="numeric"/>
+            <column name="stus" type="string"/>
+            <column name="mdsts" type="string"/>
+            <column name="sumdat" type="string"/>
+            <column name="nopayamt" type="numeric"/>
+            <column name="nopayresn" type="string"/>
+            <column name="resumt" type="numeric"/>
+            <column name="trdt" type="string"/>
+            <column name="nopaydetel" type="string"/>
+            <column name="meet_cnt" type="numeric"/>
+            <column name="meter_chk" type="numeric"/>
+            <column name="meter_chk_f" type="numeric"/>
+            <column name="work_chk" type="numeric"/>
+            <column name="work_chk_f" type="numeric"/>
+            <column name="repl_meth" type="string"/>
+            <column name="teckind_3" type="numeric"/>
+            <column name="envi_cnt" type="numeric"/>
+            <column name="envi_fee" type="numeric"/>
+            <column name="wsafe_cnt" type="numeric"/>
+            <column name="wsafe_fee" type="numeric"/>
+            <column name="sorc_1" type="numeric"/>
+            <column name="sorc_1_b" type="numeric"/>
+            <column name="sorc_1_c" type="numeric"/>
+            <column name="sorc_1_d" type="numeric"/>
+            <column name="sorc_2" type="numeric"/>
+            <column name="sorc_3" type="numeric"/>
+            <column name="sorc_4" type="numeric"/>
+            <column name="sorc_5" type="numeric"/>
+            <column name="spcw_01" type="string"/>
+            <column name="spcw_02" type="string"/>
+            <column name="spcw_03" type="string"/>
+            <column name="spcw_04" type="string"/>
+            <column name="spcw_05" type="string"/>
+            <column name="spcw_06" type="string"/>
+            <column name="spcw_07" type="string"/>
+            <column name="spcw_08" type="string"/>
+            <column name="spcw_09" type="string"/>
+            <column name="spcw_10" type="string"/>
+            <column name="spcw_11" type="string"/>
+            <column name="spcw_12" type="string"/>
+            <column name="equp_01" type="string"/>
+            <column name="equp_02" type="string"/>
+            <column name="equp_03" type="string"/>
+            <column name="equp_04" type="string"/>
+            <column name="equp_05" type="string"/>
+            <column name="equp_06" type="string"/>
+            <column name="equp_07" type="string"/>
+            <column name="equp_08" type="string"/>
+            <column name="equp_09" type="string"/>
+            <column name="equp_10" type="string"/>
+            <column name="equp_11" type="string"/>
+            <column name="cosend" type="numeric"/>
+            <column name="a_trate" type="numeric"/>
+            <column name="wdayeds" type="numeric"/>
+            <column name="sorc_3_b" type="numeric"/>
+            <column name="sorc_3_c" type="numeric"/>
+            <column name="sorc_3_d" type="numeric"/>
+            <column name="sorc_3_e" type="numeric"/>
+            <column name="sorc_3_a" type="numeric"/>
+            <column name="sorc_6" type="numeric"/>
+            <column name="sorc_3_b_2" type="numeric"/>
+            <column name="sorc_3_b_3" type="numeric"/>
+            <column name="sorc_3_b_4" type="numeric"/>
+            <column name="sorc_3_b_5" type="numeric"/>
+            <column name="sorc_3_c_1" type="numeric"/>
+            <column name="sorc_3_d_1" type="numeric"/>
+            <column name="sorc_3_d_3" type="numeric"/>
+            <column name="sorc_3_d_4" type="numeric"/>
+            <column name="teckind_4" type="numeric"/>
+            <column name="sorc_7" type="numeric"/>
+            <column name="sorc_7_use" type="numeric"/>
+            <column name="sorc_7_oth" type="numeric"/>
+            <column name="sorc_7_tac" type="numeric"/>
+            <column name="sorc_7_self" type="numeric"/>
+            <column name="sorc_8" type="numeric"/>
+            <column name="pay_arr" type="string"/>
+            <column name="sorc_7_use_2" type="numeric"/>
+            <column name="sorc_7_use_3" type="numeric"/>
+            <column name="sfr_wkr" type="numeric"/>
+            <column name="sorc_9" type="numeric"/>
+            <column name="dsts" type="string"/>
+            <column name="conf_out" type="numeric"/>
+            <column name="conf_out_2" type="numeric"/>
+            <column name="create_date" type="date"/>
+            <column name="create_user" type="string"/>
+            <column name="update_date" type="date"/>
+            <column name="update_user" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

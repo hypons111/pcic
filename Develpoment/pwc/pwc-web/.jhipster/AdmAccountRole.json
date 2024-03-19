@@ -1,0 +1,54 @@
+{
+  "applications": "*",
+  "changelogDate": "20220624033916",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "adm_account_role",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: bigint",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: varchar(20)"
+    },
+    {
+      "fieldName": "roleId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: varchar(20)"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: varchar(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: datetime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AdmAccountRole",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

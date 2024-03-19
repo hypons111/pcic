@@ -1,0 +1,165 @@
+[
+  {
+    "id": 8,
+    "path": "/g",
+    "meta": {
+      "functionId": "g",
+      "label": "公共工程價格資料庫",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 8101,
+        "path": "/service/mrp0101r",
+        "meta": {
+          "functionId": "mrp0101r",
+          "label": "常用查詢"
+        }
+      },
+      {
+        "id": 8102,
+        "path": "/service/mrp0102r",
+        "meta": {
+          "functionId": "mrp0102r",
+          "label": "同義詞管理"
+        }
+      },
+      {
+        "id": 8103,
+        "path": "/service/mrp0103r",
+        "meta": {
+          "functionId": "mrp0103r",
+          "label": "使用者紀錄管理"
+        }
+      },
+      {
+        "id": 8104,
+        "path": "/service/mrp0104r",
+        "meta": {
+          "functionId": "mrp0104r",
+          "label": "解析 KPI 管理"
+        }
+      },
+      {
+        "id": 8105,
+        "path": "/service/mrp0105r",
+        "meta": {
+          "functionId": "mrp0105r",
+          "label": "變動篩選管理"
+        }
+      },
+      {
+        "id": 8106,
+        "path": "/service/mrp0106r",
+        "meta": {
+          "functionId": "mrp0106r",
+          "label": "工項價量分析"
+        }
+      },
+      {
+        "id": 8107,
+        "path": "/service/mrp0107r",
+        "meta": {
+          "functionId": "mrp0107r",
+          "label": "前台已公布工項進階查詢"
+        }  
+      },
+      {
+        "id": 8108,
+        "path": "/service/mrp0108r",
+        "meta": {
+          "functionId": "mrp0108r",
+          "label": "前台未公布工項查詢"
+        }  
+      },
+      {
+        "id": 8109,
+        "path": "/service/mrp0109r",
+        "meta": {
+          "functionId": "mrp0109r",
+          "label": "解析前原始工項查詢"
+        }  
+      },
+      {
+        "id": 8119,
+        "path": "/service/mrp0118r",
+        "meta": {
+          "functionId": "mrp0118r",
+          "label": "工項編碼異動匯入"
+        }  
+      },
+      {
+        "id": 8120,
+        "path": "/service/mrp0119r",
+        "meta": {
+          "functionId": "mrp0119r",
+          "label": "擴增公佈工項匯入"
+        }  
+      },
+      {
+        "id": 8121,
+        "path": "/service/mrp0120r",
+        "meta": {
+          "functionId": "mrp0120r",
+          "label": "決標結果回報"
+        }  
+      },
+      {
+        "id": 8122,
+        "path": "/service/mrp0121r",
+        "meta": {
+          "functionId": "mrp0121r",
+          "label": "參考單價設定"
+        }  
+      },
+      {
+        "id": 8201,
+        "path": "/service/mrp0201r",
+        "meta": {
+          "functionId": "mrp0201r",
+          "label": "價格查詢"
+        }  
+      },
+      {
+        "id": 8202,
+        "path": "/service/mrp0202r",
+        "meta": {
+          "functionId": "mrp0202r",
+          "label": "早期價格查詢"
+        }  
+      },
+      {
+        "id": 8301,
+        "path": "/service/mrp0301r",
+        "meta": {
+          "functionId": "mrp0301r",
+          "label": "上傳結果查詢"
+        }  
+      },
+      {
+        "id": 8401,
+        "path": "/service/mrp0401r",
+        "meta": {
+          "functionId": "mrp0401r",
+          "label": "常見問題"
+        }  
+      },
+      {
+        "id": 8501,
+        "path": "/service/mrp0501r",
+        "meta": {
+          "functionId": "mrp0501r",
+          "label": "稽催報表"
+        }  
+      },
+      {
+        "id": 10701,
+        "path": "/service/pcc0701r",
+        "meta": {
+          "functionId": "pcc0701r",
+          "label": ""
+        }
+      }
+    ]
+  }
+]

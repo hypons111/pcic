@@ -1,0 +1,31 @@
+ entity GeoJob(GEO_JOB) {
+   @Id id Long required
+   geoJobId Long
+   salaryRange String maxlength(20)
+   workPlaceList String maxlength(510)
+   workPlaceDesc String maxlength(510)
+   otherComment String maxlength(510)
+   publishDateStart Instant
+   publishDateEnd Instant
+   publishStatus String maxlength(1)
+   jobTitle String maxlength(510)
+   isApprove String maxlength(1)
+   jobType String maxlength(100)
+   type1List String maxlength(100)
+   type2List String maxlength(100)
+   type3List String maxlength(100)
+   personCount BigDecimal
+   rejectReason String maxlength(510)
+   isPublic String maxlength(1)
+   mobileTel String maxlength(510)
+   contactTel String maxlength(510)
+   contactPerson String maxlength(510)
+   createUser String maxlength(40)
+   createTime Instant
+   updateUser String maxlength(40)
+   updateTime Instant
+   transferDate Instant
+   transferFrom String maxlength(100)
+   jobKind String maxlength(2)
+   }
+use mapstruct for *

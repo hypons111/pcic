@@ -1,0 +1,93 @@
+entity ProInnovativeProduct(pro_innovative_product) {
+	@Id proInnovativeProductId String required maxlength(10),
+	acceptedOrganization String maxlength(1000) ,
+	accountId String maxlength(20),
+    innovateType String maxlength(2),
+    innovateFunction String ,
+    innovateQuality String ,
+    innovateProve String ,
+    innovateCaseName String maxlength(200),
+    status String maxlength(1),
+    innovateName String maxlength(50),
+    patent String maxlength(1),
+    patentStartDate Instant,
+    patentEndDate Instant,
+    constructCost String maxlength(100),
+    maintainCost String maxlength(100),
+    communicateDate Instant,
+    communicateDocNumber String maxlength(100),
+    innovateCaseVendor String maxlength(200),
+    innovateCaseScale String maxlength(200),
+    updateUser String maxlength(20),
+    updateTime Instant,
+    createUser String maxlength(20),
+    createTime Instant,
+}
+
+entity ProRecommendList(pro_recommend_list) {
+	@Id proRecommendListId Long required,
+	proInnovativeProductId String maxlength(10) ,
+	recommendType String maxlength(2),
+    recommendName String maxlength(50),
+    recommendTel String maxlength(50),
+    updateUser String maxlength(20),
+    updateTime Instant,
+    createUser String maxlength(20),
+    createTime Instant,
+}
+
+
+entity ProEnginList(pro_engin_list) {
+	@Id proEnginListId Long required,
+	proInnovativeProductId String maxlength(10) ,
+	enginType String maxlength(2),
+    updateUser String maxlength(20),
+    updateTime Instant,
+    createUser String maxlength(20),
+    createTime Instant,
+}
+
+entity ProOrgSuggestion(pro_org_suggestion) {
+	@Id proOrgSuggestionId Long required,
+	proInnovativeProductId String maxlength(10) ,
+    accountId String maxlength(20),
+    type String maxlength(1),
+    addr String maxlength(500),
+    time Instant,
+    outline	String maxlength(2000),
+    memo String maxlength(2000),
+    other String maxlength(2000),
+    status String maxlength(1),
+    commReason String,
+    writeCondition String maxlength(1),
+    updateUser String maxlength(20),
+    updateTime Instant,
+    createUser String maxlength(20),
+    createTime Instant,
+}
+
+entity ProNoCommunicateList(pro_no_communicate_list) {
+	@Id proNoCommunicateListId Long required,
+	proOrgSuggestionId Long required ,
+	noCommunicateType String maxlength(1),
+    updateUser String maxlength(20),
+    updateTime Instant,
+    createUser String maxlength(20),
+    createTime Instant,
+}
+
+entity ProOsPersonList(pro_os_person_list) {
+	@Id proOsPersonListId Long required,
+	proOrgSuggestionId Long required ,
+	personType String maxlength(1),
+    personName String maxlength(20),
+    personTitle String maxlength(20),
+    updateUser String maxlength(20),
+    updateTime Instant,
+    createUser String maxlength(20),
+    createTime Instant,
+}
+
+
+use mapstruct for *
+

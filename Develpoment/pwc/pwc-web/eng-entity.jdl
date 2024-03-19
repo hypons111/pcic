@@ -1,0 +1,56 @@
+entity EngEngrCertificate(ENG_ENGR_CERTIFICATE) {
+  @Id engEngrCertificateId String maxlength(20) required
+  engEngrCertificateVersion BigDecimal required
+  engEngrCertificateNo String maxlength(9)
+  status String maxlength(1)
+  reviewStaff String maxlength(20)
+  reviewTime Instant
+  reviewDesc String maxlength(2000)
+  applyItemsList String maxlength(3)
+  applyType String maxlength(1)
+  applyDate LocalDate 
+  engrId String maxlength(20)
+  idno String maxlength(20)
+  chName String maxlength(20)
+  enName String maxlength(100)
+  birthDate LocalDate
+  sex Boolean
+  contactTelOffice String maxlength(20)
+  contactTelHome String maxlength(20)
+  mobileTel String maxlength(20)
+  fax String maxlength(20)
+  email String maxlength(50)
+  permanentAddrZip String maxlength(10)
+  permanentAddrCity String maxlength(5)
+  permanentAddrTown String maxlength(3)
+  permanentAddrOther String maxlength(100)
+  contactAddrZip String maxlength(10)
+  contactAddrCity String maxlength(5)
+  contactAddrTown String maxlength(3)
+  contactAddrOther String maxlength(100)
+  identityType String maxlength(1) required
+  addrForeign String maxlength(300)
+  subject String maxlength(3) required
+  engrCertificateDocNo String maxlength(20)
+  engrCertificateDocNoOld String maxlength(50)
+  examType String maxlength(1) required
+  examNo String maxlength(100)
+  examNoOld String maxlength(100)
+  receiveDate LocalDate
+  receiveNo String maxlength(20)
+  publicDate LocalDate
+  receiveType String maxlength(1)
+  receiveAddrZip String maxlength(10)
+  receiveAddrCity String maxlength(5)
+  receiveAddrTown String maxlength(3)
+  receiveAddrOther String maxlength(100)
+  contractorId String maxlength(30)
+  remark String maxlength(1600)
+  updateTime Instant required
+  updateUser String maxlength(20) required
+  createTime Instant required
+  createUser String maxlength(20) required
+  transferFrom String maxlength(100)
+  transferTime Instant
+}
+use mapstruct for *

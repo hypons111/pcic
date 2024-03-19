@@ -1,0 +1,33 @@
+.modal-dialog {
+  min-width: 100%;
+  /* border: 2px solid red !important; */
+}
+.modal-content {
+  min-width: 70%;
+  margin: auto;
+  /* border: 2px solid blue !important; */
+}
+
+#exampleModal table {
+  width: 100%;
+  /* border: 2px solid green !important; */
+}
+
+.header {
+  font-weight: bold;
+}
+
+.headerOnLeft {
+  width: 100px;
+}
+.headerOnRight {
+  width: 200px;
+}
+
+.bodyOnLeft,
+.bodyOnRight{
+  text-align: justify;
+}
+.bodyOnRight {
+  width: 150px;
+}

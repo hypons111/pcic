@@ -1,0 +1,16 @@
+entity BidPrjSur2(Bid_Prj_Sur2) {
+	wkut String maxlength(21) ,
+	prjno String maxlength(40),
+  disNo String maxlength(20),
+  amnta BigDecimal,
+  amntb BigDecimal,
+  amnt BigDecimal,
+  createDate Instant,
+  createUser String maxlength(20),
+  updateDate Instant,
+  updateUser String maxlength(20),
+  dsts String maxlength(1),
+  confOut BigDecimal,
+  uIp String maxlength(60),
+}
+use mapstruct for *

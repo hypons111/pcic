@@ -1,0 +1,112 @@
+{
+  "name": "AdmSmsSend",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "javadoc": "type: bigint",
+      "fieldValidateRules": ["required"],
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "smsType",
+      "fieldType": "String",
+      "javadoc": "type: varchar(10)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "sourceId",
+      "fieldType": "String",
+      "javadoc": "type: varchar(100)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "sender",
+      "fieldType": "String",
+      "javadoc": "type: varchar(50)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "receiver",
+      "fieldType": "String",
+      "javadoc": "type: varchar(MAX)"
+    },
+    {
+      "fieldName": "supplier",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(30)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(1000)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "expectSendTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime"
+    },
+    {
+      "fieldName": "realSendTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "javadoc": "type: varchar(1)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "processMessage",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(MAX)"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "adm_sms_send",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220302035614"
+}

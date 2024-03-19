@@ -1,0 +1,2753 @@
+[
+  {
+    "id": 1,
+    "meta": {
+      "directory": true,
+      "icon": "tasks",
+      "label": "生命週期一"
+    },
+    "children": [
+      {
+        "id": 2,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "功能一"
+        },
+        "children": [
+          {
+            "id": 3,
+            "path": "/ogn01",
+            "meta": {
+              "functionId": "ogn01",
+              "label": "公會通訊管理",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 1005,
+            "path": "/bulletin",
+            "meta": {
+              "functionId": "bulletin",
+              "label": "公告訊息維護",
+              "icon": "tasks"
+            }
+          }
+        ]
+      },
+      {
+        "id": 9904,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "測試畫面用"
+        },
+        "children": [
+          {
+            "id": 9905,
+            "path": "/viewDemo/01",
+            "meta": {
+              "functionId": "viewDemo",
+              "label": "測試畫面一",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 9906,
+            "path": "/viewDemo/02",
+            "meta": {
+              "functionId": "viewDemo02",
+              "label": "測試畫面二",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 9907,
+            "path": "/viewDemo/03",
+            "meta": {
+              "functionId": "viewDemo03",
+              "label": "測試畫面三",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 9908,
+            "path": "/viewDemo/04",
+            "meta": {
+              "functionId": "viewDemo04",
+              "label": "測試畫面四",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 9909,
+            "path": "/viewDemo/05",
+            "meta": {
+              "functionId": "viewDemo05",
+              "label": "測試畫面五",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 9910,
+            "path": "/viewDemo/06",
+            "meta": {
+              "functionId": "viewDemo06",
+              "label": "測試畫面六",
+              "icon": "tasks"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "meta": {
+      "directory": true,
+      "icon": "tasks",
+      "label": "生命週期二"
+    },
+    "children": [
+      {
+        "id": 7,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "後臺管理"
+        },
+        "children": [
+          {
+            "id": 22,
+            "meta": {
+              "label": "子類別一",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 25,
+                "path": "/25",
+                "meta": {
+                  "functionId": "25",
+                  "label": "子類別一子功能一"
+                }
+              },
+              {
+                "id": 40,
+                "path": "/40",
+                "meta": {
+                  "functionId": "40",
+                  "label": "子類別一子功能二"
+                }
+              }
+            ]
+          },
+          {
+            "id": 23,
+            "meta": {
+              "label": "子類別二",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 28,
+                "path": "/28",
+                "meta": {
+                  "functionId": "28",
+                  "label": "子類別二子功能一"
+                }
+              },
+              {
+                "id": 29,
+                "path": "/29",
+                "meta": {
+                  "functionId": "29",
+                  "label": "子類別二子功能二"
+                }
+              }
+            ]
+          },
+          {
+            "id": 24,
+            "meta": {
+              "label": "子類別三",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 35,
+                "path": "/35",
+                "meta": {
+                  "functionId": "35",
+                  "label": "子類別三子功能一"
+                }
+              },
+              {
+                "id": 36,
+                "path": "/36",
+                "meta": {
+                  "functionId": "36",
+                  "label": "子類別三子功能二"
+                }
+              },
+              {
+                "id": 37,
+                "path": "/37",
+                "meta": {
+                  "functionId": "37",
+                  "label": "子類別三子功能三"
+                }
+              },
+              {
+                "id": 39,
+                "path": "/39",
+                "meta": {
+                  "functionId": "39",
+                  "label": "子類別三子功能四"
+                }
+              },
+              {
+                "id": 40,
+                "path": "/40",
+                "meta": {
+                  "functionId": "40",
+                  "label": "子類別三子功能五"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5077,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "技師顧問"
+        },
+        "children": [
+          {
+            "id": 5001,
+            "meta": {
+              "directory": true,
+              "label": "首頁"
+            },
+            "children": [
+              {
+                "id": 5002,
+                "path": "/40",
+                "meta": {
+                  "label": "首頁",
+                  "functionId": "eng0101"
+                }
+              }
+            ]
+          },
+          {
+            "id": 5003,
+            "meta": {
+              "label": "技師",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 5004,
+                "path": "/eng0101Query",
+                "meta": {
+                  "functionId": "ENG0101",
+                  "label": "技師證書"
+                }
+              },
+              {
+                "id": 50041,
+                "path": "/eng0102Query",
+                "meta": {
+                  "functionId": "ENG0102",
+                  "label": "技師執業執照"
+                }
+              },
+              {
+                "id": 5005,
+                "path": "/eng0103",
+                "meta": {
+                  "functionId": "ENG0103",
+                  "label": "技師積分查詢"
+                }
+              },
+              {
+                "id": 5006,
+                "path": "/eng0104Query",
+                "meta": {
+                  "functionId": "ENG0104",
+                  "label": "書面積分審查"
+                }
+              },
+              {
+                "id": 50081,
+                "path": "/eng0107Query",
+                "meta": {
+                  "functionId": "ENG0107",
+                  "label": "考試院考試資料"
+                }
+              },
+              {
+                "id": 5007,
+                "path": "/eng0106Query",
+                "meta": {
+                  "functionId": "ENG0106",
+                  "label": "事務所年度業務報告"
+                }
+              },
+              {
+                "id": 50071,
+                "path": "/eng0105Query",
+                "meta": {
+                  "functionId": "ENG0105",
+                  "label": "技師懲戒作業"
+                }
+              },
+              {
+                "id": 5008,
+                "path": "/eng0106Query",
+                "meta": {
+                  "functionId": "ENG0106",
+                  "label": "年度業務報告"
+                }
+              },
+              {
+                "id": 5009,
+                "path": "/engEngrReport",
+                "meta": {
+                  "functionId": "ENG",
+                  "label": "相關報表"
+                }
+              },
+              {
+                "id": 50091,
+                "path": "/eng0109Export",
+                "meta": {
+                  "functionId": "ENG0109",
+                  "label": "執照綜合報表"
+                }
+              },
+              {
+                "id": 5100,
+                "path": "/eng0815Query",
+                "meta": {
+                  "functionId": "ENG0815",
+                  "label": "技師個人訓練積分查詢"
+                }
+              },
+              {
+                "id": 5101,
+                "path": "/eng0814Query",
+                "meta": {
+                  "functionId": "ENG0814",
+                  "label": "技師執業執照查詢"
+                }
+              },
+              {
+                "id": 5102,
+                "path": "/eng0816Query",
+                "meta": {
+                  "functionId": "ENG0816",
+                  "label": "執照尚在效期內且未註銷之執業技師"
+                }
+              },
+              {
+                "id": 5109,
+                "path": "/eng0809Query",
+                "meta": {
+                  "functionId": "ENG0809",
+                  "label": "無效或(即將逾期)之執業技師統計、通知"
+                }
+              },
+              {
+                "id": 51021,
+                "path": "/eng0817Query",
+                "meta": {
+                  "functionId": "ENG0817",
+                  "label": "查詢即時各科技師執業人數"
+                }
+              },
+              {
+                "id": 51023,
+                "path": "/eng0823Query",
+                "meta": {
+                  "functionId": "ENG0823",
+                  "label": "技師證書查詢"
+                }
+              },
+              {
+                "id": 51002,
+                "path": "/eng0802Query",
+                "meta": {
+                  "functionId": "ENG0802",
+                  "label": "相關報表"
+                }
+              }
+            ]
+          },
+          {
+            "id": 5010,
+            "meta": {
+              "label": "顧問公司",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 50121,
+                "path": "/eng0201Query",
+                "meta": {
+                  "functionId": "ENG0201",
+                  "label": "許可/登記作業"
+                }
+              },
+              {
+                "id": 5011,
+                "path": "/eng0202Query",
+                "meta": {
+                  "functionId": "ENG0202",
+                  "label": "年度業務報告"
+                }
+              },
+              {
+                "id": 5012,
+                "path": "/eng0203Query",
+                "meta": {
+                  "functionId": "ENG0203",
+                  "label": "公司查核紀錄"
+                }
+              },
+              {
+                "id": 5015,
+                "path": "/eng0204Export",
+                "meta": {
+                  "functionId": "ENG0204",
+                  "label": "登記證綜合報表"
+                }
+              },
+              {
+                "id": 5013,
+                "path": "/eng0206Query",
+                "meta": {
+                  "functionId": "ENG0206",
+                  "label": "財稅資料檢閱紀錄匯出"
+                }
+              },
+              {
+                "id": 5816,
+                "path": "/eng0806Query",
+                "meta": {
+                  "functionId": "ENG0806",
+                  "label": "各縣市統計表"
+                }
+              },
+              {
+                "id": 5017,
+                "path": "/eng0207Query",
+                "meta": {
+                  "functionId": "ENG0207",
+                  "label": "聘用技師名冊"
+                }
+              },
+              {
+                "id": 5018,
+                "path": "/eng0208Query",
+                "meta": {
+                  "functionId": "ENG0208",
+                  "label": "負責經理人名冊"
+                }
+              },
+              {
+                "id": 5019,
+                "path": "/eng0209Query",
+                "meta": {
+                  "functionId": "ENG0209",
+                  "label": "董事或執行業務股東名冊"
+                }
+              },
+              {
+                "id": 5020,
+                "path": "/engCompReport",
+                "meta": {
+                  "functionId": "ENGCOMPRP",
+                  "label": "相關報表"
+                }
+              },
+              {
+                "id": 8020,
+                "path": "/eng0820Query",
+                "meta": {
+                  "functionId": "ENG0820",
+                  "label": "登記按營業範圍技師科別查詢表"
+                }
+              }
+            ]
+          },
+          {
+            "id": 5022,
+            "meta": {
+              "label": "訓練課程",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 5023,
+                "path": "/eng0401Query",
+                "meta": {
+                  "functionId": "ENG0401",
+                  "label": "課程管理"
+                }
+              },
+              {
+                "id": 5024,
+                "path": "/eng0402Query",
+                "meta": {
+                  "functionId": "ENG0402",
+                  "label": "課程審核"
+                }
+              },
+              {
+                "id": 50251,
+                "path": "/engAd22",
+                "meta": {
+                  "functionId": "eng0301",
+                  "label": "課程管理(舊)"
+                }
+              }
+            ]
+          },
+          {
+            "id": 50252,
+            "meta": {
+              "directory": true,
+              "label": "履約紀錄/其它"
+            },
+            "children": [
+              {
+                "id": 5026,
+                "path": "/eng0605Query",
+                "meta": {
+                  "label": "電子付款",
+                  "functionId": "ENG0605"
+                }
+              },
+              {
+                "id": 5030,
+                "path": "/eng0606Query",
+                "meta": {
+                  "label": "勞保局查詢報表",
+                  "functionId": "ENG0606"
+                }
+              }
+            ]
+          },
+          {
+            "id": 50253,
+            "meta": {
+              "directory": true,
+              "label": "管理作業"
+            },
+            "children": [
+              {
+                "id": 5026,
+                "path": "/eng0706Query",
+                "meta": {
+                  "label": "技師個人基本資料",
+                  "functionId": "ENG0706"
+                }
+              },
+              {
+                "id": 6666,
+                "path": "/eng0707Query",
+                "meta": {
+                  "label": "顧問公司個人基本資料",
+                  "functionId": "ENG0707"
+                }
+              },
+              {
+                "id": 70301,
+                "path": "/eng0703r1",
+                "meta": {
+                  "functionId": "ENG0703",
+                  "label": "區域主管機關"
+                }
+              }
+            ]
+          },
+          {
+            "id": 5027,
+            "meta": {
+              "directory": true,
+              "label": "公會線上作業"
+            },
+            "children": [
+              {
+                "id": 50271,
+                "path": "/eng0506Edit",
+                "meta": {
+                  "label": "公會基本資料",
+                  "functionId": "ENG0506"
+                }
+              }
+            ]
+          },
+          {
+            "id": 5028,
+            "meta": {
+              "directory": true,
+              "label": "公會組織作業"
+            },
+            "children": [
+              {
+                "id": 50282,
+                "path": "/eng0502Query",
+                "meta": {
+                  "label": "公會通訊管理",
+                  "functionId": "ENG0502"
+                }
+              },
+              {
+                "id": 50283,
+                "path": "/eng0503Query",
+                "meta": {
+                  "label": "技師公會會員名冊",
+                  "functionId": "ENG0503"
+                }
+              },
+              {
+                "id": 50284,
+                "path": "/eng0504Query",
+                "meta": {
+                  "label": "全聯會會員名冊",
+                  "functionId": "ENG0504"
+                }
+              },
+              {
+                "id": 50285,
+                "path": "/eng0505Query",
+                "meta": {
+                  "label": "顧問公會會員名冊",
+                  "functionId": "ENG0505"
+                }
+              },
+              {
+                "id": 50287,
+                "path": "/eng0507Edit",
+                "meta": {
+                  "label": "公會基本資料",
+                  "functionId": "ENG0507"
+                }
+              },
+              {
+                "id": 50289,
+                "path": "/eng0509Edit",
+                "meta": {
+                  "label": "全聯會基本資料",
+                  "functionId": "ENG0509"
+                }
+              }
+            ]
+          },
+          {
+            "id": 5029,
+            "meta": {
+              "directory": true,
+              "label": "簽證管理"
+            },
+            "children": [
+              {
+                "id": 50291,
+                "path": "/eng0301Query",
+                "meta": {
+                  "label": "簽證案件維護",
+                  "functionId": "ENG0301"
+                }
+              },
+              {
+                "id": 50292,
+                "path": "/eng0302Query",
+                "meta": {
+                  "label": "技師簽證紀錄管理",
+                  "functionId": "ENG0302"
+                }
+              },
+              {
+                "id": 50293,
+                "path": "/eng0303Query",
+                "meta": {
+                  "label": "技師簽證異常統計",
+                  "functionId": "ENG0303"
+                }
+              },
+              {
+                "id": 6667,
+                "path": "/eng0704Query",
+                "meta": {
+                  "label": "政府機關維護",
+                  "functionId": "ENG0704"
+                }
+              },
+              {
+                "id": 6669,
+                "path": "/eng0824Query",
+                "meta": {
+                  "label": "技師法相關解釋函查詢",
+                  "functionId": "ENG0824"
+                }
+              },
+              {
+                "id": 50294,
+                "path": "/eng0304Query",
+                "meta": {
+                  "label": "技術顧問公司簽證案件數量統計",
+                  "functionId": "ENG0304"
+                }
+              },
+              {
+                "id": 50295,
+                "path": "/eng0305Query",
+                "meta": {
+                  "label": "政府機關自辦案件簽證數量統計表",
+                  "functionId": "ENG0305"
+                }
+              },
+              {
+                "id": 6670,
+                "path": "/eng0825Query",
+                "meta": {
+                  "label": "工程技術顧問公司管理條例相關解釋函查詢",
+                  "functionId": "ENG0825"
+                }
+              },
+              {
+                "id": 6671,
+                "path": "/eng0604Query",
+                "meta": {
+                  "label": "執業技師地理資訊(GIS)",
+                  "functionId": "ENG0604"
+                }
+              },
+              {
+                "id": 50296,
+                "path": "/eng0306Export",
+                "meta": {
+                  "label": "技師簽證綜合報表",
+                  "functionId": "ENG0306"
+                }
+              }
+            ]
+          },
+          {
+            "id": 6672,
+            "meta": {
+              "label": "技師線上作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 6673,
+                "path": "/eng0406Query",
+                "meta": {
+                  "functionId": "ENG0406",
+                  "label": "技師業務登記簿"
+                }
+              },
+              {
+                "id": 6674,
+                "path": "/eng0403Query",
+                "meta": {
+                  "functionId": "ENG0403",
+                  "label": "上傳上課紀錄"
+                }
+              },
+              {
+                "id": 6675,
+                "path": "/eng0404Query",
+                "meta": {
+                  "functionId": "ENG0404",
+                  "label": "上課紀錄審查"
+                }
+              },
+              {
+                "id": 6676,
+                "path": "/eng0405Query",
+                "meta": {
+                  "functionId": "ENG0405",
+                  "label": "技師訓練活動查詢"
+                }
+              },
+              {
+                "id": 6667,
+                "path": "/eng0704Query",
+                "meta": {
+                  "label": "政府機關維護",
+                  "functionId": "ENG0704"
+                }
+              },
+              {
+                "id": 6669,
+                "path": "/eng0824Query",
+                "meta": {
+                  "label": "技師法相關解釋函查詢",
+                  "functionId": "ENG0824"
+                }
+              },
+              {
+                "id": 6670,
+                "path": "/eng0825Query",
+                "meta": {
+                  "label": "工程技術顧問公司管理條例相關解釋函查詢",
+                  "functionId": "ENG0825"
+                }
+              },
+              {
+                "id": 6671,
+                "path": "/eng0604Query",
+                "meta": {
+                  "label": "執業技師地理資訊(GIS)",
+                  "functionId": "ENG0604"
+                }
+              }
+            ]
+          },
+          {
+            "id": 6010,
+            "meta": {
+              "label": "履約驗收",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 6668,
+                "path": "/eng0812Query",
+                "meta": {
+                  "label": "系統檢核報表",
+                  "functionId": "ENG0812"
+                }
+              },
+              {
+                "id": 6011,
+                "path": "/eng0210Query",
+                "meta": {
+                  "functionId": "ENG0210",
+                  "label": "施工查核成積丙等件數"
+                }
+              },
+              {
+                "id": 6012,
+                "path": "/eng0211Query",
+                "meta": {
+                  "functionId": "ENG0211",
+                  "label": "在建工程不符合比例之廠商名單"
+                }
+              },
+              {
+                "id": 6022,
+                "path": "/eng0501Query",
+                "meta": {
+                  "functionId": "ENG0501",
+                  "label": "公會組織作業"
+                }
+              },
+              {
+                "id": 6023,
+                "path": "/eng0501EditInfo",
+                "meta": {
+                  "functionId": "ENG0501",
+                  "label": "技師線上作業"
+                }
+              }
+            ]
+          },
+          {
+            "id": 7010,
+            "meta": {
+              "label": "其他團體線上作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 7011,
+                "path": "/eng0508EditInfo",
+                "meta": {
+                  "functionId": "ENG0508",
+                  "label": "其他團體基本資料"
+                }
+              }
+            ]
+          },
+          {
+            "id": 8010,
+            "meta": {
+              "label": "機關線上作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 8011,
+                "path": "/eng0510EditInfo",
+                "meta": {
+                  "functionId": "ENG0510",
+                  "label": "機關基本資料"
+                }
+              }
+            ]
+          },
+          {
+            "id": 9010,
+            "meta": {
+              "label": "履約紀錄/其它作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 9011,
+                "path": "/eng0601Query",
+                "meta": {
+                  "functionId": "ENG0601",
+                  "label": "技術服務廠商履約紀錄"
+                }
+              },
+              {
+                "id": 6013,
+                "path": "/eng0607Query",
+                "meta": {
+                  "functionId": "ENG0607",
+                  "label": "司法院裁判書查詢"
+                }
+              },
+              {
+                "id": 9012,
+                "path": "/eng0602Query",
+                "meta": {
+                  "functionId": "ENG0602",
+                  "label": "執業技師履約紀錄"
+                }
+              },
+              {
+                "id": 9013,
+                "path": "/eng0603Query",
+                "meta": {
+                  "functionId": "ENG0603",
+                  "label": "建築師履約紀錄"
+                }
+              }
+            ]
+          },
+          {
+            "id": 807,
+            "meta": {
+              "label": "顧問公司作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 8074,
+                "path": "/eng0804Query",
+                "meta": {
+                  "label": "事務所及顧問公司名冊",
+                  "functionId": "ENG0804"
+                }
+              },
+              {
+                "id": 8077,
+                "path": "/eng0807Query",
+                "meta": {
+                  "label": "董事未擔任同公司執業技師統計表",
+                  "functionId": "ENG0807"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2700,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "大地技師"
+        },
+        "children": [
+          {
+            "id": 2710,
+            "meta": {
+              "directory": true,
+              "label": "首頁"
+            },
+            "children": [
+              {
+                "id": 2711,
+                "path": "/40",
+                "meta": {
+                  "label": "第一試及格者註冊",
+                  "functionId": "geoLg01"
+                }
+              },
+              {
+                "id": 2712,
+                "path": "/geo0202",
+                "meta": {
+                  "label": "求才資訊",
+                  "functionId": "geo0202"
+                }
+              }
+            ]
+          },
+          {
+            "id": 2720,
+            "meta": {
+              "label": "電子申請文件登錄",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 2721,
+                "path": "/geoMe01",
+                "meta": {
+                  "functionId": "geoMe01",
+                  "label": "第一試及格者基本資料"
+                }
+              }
+            ]
+          },
+          {
+            "id": 8201,
+            "meta": {
+              "directory": true,
+              "label": "實務歷練機構"
+            },
+            "children": [
+              {
+                "id": 8202,
+                "path": "/geo0401",
+                "meta": {
+                  "label": "Q&A",
+                  "functionId": "geo0401"
+                }
+              },
+              {
+                "id": 8203,
+                "path": "/geo0502",
+                "meta": {
+                  "label": "刊登求才資訊",
+                  "functionId": "geo0502"
+                }
+              },
+              {
+                "id": 8204,
+                "path": "/geo0503",
+                "meta": {
+                  "label": "主動求才",
+                  "functionId": "geo0503"
+                }
+              }
+            ]
+          },
+          {
+            "id": 8205,
+            "meta": {
+              "directory": true,
+              "label": "新聞、活動及Q&A"
+            },
+            "children": [
+              {
+                "id": 8206,
+                "path": "/geo0402",
+                "meta": {
+                  "label": "Q&A管理",
+                  "functionId": "geo0402"
+                }
+              }
+            ]
+          },
+          {
+            "id": 8207,
+            "meta": {
+              "directory": true,
+              "label": "大地技師管理"
+            },
+            "children": [
+              {
+                "id": 8208,
+                "path": "/geo0603",
+                "meta": {
+                  "label": "工作職缺管理",
+                  "functionId": "geo0603"
+                }
+              }
+            ]
+          },
+          {
+            "id": 8209,
+            "meta": {
+              "directory": true,
+              "label": "總覽"
+            },
+            "children": [
+              {
+                "id": 8210,
+                "path": "/geo0601",
+                "meta": {
+                  "label": "統計總覽",
+                  "functionId": "geo0601"
+                }
+              }
+            ]
+          },
+          {
+            "id": 8211,
+            "meta": {
+              "directory": true,
+              "label": "報表管理"
+            },
+            "children": [
+              {
+                "id": 8212,
+                "path": "/geo0607",
+                "meta": {
+                  "label": "各單位刊登次數與求才人數月報表",
+                  "functionId": "geo0607"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "案件審議"
+        },
+        "children": [
+          {
+            "id": 18200,
+            "meta": {
+              "label": "可行性評估/新興建設計畫",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 18201,
+                "path": "/rev0201",
+                "meta": {
+                  "functionId": "rev0201",
+                  "label": "可行性評估/新興建設計畫(主畫面)",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18101,
+                "path": "/rev0101",
+                "meta": {
+                  "functionId": "rev0101",
+                  "label": "審議情形提醒",
+                  "icon": "tasks"
+                }
+              }
+               ]
+
+          },
+          {
+              "id": 18301,
+              "path": "/rev0301",
+              "meta": {
+                "functionId": "rev0301",
+                "label": "預定函送",
+                "icon": "tasks"
+          }
+        },
+        {
+          "id": 18300,
+          "meta": {
+            "label": "預定函送/基本設計",
+            "directory": true
+          },
+          "children": [
+            {
+              "id": 18301,
+              "path": "/rev0301",
+              "meta": {
+                "functionId": "rev0301",
+                "label": "預定函送(主畫面)",
+                "icon": "tasks"
+              }
+            },
+            {
+              "id": 18401,
+              "path": "/rev0401",
+              "meta": {
+                "functionId": "rev0401",
+                "label": "基本設計(主畫面)",
+                "icon": "tasks"
+              }
+            },
+            {
+              "id": 18501,
+              "path": "/rev0501",
+              "meta": {
+                "functionId": "rev0501",
+                "label": "年度先期",
+                "icon": "tasks"
+              }
+            },
+            {
+              "id": 18502,
+              "path": "/rev0502",
+              "meta": {
+                "functionId": "rev0502",
+                "label": "年度先期檢視",
+                "icon": "tasks"
+              }
+            }
+          ]
+        },
+          {
+            "id": 18600,
+            "meta": {
+              "label": "統計分析",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 18601,
+                "path": "/rev0601",
+                "meta": {
+                  "functionId": "rev0601",
+                  "label": "審議完成率統計",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18602,
+                "path": "/rev0602",
+                "meta": {
+                  "functionId": "rev0602",
+                  "label": "辦理情形統計",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18603,
+                "path": "/rev0603",
+                "meta": {
+                  "functionId": "rev0603",
+                  "label": "機關統計",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18604,
+                "path": "/rev0604",
+                "meta": {
+                  "functionId": "rev0604",
+                  "label": "案件經費統計",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18605,
+                "path": "/rev0605",
+                "meta": {
+                  "functionId": "rev0605",
+                  "label": "前瞻統計",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18606,
+                "path": "/rev0606",
+                "meta": {
+                  "functionId": "rev0606",
+                  "label": "單位造價分析",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18607,
+                "path": "/rev0607",
+                "meta": {
+                  "functionId": "rev0607",
+                  "label": "替選方案評估統計",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18802,
+                "path": "/rev0802",
+                "meta": {
+                  "functionId": "rev0802",
+                  "label": "單位造價類別設定",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18803,
+                "path": "/rev0803",
+                "meta": {
+                  "functionId": "rev0803",
+                  "label": "參數設定",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          },
+          {
+            "id": 18700,
+            "meta": {
+              "label": "查詢作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 18701,
+                "path": "/rev0701",
+                "meta": {
+                  "functionId": "rev0701",
+                  "label": "案件常見缺失查詢",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18702,
+                "path": "/rev0702",
+                "meta": {
+                  "functionId": "rev0702",
+                  "label": "辦理情形查詢",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 18703,
+                "path": "/rev0703",
+                "meta": {
+                  "functionId": "rev0703",
+                  "label": "進階查詢",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "計畫證照"
+        },
+        "children": [
+          {
+            "id": 1002101,
+            "path": "/lic0101",
+            "meta": {
+              "functionId": "lic0101",
+              "label": "整體概況",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 1002401,
+            "path": "/lic0401",
+            "meta": {
+              "functionId": "lic0401",
+              "label": "待審清單",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 1002402,
+            "path": "/lic0402",
+            "meta": {
+              "functionId": "lic0402",
+              "label": "已審清單",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 10023,
+            "meta": {
+              "label": "計畫概況",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 100231,
+                "path": "/lic0301",
+                "meta": {
+                  "functionId": "lic0301",
+                  "label": "計畫概況",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          },
+          {
+            "id": 10025,
+            "path": "/lic0501",
+            "meta": {
+              "functionId": "lic0501",
+              "label": "計畫管理",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 10026,
+            "meta": {
+              "label": "證照管理",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 100261,
+                "path": "/lic0601",
+                "meta": {
+                  "functionId": "lic0601",
+                  "label": "應辦證照新增與編修",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 100262,
+                "path": "/lic0602",
+                "meta": {
+                  "functionId": "lic0602",
+                  "label": "應辦證照盤點檢視表",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 100263,
+                "path": "/lic0603",
+                "meta": {
+                  "functionId": "lic0603",
+                  "label": "證照辦理情形填報",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 100264,
+                "path": "/lic0604",
+                "meta": {
+                  "functionId": "lic0604",
+                  "label": "本月及上月證照辦理情形",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 100265,
+                "path": "/lic0605",
+                "meta": {
+                  "functionId": "lic0605",
+                  "label": "歷史證照辦理情形",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          },
+          {
+            "id": 10027,
+            "meta": {
+              "label": "推動管理",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 100271,
+                "path": "/lic0701",
+                "meta": {
+                  "functionId": "lic0701",
+                  "label": "工作小組成員管理",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 100272,
+                "path": "/lic0702",
+                "meta": {
+                  "functionId": "lic0702",
+                  "label": "工作小組會議紀錄",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 100273,
+                "path": "/lic0703",
+                "meta": {
+                  "functionId": "lic0703",
+                  "label": "推動平臺成員管理",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 100274,
+                "path": "/lic0704",
+                "meta": {
+                  "functionId": "lic0704",
+                  "label": "推動平臺會議紀錄",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          },
+          {
+            "id": 100281,
+            "path": "/lic0801",
+            "meta": {
+              "functionId": "lic0801",
+              "label": "辦理情形提醒",
+              "icon": "tasks"
+            }
+          }
+        ]
+      },
+      {
+        "id": 1102,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "災後復建"
+        },
+        "children": [
+          {
+            "id": 1103,
+            "meta": {
+              "label": "管理作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 1104,
+                "path": "/rec0502",
+                "meta": {
+                  "functionId": "rec0502",
+                  "label": "風災管理",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1105,
+                "path": "/rec0503",
+                "meta": {
+                  "functionId": "rec0503",
+                  "label": "使用者工程類別管理",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1106,
+                "path": "/rec0211",
+                "meta": {
+                  "functionId": "rec0211",
+                  "label": "鄰近致災案件查詢",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1107,
+                "path": "/rec0212",
+                "meta": {
+                  "functionId": "rec0212",
+                  "label": "自選縣市各工程類別之執行統計表",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1108,
+                "path": "/rec0213",
+                "meta": {
+                  "functionId": "rec0213",
+                  "label": "自選縣市各鄉鎮市區之執行統計表",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1109,
+                "path": "/rec0214",
+                "meta": {
+                  "functionId": "rec0214",
+                  "label": "自選經費範圍之執行統計表",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1110,
+                "path": "/rec0215",
+                "meta": {
+                  "functionId": "rec0215",
+                  "label": "自選時間範圍之發包或完工統計表",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1112,
+                "path": "/rec0217",
+                "meta": {
+                  "functionId": "rec0217",
+                  "label": "自選縣市之工程經費變更案件查詢",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1113,
+                "path": "/rec0218",
+                "meta": {
+                  "functionId": "rec0218",
+                  "label": "自選縣市之工程註銷案件查詢",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1114,
+                "path": "/rec0219",
+                "meta": {
+                  "functionId": "rec0219",
+                  "label": "自選縣市提報完工期限展延案件查詢",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1115,
+                "path": "/rec0220",
+                "meta": {
+                  "functionId": "rec0220",
+                  "label": "自選縣市提報核列案件統計表",
+                  "icon": "tasks"
+                }
+              },
+              {
+                "id": 1116,
+                "path": "/rec0221",
+                "meta": {
+                  "functionId": "rec0221",
+                  "label": "工程類別提報核列案件統計表",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          },
+          {
+            "id": 1130,
+            "meta": {
+              "label": "提報作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 1131,
+                "path": "/rec0301",
+                "meta": {
+                  "functionId": "rec0301",
+                  "label": "查詢, 入口主畫面",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          },
+          {
+            "id": 1140,
+            "meta": {
+              "label": "執行控管作業",
+              "directory": true
+            },
+            "children": [
+              {
+                "id": 1141,
+                "path": "/rec0401",
+                "meta": {
+                  "functionId": "rec0401",
+                  "label": "查詢, 入口主畫面",
+                  "icon": "tasks"
+                }
+              }
+            ]
+          },
+          {
+            "id": 306,
+            "path": "/rec0206",
+            "meta": {
+              "functionId": "rec0206",
+              "label": "各風災原住民鄉核列件數及金額統計"
+            }
+          },
+          {
+            "id": 309,
+            "path": "/rec0309",
+            "meta": {
+              "functionId": "rec0309",
+              "label": "災後復建審議"
+            }
+          }
+        ]
+      },
+      {
+        "id": 81000,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-標案資料登錄"
+        },
+        "children": [
+          {
+            "id": 81100,
+            "meta": {
+              "directory": true,
+              "label": "標案資料登錄查詢"
+            },
+            "children": [
+              {
+                "id": 81101,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "標案資料登錄查詢",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 81200,
+            "meta": {
+              "directory": true,
+              "label": "開工前階段"
+            },
+            "children": [
+              {
+                "id": 81211,
+                "path": "/bidAaa003",
+                "meta": {
+                  "functionId": "bidAaa003",
+                  "label": "變更經費期程"
+                }
+              },
+              {
+                "id": 81212,
+                "path": "/bidAaa004",
+                "meta": {
+                  "functionId": "bidAaa004",
+                  "label": "停工狀況"
+                }
+              },
+              {
+                "id": 81213,
+                "path": "/bidAad005",
+                "meta": {
+                  "functionId": "bidAad005",
+                  "label": "外籍勞工核定"
+                }
+              },
+              {
+                "id": 81214,
+                "path": "/bidAaa002",
+                "meta": {
+                  "functionId": "bidAaa002",
+                  "label": "基本資料"
+                }
+              },
+              {
+                "id": 81215,
+                "path": "/bidAac001",
+                "meta": {
+                  "functionId": "bidAac001",
+                  "label": "承造廠商之品管人員"
+                }
+              },
+              {
+                "id": 81216,
+                "path": "/bidAac002",
+                "meta": {
+                  "functionId": "bidAac002",
+                  "label": "承造廠商專任工程人員"
+                }
+              },
+              {
+                "id": 81217,
+                "path": "/bidAac003",
+                "meta": {
+                  "functionId": "bidAac003",
+                  "label": "工地主任及工地負責人"
+                }
+              },
+              {
+                "id": 81218,
+                "path": "/bidAab006",
+                "meta": {
+                  "functionId": "bidAab006",
+                  "label": "開工要件"
+                }
+              },
+              {
+                "id": 81219,
+                "path": "/bidAac004",
+                "meta": {
+                  "functionId": "bidAac004",
+                  "label": "承造廠商技術士"
+                }
+              },
+              {
+                "id": 81220,
+                "path": "/bidAac005",
+                "meta": {
+                  "functionId": "bidAac005",
+                  "label": "安衛人員"
+                }
+              },
+              {
+                "id": 81221,
+                "path": "/bidAac006",
+                "meta": {
+                  "functionId": "bidAac006",
+                  "label": "其他合約規定人員"
+                }
+              },
+              {
+                "id": 81223,
+                "path": "/bidAac007",
+                "meta": {
+                  "functionId": "bidAac007",
+                  "label": "監造單位現場人員"
+                }
+              },
+              {
+                "id": 81226,
+                "path": "/bidAac008",
+                "meta": {
+                  "functionId": "bidAac008",
+                  "label": "規劃設計監造PCM專技人員"
+                }
+              },
+             
+              {
+                "id": 81222,
+                "path": "/bidAab002",
+                "meta": {
+                  "functionId": "bidAab002",
+                  "label": "預定完成里程碑"
+                }
+              },
+              {
+                "id": 81225,
+                "path": "/bidAac013",
+                "meta": {
+                  "functionId": "bidAac013",
+                  "label": "工地型預拌混凝土通報"
+                }
+              },
+              {
+                "id": 81224,
+                "path": "/bidAab005",
+                "meta": {
+                  "functionId": "bidAab005",
+                  "label": "未開工原因"
+                }
+              }
+            ]
+          },
+          {
+            "id": 81300,
+            "meta": {
+              "directory": true,
+              "label": "履約期間階段"
+            },
+            "children": [
+              {
+                "id": 81301,
+                "path": "/bidAaa005",
+                "meta": {
+                  "functionId": "bidAaa005",
+                  "label": "付款狀況"
+                }
+              },
+              {
+                "id": 81302,
+                "path": "/bidAab001",
+                "meta": {
+                  "functionId": "bidAab001",
+                  "label": "各月分配"
+                }
+              },
+              {
+                "id": 81303,
+                "path": "/bidAad002/query",
+                "meta": {
+                  "functionId": "bidAad002",
+                  "label": "工安事件狀況"
+                }
+              },
+              {
+                "id": 8104,
+                "path": "/bidAad003",
+                "meta": {
+                  "functionId": "bidAad003",
+                  "label": "環保裁罰狀況"
+                }
+              },
+              {
+                "id": 81311,
+                "path": "/bidAad007",
+                "meta": {
+                  "functionId": "bidAad007",
+                  "label": "施工相片影像文件上傳"
+                }
+              },
+              {
+                "id": 81304,
+                "path": "/bidAab008",
+                "meta": {
+                  "functionId": "bidAab008",
+                  "label": "復建院核定項目"
+                }
+              },
+              {
+                "id": 81312,
+                "path": "/bidAab009",
+                "meta": {
+                  "functionId": "bidAab009",
+                  "label": "復建請撥款情形"
+                }
+              },
+              {
+                "id": 81313,
+                "path": "/bidAad006",
+                "meta": {
+                  "functionId": "bidAad006",
+                  "label": "人力需求"
+                }
+              },
+              {
+                "id": 81314,
+                "path": "/bidAac011",
+                "meta": {
+                  "functionId": "bidAac011",
+                  "label": "監督付款或連帶保證"
+                }
+              },
+              {
+                "path": "/bidAab007",
+                "meta": {
+                  "functionId": "bidAab007",
+                  "label": "開口合約派工"
+                }
+              }
+            ]
+          },
+          {
+            "id": 81400,
+            "meta": {
+              "directory": true,
+              "label": "竣工結案階段"
+            },
+            "children": [
+              {
+                "id": 81403,
+                "path": "/bidAad008",
+                "meta": {
+                  "label": "履約情形計分",
+                  "functionId": "bidAad008"
+                }
+              },
+              {
+                "id": 81402,
+                "path": "/bidAac009",
+                "meta": {
+                  "functionId": "bidAac009",
+                  "label": "竣工或結案"
+                }
+              }
+            ]
+          },
+          {
+            "id": 81500,
+            "meta": {
+              "directory": true,
+              "label": "(暫定)不知道要放哪裡的功能"
+            },
+            "children": [
+              {
+                "id": 81501,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "不知道要放哪裡的功能-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 82000,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-標案資料管理"
+        },
+        "children": [
+          {
+            "id": 82500,
+            "meta": {
+              "directory": true,
+              "label": "標案查詢"
+            },
+            "children": [
+              {
+                "id": 82501,
+                "path": "/bidAba001",
+                "meta": {
+                  "label": "標案查詢",
+                  "functionId": "bidAba001"
+                }
+              },
+              {
+                "id": 82502,
+                "path": "/bidAba002",
+                "meta": {
+                  "functionId": "bidAba002",
+                  "label": "依工程施工地點查詢"
+                }
+              },
+              {
+                "id": 82503,
+                "path": "/bidAda001",
+                "meta": {
+                  "functionId": "bidAda001",
+                  "label": "標案執行機關變更"
+                }
+              }
+            ]
+          },
+          {
+            "id": 82100,
+            "meta": {
+              "directory": true,
+              "label": "標案資料服務"
+            },
+            "children": [
+              {
+                "id": 82101,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "標案管制",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82102,
+                "path": "/bidAdc001",
+                "meta": {
+                  "label": "標案案件調查(合併&分析)",
+                  "functionId": "bidAdc001"
+                }
+              },
+              {
+                "id": 82103,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "標案修改申請",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82104,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "地理資訊服務",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82105,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "金質獎",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82106,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "專案追蹤列管",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82107,
+                "path": "/bidAbe002/query",
+                "meta": {
+                  "label": "改為非工程",
+                  "functionId": "bidAbe002"
+                }
+              },
+              {
+                "id": 82108,
+                "path": "/bidAbe007",
+                "meta": {
+                  "label": "政府機關名稱",
+                  "functionId": "bidAbe007"
+                }
+              }
+            ]
+          },
+          {
+            "id": 82200,
+            "meta": {
+              "directory": true,
+              "label": "復建核定經費作業"
+            },
+            "children": [
+              {
+                "id": 82201,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "復建經費資料登錄",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82202,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "復建工程執行確認作業",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 82300,
+            "meta": {
+              "directory": true,
+              "label": "延遲付款作業"
+            },
+            "children": [
+              {
+                "id": 82301,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "新增一百萬以下標案延遲付款",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82302,
+                "path": "/bidAaa006",
+                "meta": {
+                  "label": "延遲付款處理",
+                  "functionId": "bidAaa006"
+                }
+              },
+              {
+                "id": 82303,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "延遲付款通報",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 82304,
+                "path": "/bidBda001",
+                "meta": {
+                  "label": "廠商通報延遲付款",
+                  "functionId": "bidBda001"
+                }
+              }
+              
+            ]
+          }
+        ]
+      },
+      {
+        "id": 83000,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-查核作業"
+        },
+        "children": [
+          {
+            "id": 83100,
+            "meta": {
+              "directory": true,
+              "label": "查核行程預排作業"
+            },
+            "children": [
+              {
+                "id": 83101,
+                "path": "/bidAbb001",
+                "meta": {
+                  "label": "查核行程預排作業",
+                  "functionId": "bidAbb001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 83200,
+            "meta": {
+              "directory": true,
+              "label": "進度查證"
+            },
+            "children": [
+              {
+                "id": 83201,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "查核行程預排作業-temp",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 83202,
+                "path": "/bidAbd001",
+                "meta": {
+                  "label": "進度查證輸入",
+                  "functionId": "bidAbd001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 83300,
+            "meta": {
+              "directory": true,
+              "label": "查核結果輸入作業"
+            },
+            "children": [
+              {
+                "id": 83301,
+                "path": "/bidAad001",
+                "meta": {
+                  "functionId": "bidAad001",
+                  "label": "查核懲處狀況"
+                }
+              },
+              {
+                "id": 83302,
+                "path": "/bidAbc001",
+                "meta": {
+                  "functionId": "bidAbc001",
+                  "label": "上級機關品質查核結果輸入"
+                }
+              }
+            ]
+          },
+          {
+            "id": 83400,
+            "meta": {
+              "directory": true,
+              "label": "施工查核季報"
+            },
+            "children": [
+              {
+                "id": 83401,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "查核結果輸入作業-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 83500,
+            "meta": {
+              "directory": true,
+              "label": "查核委員專家名單"
+            },
+            "children": [
+              {
+                "id": 83501,
+                "path": "/bidAkc001",
+                "meta": {
+                  "label": "查核委員專家名單資料庫",
+                  "functionId": "bidAkc001"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 84000,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-系統管理"
+        },
+        "children": [
+          {
+            "id": 84100,
+            "meta": {
+              "directory": true,
+              "label": "給帳號"
+            },
+            "children": [
+              {
+                "id": 84101,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "給帳號-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 84200,
+            "meta": {
+              "directory": true,
+              "label": "新增所屬內部單位"
+            },
+            "children": [
+              {
+                "id": 84201,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "新增所屬內部單位-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 84300,
+            "meta": {
+              "directory": true,
+              "label": "機關聯絡人員名單維護"
+            },
+            "children": [
+              {
+                "id": 84301,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "機關聯絡人員名單維護-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 85000,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-報表查詢"
+        },
+        "children": [
+          {
+            "id": 85100,
+            "meta": {
+              "directory": true,
+              "label": "廠商分析"
+            },
+            "children": [
+              {
+                "id": 85101,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "廠商分析-temp",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 85102,
+                "path": "/bidAcb008",
+                "meta": {
+                  "label": "廠商履歷表",
+                  "functionId": "bidAcb008"
+                }
+              }
+            ]
+          },
+          {
+            "id": 85200,
+            "meta": {
+              "directory": true,
+              "label": "標案報表"
+            },
+            "children": [
+              {
+                "id": 85201,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "標案報表-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 85300,
+            "meta": {
+              "directory": true,
+              "label": "異常狀況"
+            },
+            "children": [
+              {
+                "id": 85301,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "異常狀況-temp",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 85302,
+                "path": "/bidAcd014",
+                "meta": {
+                  "label": "工安事件表",
+                  "functionId": "bidAcd014"
+                }
+              }
+            ]
+          },
+          {
+            "id": 85400,
+            "meta": {
+              "directory": true,
+              "label": "人員管制"
+            },
+            "children": [
+              {
+                "id": 85401,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "人員管制-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 85500,
+            "meta": {
+              "directory": true,
+              "label": "品質查核"
+            },
+            "children": [
+              {
+                "id": 85501,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "品質查核-temp",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 85502,
+                "path": "/bidAcf016",
+                "meta": {
+                  "label": "異常廠商篩選",
+                  "functionId": "bidAcf016"
+                }
+              }
+            ]
+          },
+          {
+            "id": 85600,
+            "meta": {
+              "directory": true,
+              "label": "其他服務"
+            },
+            "children": [
+              {
+                "id": 85601,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "其他服務-temp",
+                  "functionId": "bidAaa001"
+                }
+              },
+              {
+                "id": 85602,
+                "path": "/bidAla001",
+                "meta": {
+                  "label": "重大工安事件查詢",
+                  "functionId": "bidAla001"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 86000,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-其他查詢"
+        },
+        "children": [
+          {
+            "id": 86100,
+            "meta": {
+              "directory": true,
+              "label": "全民督工"
+            },
+            "children": [
+              {
+                "id": 86101,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "全民督工-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 86200,
+            "meta": {
+              "directory": true,
+              "label": "承攬廠商編號查詢"
+            },
+            "children": [
+              {
+                "id": 86201,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "承攬廠商編號查詢-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          },
+          {
+            "id": 86300,
+            "meta": {
+              "directory": true,
+              "label": "工程人員履歷"
+            },
+            "children": [
+              {
+                "id": 86301,
+                "path": "/bidAaa001",
+                "meta": {
+                  "label": "工程人員履歷-temp",
+                  "functionId": "bidAaa001"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 997,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "創新產品交流平台查詢"
+        },
+        "children": [
+          {
+            "id": 998,
+            "meta": {
+              "directory": true,
+              "label": "創新產品查詢"
+            },
+            "children": [
+              {
+                "id": 999,
+                "path": "/proAd0101Query",
+                "meta": {
+                  "label": "後臺查詢",
+                  "functionId": "pro0101"
+                }
+              },
+              {
+                "id": 1000,
+                "path": "/pro0103r1",
+                "meta": {
+                  "label": "交流意見",
+                  "functionId": "pro0103r1"
+                }
+              },
+              {
+                "id": 1001,
+                "path": "/pro104",
+                "meta": {
+                  "label": "歷史查詢",
+                  "functionId": "pro0104"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 510,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "使用者權限管理"
+        },
+        "children": [
+          {
+            "meta": {
+              "directory": true,
+              "label": "使用者權限管理"
+            },
+            "children": [
+              {
+                "id": 511,
+                "path": "/pwb0204",
+                "meta": {
+                  "label": "使用者權限維護",
+                  "functionId": "pwb0204"
+                }
+              },
+              {
+                "id": 512,
+                "path": "/pwb0203",
+                "meta": {
+                  "label": "使用者權限申請",
+                  "functionId": "pwb0203"
+                }
+              },
+              {
+                "id": 513,
+                "path": "/pwb0103",
+                "meta": {
+                  "label": "雲端系統公告事項",
+                  "functionId": "pwb0103"
+                }
+              },
+              {
+                "id": 514,
+                "path": "/pwb0201",
+                "meta": {
+                  "label": "使用者資料維護",
+                  "functionId": "pwb0201"
+                }
+              },
+              {
+                "id": 515,
+                "path": "/pwb0301",
+                "meta": {
+                  "label": "單位管理者權限申請",
+                  "functionId": "pwb0301"
+                }
+              },
+              {
+                "id": 516,
+                "path": "/pwb0302",
+                "meta": {
+                  "label": "單位管理者權限維護",
+                  "functionId": "pwb0302"
+                }
+              },
+              {
+                "id": 517,
+                "path": "/pwb0202",
+                "meta": {
+                  "label": "使用者管理",
+                  "functionId": "pwb0202"
+                }
+              },
+              {
+                "id": 518,
+                "path": "/pwb0303",
+                "meta": {
+                  "label": "所屬機關權限維護",
+                  "functionId": "pwb0303"
+                }
+              },
+              {
+                "id": 519,
+                "path": "/pwb0205",
+                "meta": {
+                  "label": "常用功能維護",
+                  "functionId": "pwb0205"
+                }
+              },
+              {
+                "id": 520,
+                "path": "/pwb0401",
+                "meta": {
+                  "label": "權限審核檔維護",
+                  "functionId": "pwb0401"
+                }
+              },
+              {
+                "id": 521,
+                "path": "/pwb0402",
+                "meta": {
+                  "label": "角色模組維護",
+                  "functionId": "pwb0402"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 55520,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-送機關備查之分包情形廠商"
+        },
+        "children": [
+          {
+            "meta": {
+              "directory": true,
+              "label": "送機關備查之分包情形廠商"
+            },
+            "children": [
+              {
+                "id": 55521,
+                "path": "/bidAaa007",
+                "meta": {
+                  "label": "送機關備查之分包情形廠商",
+                  "functionId": "bidAaa007"
+                }
+              }
+            ]
+          }
+        ]
+      },
+
+
+      {
+        "id": 66620,
+        "meta": {
+          "directory": true,
+          "icon": "tasks",
+          "label": "標案管理-補填[變更]字樣"
+        },
+        "children": [
+          {
+            "meta": {
+              "directory": true,
+              "label": "補填[變更]字樣(設為子案功能)"
+            },
+            "children": [
+              {
+                "id": 66621,
+                "path": "/bidAbe001",
+                "meta": {
+                  "label": "補填[變更]字樣(設為子案功能)",
+                  "functionId": "bidAbe001"
+                }
+              }
+            ]
+          }
+        ]
+      }
+
+
+
+
+
+    ]
+  }
+]

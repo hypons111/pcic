@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertType1" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="380480d1-48d8-4b9e-be11-86a87adb6c68">
+	<property name="ireport.zoom" value="3.138428376721022"/>
+	<property name="ireport.x" value="33"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="certificateWord" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="sex" class="java.lang.String"/>
+	<parameter name="idno" class="java.lang.String"/>
+	<parameter name="birthDate" class="java.lang.String"/>
+	<parameter name="praApproach" class="java.lang.String"/>
+	<parameter name="praComp" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="scope" class="java.lang.String"/>
+	<parameter name="period" class="java.lang.String"/>
+	<parameter name="createDate" class="java.lang.String"/>
+	<parameter name="backgroundUrl" class="java.lang.String"/>
+	<parameter name="imgUrl" class="java.lang.String"/>
+	<parameter name="praScope" class="java.lang.String"/>
+	<detail>
+		<band height="842">
+			<image>
+				<reportElement x="0" y="0" width="595" height="842" uuid="9e69a7d5-6112-413c-9b73-8cd0524d7aa6"/>
+				<imageExpression><![CDATA[$P{backgroundUrl}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="416" y="165" width="102" height="129" uuid="e7faf1d7-2232-4c23-8b48-0dce01d12d50">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{imgUrl}]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="741" width="415" height="30" isPrintWhenDetailOverflows="true" uuid="e03b8dd3-9bc4-490e-8df2-4ec6425b36ae"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{createDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="120" y="170" width="195" height="25" isPrintWhenDetailOverflows="true" uuid="bf9d2c3f-1d9b-4c09-b4c9-37b7afd4aaea"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{certificateWord}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="195" width="336" height="25" isPrintWhenDetailOverflows="true" uuid="0fe598b2-90fe-4451-afad-11f7913bc668"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["技師　"+$P{name}+"　申請執業核與技師法規定"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="220" width="336" height="25" isPrintWhenDetailOverflows="true" uuid="a3dfaede-21d9-4ced-aa62-e2c17f200bfc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[相符合行發給執業證照准予執業登記事項如下：]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="245" width="336" height="25" isPrintWhenDetailOverflows="true" uuid="b11f6396-118b-4395-86b8-3dcacb4c0895"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["一、姓名："+$P{name}+"　性別："+$P{sex}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="270" width="336" height="25" isPrintWhenDetailOverflows="true" uuid="6be246c2-1679-4e58-b487-4ddf95248e14"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["　　身分證明文件字號："+$P{idno}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="295" width="415" height="25" isPrintWhenDetailOverflows="true" uuid="45ff9a51-511e-4dac-aaaf-d52a2be01361"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["二、出生年月日："+$P{birthDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="320" width="415" height="25" isPrintWhenDetailOverflows="true" uuid="e174fa7b-f74b-42f3-a3d6-97e02c159e85"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["三、執業方式："+$P{praApproach}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="345" width="415" height="25" isPrintWhenDetailOverflows="true" uuid="27300237-51ff-4470-8dfc-9eb707aa94c4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["四、執業機構名稱："+$P{praComp}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="370" width="415" height="25" isPrintWhenDetailOverflows="true" uuid="3e735148-024f-4afc-86b9-b726478244e7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["　　所在地："+$P{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="398" width="145" height="53" isPrintWhenDetailOverflows="true" uuid="f78c03c4-d9e8-4272-b1e6-ee4b2b0b7a38"/>
+				<textElement verticalAlignment="Top">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[五、技師科別及證書字號：]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="235" y="398" width="270" height="53" isPrintWhenDetailOverflows="true" uuid="e8decdcb-044a-4219-9c62-46d14285e4bc"/>
+				<textElement verticalAlignment="Top">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{scope}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="476" width="415" height="25" isPrintWhenDetailOverflows="true" uuid="a3346a6f-0f94-4311-9e3c-f018fa54a403"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["七、執照有效期間：自民國"+$P{period}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="451" width="415" height="25" isPrintWhenDetailOverflows="true" uuid="3a3e2401-b206-433e-a22e-1f45305405a9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[六、執業範圍：（如背面）]]></text>
+			</staticText>
+		</band>
+		<band height="842">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="54" width="415" height="30" uuid="bf762809-45b2-49a2-9272-c49381156cc0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{praScope}.replaceAll("<br>", "\r\n")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

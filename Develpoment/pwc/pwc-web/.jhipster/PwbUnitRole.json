@@ -1,0 +1,67 @@
+{
+  "applications": "*",
+  "changelogDate": "20220621082421",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "pwb_unit_role",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIGINT",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "unitId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "roleId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PwbUnitRole",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

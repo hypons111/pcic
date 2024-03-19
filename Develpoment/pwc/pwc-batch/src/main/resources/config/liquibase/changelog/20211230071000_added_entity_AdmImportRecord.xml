@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmImportRecord.
+    -->
+    <changeSet id="20211230071000-1" author="jhipster">
+        <createTable tableName="adm_batch_record">
+            <column name="id" type="bigint" remarks="type: bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="process_date" type="${datetimeType}" remarks="type: date">
+                <constraints nullable="false" />
+            </column>
+            <column name="process_start_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="process_end_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="process_file_name" type="varchar(100)" remarks="type: nvarchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="original_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="processed_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="unprocessed_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="insert_success_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="insert_fail_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_success_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_fail_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="delete_success_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="delete_fail_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="case_success_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="case_fail_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="interfacing_success_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="interfacing_fail_data_count" type="decimal(21,2)" remarks="type: decimal(10,0)">
+                <constraints nullable="false" />
+            </column>
+            <column name="failed_data_memo" type="varchar(1000)" remarks="type: varchar(1000)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_batch_record" columnName="process_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="adm_batch_record" columnName="process_start_time" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="adm_batch_record" columnName="process_end_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+</databaseChangeLog>

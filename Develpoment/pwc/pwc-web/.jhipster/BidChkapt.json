@@ -1,0 +1,162 @@
+{
+  "applications": "*",
+  "changelogDate": "20220719141313",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bid_chkapt",
+  "fields": [
+    {
+      "fieldName": "wkut",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "prjno",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "idate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "scope",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "arlt",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "day",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "deadline",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fcost3",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "afal",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "item1",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "item2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "aokDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dsts",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "fckdat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fokdat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ackdat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "chker1",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "chker2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "fcksdat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fckedat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "acksdat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ackedat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fdays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "adays",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BidChkapt",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

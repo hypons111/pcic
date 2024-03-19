@@ -1,0 +1,106 @@
+{
+  "name": "AdmFile",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "javadoc": "type: bigint",
+      "fieldValidateRules": ["required"],
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "moduleType",
+      "fieldType": "String",
+      "javadoc": "type: varchar(3)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "businessType",
+      "fieldType": "String",
+      "javadoc": "type: varchar(30)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "fieldName": "sourceId",
+      "fieldType": "String",
+      "javadoc": "type: varchar(30)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "fieldName": "fileType",
+      "fieldType": "String",
+      "javadoc": "type: varchar(10)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "fileNameOri",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(200)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "fileName",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(500)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "fileRemark",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(100)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "s3Url",
+      "fieldType": "String",
+      "javadoc": "type: varchar(100)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "adm_file",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220302035609"
+}

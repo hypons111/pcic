@@ -1,0 +1,23 @@
+entity BidPrjQc(Bid_Prj_Qc) {
+	wkut String maxlength(21) ,
+	prjNo String maxlength(40),
+    id String maxlength(10),
+    dsts String maxlength(2),
+	jobType String maxlength(1),
+	major String maxlength(20),
+	company String maxlength(100),
+	siteTel String maxlength(30),
+	startDate LocalDate,
+	endDate LocalDate,
+	duty String maxlength(1),
+	reEntry String maxlength(1),
+	createDate Instant,
+	createUser String maxlength(20),
+	updateDate Instant,
+	updateUser String maxlength(20),
+	remark String maxlength(2000),
+    man String maxlength(20),
+    tel String maxlength(30),
+
+}
+use mapstruct for *

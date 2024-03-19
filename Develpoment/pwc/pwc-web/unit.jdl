@@ -1,0 +1,27 @@
+entity PwbUnitApply (PWB_UNIT_APPLY) {
+    @Id id Long required /** type: BIGINT */
+    unitId String maxlength(20) required /** type: VARCHAR(20) */
+    applyTime Instant /** type: DATETIME */
+    approveTime Instant /** type: DATETIME */
+    status String maxlength(1) /** type: VARCHAR(1) */
+    moduleType String maxlength(3) required /** type: VARCHAR(3) */
+    businessType String maxlength(20) /** type: VARCHAR(20) */
+    approveUnit String maxlength(20) /** type: VARCHAR(20) */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+    updateTime Instant required /** type: DATETIME */
+    createUser String maxlength(20) required /** type: NVARCHAR(20) */
+    createTime Instant required /** type: DATETIME */
+}
+
+entity PwbUnitRole (PWB_UNIT_ROLE) {
+    @Id id Long required /** type: BIGINT */
+    unitId String maxlength(20) required /** type: VARCHAR(20) */
+    roleId String maxlength(20) required /** type: VARCHAR(20) */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+    updateTime Instant required /** type: DATETIME */
+    createUser String maxlength(20) required /** type: NVARCHAR(20) */
+    createTime Instant required /** type: DATETIME */
+}
+
+
+use mapstruct for *

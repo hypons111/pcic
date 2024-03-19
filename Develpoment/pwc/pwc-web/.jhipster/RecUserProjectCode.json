@@ -1,0 +1,61 @@
+{
+  "applications": "*",
+  "changelogDate": "20220506043148",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "rec_user_project_code",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "projectCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RecUserProjectCode",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

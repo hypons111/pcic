@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity RecProject.
+    -->
+    <changeSet id="20220524075520-1" author="jhipster">
+        <createTable tableName="rec_project">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="project_no" type="varchar(22)">
+                <constraints nullable="false" />
+            </column>
+            <column name="typhoon_no" type="varchar(36)">
+                <constraints nullable="false" />
+            </column>
+            <column name="project_code" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apply_org_id" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apply_submit_no" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="approve_no" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="project_name" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="damage_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="damage_descript" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dangerous_degree" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="dangerous_descript" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="reason_analysis" type="varchar(44)">
+                <constraints nullable="true" />
+            </column>
+            <column name="other_reason" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apply_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="project_status" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apply_user_id" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="delete_user_id" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="approve_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="review_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="review_descript" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_review_watch" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_review_in_cal_list" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="execution_status" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="change_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="change_descript" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_review_change_amount" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="review_change_descript" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_cancel_amount" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="cancel_descript" type="varchar(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="review_project_code" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="status_change_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="center_allowance_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="local_reserves_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="return_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="return_status" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_survey_plan" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="survey_plan_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_no_demand" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="survey_plan_end_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="survey_plan_date_1" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="survey_plan_date_2" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="survey_plan_date_3" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_time" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_time" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="rec_project" columnName="damage_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="approve_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="status_change_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="survey_plan_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="survey_plan_end_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="survey_plan_date_1" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="survey_plan_date_2" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="survey_plan_date_3" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="create_time" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="rec_project" columnName="update_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220524075520-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/rec_project.csv"
+                  separator=";"
+                  tableName="rec_project"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="project_no" type="string"/>
+            <column name="typhoon_no" type="string"/>
+            <column name="project_code" type="string"/>
+            <column name="apply_org_id" type="string"/>
+            <column name="apply_submit_no" type="string"/>
+            <column name="approve_no" type="string"/>
+            <column name="project_name" type="string"/>
+            <column name="damage_date" type="date"/>
+            <column name="damage_descript" type="string"/>
+            <column name="dangerous_degree" type="numeric"/>
+            <column name="dangerous_descript" type="string"/>
+            <column name="reason_analysis" type="string"/>
+            <column name="other_reason" type="string"/>
+            <column name="apply_amount" type="numeric"/>
+            <column name="project_status" type="string"/>
+            <column name="apply_user_id" type="string"/>
+            <column name="delete_user_id" type="string"/>
+            <column name="approve_date" type="date"/>
+            <column name="review_amount" type="numeric"/>
+            <column name="review_descript" type="string"/>
+            <column name="is_review_watch" type="boolean"/>
+            <column name="is_review_in_cal_list" type="boolean"/>
+            <column name="execution_status" type="string"/>
+            <column name="change_amount" type="numeric"/>
+            <column name="change_descript" type="string"/>
+            <column name="is_review_change_amount" type="boolean"/>
+            <column name="review_change_descript" type="string"/>
+            <column name="is_cancel_amount" type="boolean"/>
+            <column name="cancel_descript" type="string"/>
+            <column name="review_project_code" type="string"/>
+            <column name="status_change_date" type="date"/>
+            <column name="center_allowance_amount" type="numeric"/>
+            <column name="local_reserves_amount" type="numeric"/>
+            <column name="return_amount" type="numeric"/>
+            <column name="return_status" type="string"/>
+            <column name="is_survey_plan" type="boolean"/>
+            <column name="survey_plan_date" type="date"/>
+            <column name="is_no_demand" type="boolean"/>
+            <column name="survey_plan_end_date" type="date"/>
+            <column name="survey_plan_date_1" type="date"/>
+            <column name="survey_plan_date_2" type="date"/>
+            <column name="survey_plan_date_3" type="date"/>
+            <column name="create_user" type="string"/>
+            <column name="create_time" type="date"/>
+            <column name="update_user" type="string"/>
+            <column name="update_time" type="date"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

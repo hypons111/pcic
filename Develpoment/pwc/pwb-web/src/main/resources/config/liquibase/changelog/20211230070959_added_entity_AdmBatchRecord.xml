@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmBatchRecord.
+    -->
+    <changeSet id="20211230070959-1" author="jhipster">
+        <createTable tableName="adm_batch_record">
+            <column name="id" type="bigint" remarks="type: bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="batch_service_no" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="batch_service_name" type="varchar(20)" remarks="type: nvarchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="batch_service_category" type="varchar(10)" remarks="type: varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="trigger_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="finish_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="result" type="varchar(1)" remarks="type: varchar(1)">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_batch_record" columnName="trigger_time" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="adm_batch_record" columnName="finish_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+</databaseChangeLog>

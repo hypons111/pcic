@@ -1,0 +1,189 @@
+diff --git a/node_modules/vue2-datepicker/index.esm.js b/node_modules/vue2-datepicker/index.esm.js
+index 1e4d634..90ff9cd 100644
+--- a/node_modules/vue2-datepicker/index.esm.js
++++ b/node_modules/vue2-datepicker/index.esm.js
+@@ -1099,7 +1099,7 @@ var script$2 = {
+ 
+       var yearLabel = {
+         panel: 'year',
+-        label: this.formatDate(this.calendar, yearFormat)
++        label: (Number.parseInt(this.formatDate(this.calendar, yearFormat).substring(0, 4)) - 1911) + this.formatDate(this.calendar, yearFormat).substr(4)
+       };
+       var monthLabel = {
+         panel: 'month',
+@@ -1352,7 +1352,7 @@ var script$3 = {
+   },
+   computed: {
+     calendarYear: function calendarYear() {
+-      return this.calendar.getFullYear();
++      return this.calendar.getFullYear() - 1911;
+     },
+     months: function months() {
+       var locale = this.getLocale();
+@@ -1533,7 +1533,7 @@ var script$4 = {
+   },
+   methods: {
+     getYears: function getYears(calendar) {
+-      var firstYear = Math.floor(calendar.getFullYear() / 10) * 10;
++      var firstYear = Math.floor(calendar.getFullYear() / 10) * 10 - 1911;
+       var years = [];
+ 
+       for (var i = 0; i < 10; i++) {
+@@ -1729,7 +1729,7 @@ var CalendarPanel = {
+       });
+     },
+     calendarYear: function calendarYear() {
+-      return this.innerCalendar.getFullYear();
++      return this.innerCalendar.getFullYear() - 1911;
+     },
+     calendarMonth: function calendarMonth() {
+       return this.innerCalendar.getMonth();
+@@ -1780,6 +1780,7 @@ var CalendarPanel = {
+       this.dispatchDatePicker('panel-change', panel, oldPanel);
+     },
+     handleSelectYear: function handleSelectYear(year) {
++      year = Number.parseInt(year) + 1911;
+       if (this.type === 'year') {
+         var date = this.getYearCellDate(year);
+         this.emitDate(date, 'year');
+@@ -1797,17 +1798,18 @@ var CalendarPanel = {
+       }
+     },
+     handleSelectMonth: function handleSelectMonth(month) {
++      const year = Number.parseInt(this.calendarYear) + 1911;
+       if (this.type === 'month') {
+         var date = this.getMonthCellDate(month);
+         this.emitDate(date, 'month');
+       } else {
+-        this.handleCalendarChange(createDate(this.calendarYear, month), 'month');
++        this.handleCalendarChange(createDate(year, month), 'month');
+         this.handelPanelChange('date');
+ 
+         if (this.partialUpdate && this.innerValue.length === 1) {
+           var _date2 = new Date(this.innerValue[0]);
+ 
+-          _date2.setFullYear(this.calendarYear);
++          _date2.setFullYear(year);
+ 
+           this.emitDate(setMonth(_date2, month), 'month');
+         }
+@@ -1817,7 +1819,7 @@ var CalendarPanel = {
+       this.emitDate(date, this.type === 'week' ? 'week' : 'date');
+     },
+     getMonthCellDate: function getMonthCellDate(month) {
+-      return createDate(this.calendarYear, month);
++      return createDate(this.calendarYear + 1911, month);
+     },
+     getYearCellDate: function getYearCellDate(year) {
+       return createDate(year, 0);
+@@ -3348,7 +3350,10 @@ var DatePicker = {
+       type: String,
+       default: 'mx'
+     },
+-    inputClass: {},
++    inputClass: {
++      type: String,
++      default: 'form-control'
++    },
+     inputAttr: {
+       type: Object,
+       default: function _default() {
+diff --git a/node_modules/vue2-datepicker/index.js b/node_modules/vue2-datepicker/index.js
+index 089c4c8..acd276d 100644
+--- a/node_modules/vue2-datepicker/index.js
++++ b/node_modules/vue2-datepicker/index.js
+@@ -8,7 +8,7 @@
+     "@babel/helpers - typeof";
+ 
+     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+-      _typeof = function (obj) {
++      _typeof = function (obj)
+         return typeof obj;
+       };
+     } else {
+@@ -1828,7 +1828,7 @@
+ 
+         var yearLabel = {
+           panel: 'year',
+-          label: this.formatDate(this.calendar, yearFormat)
++          label: (Number.parseInt(this.formatDate(this.calendar, yearFormat).substring(0, 4)) - 1911) + this.formatDate(this.calendar, yearFormat).substr(4)
+         };
+         var monthLabel = {
+           panel: 'month',
+@@ -2081,7 +2081,7 @@
+     },
+     computed: {
+       calendarYear: function calendarYear() {
+-        return this.calendar.getFullYear();
++        return this.calendar.getFullYear() - 1911;
+       },
+       months: function months() {
+         var locale = this.getLocale();
+@@ -2262,7 +2262,7 @@
+     },
+     methods: {
+       getYears: function getYears(calendar) {
+-        var firstYear = Math.floor(calendar.getFullYear() / 10) * 10;
++        var firstYear = Math.floor(calendar.getFullYear() / 10) * 10 - 1911;
+         var years = [];
+ 
+         for (var i = 0; i < 10; i++) {
+@@ -2458,7 +2458,7 @@
+         });
+       },
+       calendarYear: function calendarYear() {
+-        return this.innerCalendar.getFullYear();
++        return this.innerCalendar.getFullYear() - 1911;
+       },
+       calendarMonth: function calendarMonth() {
+         return this.innerCalendar.getMonth();
+@@ -2509,6 +2509,7 @@
+         this.dispatchDatePicker('panel-change', panel, oldPanel);
+       },
+       handleSelectYear: function handleSelectYear(year) {
++        year = Number.parseInt(year) + 1911;
+         if (this.type === 'year') {
+           var date = this.getYearCellDate(year);
+           this.emitDate(date, 'year');
+@@ -2526,17 +2527,18 @@
+         }
+       },
+       handleSelectMonth: function handleSelectMonth(month) {
++        const year = Number.parseInt(this.calendarYear) + 1911;
+         if (this.type === 'month') {
+           var date = this.getMonthCellDate(month);
+           this.emitDate(date, 'month');
+         } else {
+-          this.handleCalendarChange(createDate$1(this.calendarYear, month), 'month');
++          this.handleCalendarChange(createDate$1(year, month), 'month');
+           this.handelPanelChange('date');
+ 
+           if (this.partialUpdate && this.innerValue.length === 1) {
+             var _date2 = new Date(this.innerValue[0]);
+ 
+-            _date2.setFullYear(this.calendarYear);
++            _date2.setFullYear(year);
+ 
+             this.emitDate(setMonth(_date2, month), 'month');
+           }
+@@ -2546,7 +2548,7 @@
+         this.emitDate(date, this.type === 'week' ? 'week' : 'date');
+       },
+       getMonthCellDate: function getMonthCellDate(month) {
+-        return createDate$1(this.calendarYear, month);
++        return createDate$1(this.calendarYear + 1911, month);
+       },
+       getYearCellDate: function getYearCellDate(year) {
+         return createDate$1(year, 0);
+@@ -4077,7 +4079,10 @@
+         type: String,
+         default: 'mx'
+       },
+-      inputClass: {},
++      inputClass: {
++        type: String,
++        default: 'form-control'
++      },
+       inputAttr: {
+         type: Object,
+         default: function _default() {

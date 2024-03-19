@@ -1,0 +1,89 @@
+{
+  "name": "AdmMailSendError",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "javadoc": "type: bigint",
+      "fieldValidateRules": ["required"],
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "realSendTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "sender",
+      "fieldType": "String",
+      "javadoc": "type: varchar(50)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "receiver",
+      "fieldType": "String",
+      "javadoc": "type: varchar(MAX)",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "subject",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(100)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(MAX)",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "errorMessage",
+      "fieldType": "String",
+      "javadoc": "type: nvarchar(100)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "adm_mail_send_error",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220302035611"
+}

@@ -1,0 +1,21 @@
+entity BidProjectUnit(BidProjectUnit){
+    wkut String maxlength(21)
+    prjno String maxlength(40)
+    type String maxlength(2)
+    seq String maxlength(2)
+    dsut String maxlength(21)
+    dsct Double
+    scut String maxlength(21)
+    scct Double
+    ccut String maxlength(21)
+    crat Double
+    ccwkA String maxlength(1)
+    ccwkB String maxlength(1)
+    ccwkC String maxlength(1)
+    createDate Instant
+    createUser String maxlength(20)
+    updateDate Instant
+    updateUser String maxlength(20)
+
+}
+use mapstruct for *

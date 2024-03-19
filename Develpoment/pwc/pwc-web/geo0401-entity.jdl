@@ -1,0 +1,18 @@
+ entity GeoQuestion(GEO_QUESTION) {
+   @Id id Long required
+   geoQuestionId String maxlength(32)
+   roleId String maxlength(3)
+   question String maxlength(1530)
+   reply String maxlength(1530)
+   transferTime Instant
+   transferFrom String maxlength(100)
+   isDel String maxlength(1)
+   delDate Instant
+   delAccId String maxlength(510)
+   createUser String maxlength(40)
+   createTime Instant
+   updateUser String maxlength(40)
+   updateTime Instant
+   status String maxlength(1)
+   }
+use mapstruct for *

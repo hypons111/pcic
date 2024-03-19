@@ -1,0 +1,1561 @@
+{
+  "applications": "*",
+  "changelogDate": "20220418082547",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bid_project",
+  "fields": [
+    {
+      "fieldName": "wkut",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "prjno",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "180"
+    },
+    {
+      "fieldName": "isAdd92",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "pntCtrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "typeCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "isUnion",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "placeCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4"
+    },
+    {
+      "fieldName": "place",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "bosCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "depCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "isBg",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "plnCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "plnNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "plnUnicod",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "fieldName": "bos2Code",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "bos2Rate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bos2bCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "bos2bRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bos2cCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "bos2cAte",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bos2dCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "bos2dRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lnkCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "ccnt2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "180"
+    },
+    {
+      "fieldName": "man",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "80"
+    },
+    {
+      "fieldName": "tel",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "eMail",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "wrate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "contain",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "pfunc",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "benf",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "pstand",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "pqty",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "untnd",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "isSpcw",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw01",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw02",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw03",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw04",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw05",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw06",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw07",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw08",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw09",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw10",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw11",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw12",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw01Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw01Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw02Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw02Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw03Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw03Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw04Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw04Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw05Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw05Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw06Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw06Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw07Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw07Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw08Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw08Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw09Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw09Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw10Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw10Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw11Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw11Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw12Amt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw12Nm",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job01Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job02Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job03Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job04Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job05Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job06Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job07Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job08Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job09Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job10Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job11Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job12Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job13Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "job14Type",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "semset",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "isRcb",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "sorc1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc5",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc1b",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc1c",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc1d",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3c",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3e",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3a",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc6",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b5",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3c1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7Use",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc8",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7Use2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7Use3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "openYn",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "wKind",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "wDays",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "wRemk",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "bCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "26"
+    },
+    {
+      "fieldName": "totAmt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bdgt1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "igtct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "othct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "rsvct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "poll",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pollNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "othMon",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "drut",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "drct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dsut",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "dsct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dsut2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "dsct2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dsut3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "dsct3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dsut4",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "dsct4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dsrm",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "300"
+    },
+    {
+      "fieldName": "scut",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "scct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "scut2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "scct2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "scut3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "scct3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "scut4",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "scct4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "scrm",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "300"
+    },
+    {
+      "fieldName": "scrr",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "scnum",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pcmut",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "ccut1",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "crat1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ccwk1A",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccwk1B",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccwk1C",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccut2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "crat2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ccwk2A",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccwk2B",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccwk2C",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccut3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "crat3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ccwk3A",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccwk3B",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccwk3C",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ccnum",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "issStartDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "issEndDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "issCost",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "issNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "issRmk",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "pdsDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dsDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "adsDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "getlDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "agetlDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "isSpay",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ipe",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "ipeY",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "ipeN",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "isNlic",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "isDlic",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "licNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "licDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "alicDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "opdt",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "7"
+    },
+    {
+      "fieldName": "aopDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "pckDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ackDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "pscDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ascDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "pctDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "actDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ctmeth",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "actmth",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "specPurch",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "isIntl",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "tctmth",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "bdgt2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bdgt3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "mctmth",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "ccnt3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "isPer",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "ctSum",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ctSumF",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ctSumU",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ctmo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "ctSumD",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "cntid",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "80"
+    },
+    {
+      "fieldName": "pays",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pmsSumT",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pmsType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "paymth",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "foreignYn",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "csDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "asDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "asuDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ceDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ceDateF",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "aeDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fcost2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "fcsDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "afcsDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fcost",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "isCkp",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "isCkp2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "isCkp3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "ckpMoney",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ckpUnit",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "ckpDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ckpCnt",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ckpNum",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "ckaUnit",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "ckaDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ckaCnt",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ckaNum",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "ckdUnit",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "ckdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ckdCnt",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ckdNum",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "workMemo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "hotLine",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "lnkCode2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "lnkCode3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "lnkNo2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "ccnt1",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "180"
+    },
+    {
+      "fieldName": "typeCode2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4"
+    },
+    {
+      "fieldName": "deptName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60"
+    },
+    {
+      "fieldName": "aopCnt",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "5"
+    },
+    {
+      "fieldName": "uniqueKey",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "isBidstr",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "isEngineer",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "name0",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "180"
+    },
+    {
+      "fieldName": "ctSum0",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bdgt10",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "batch",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "7"
+    },
+    {
+      "fieldName": "nocntDay",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "aokDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fcost3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "finWays",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "aworkDay",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "fastDay",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "overDay",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "overDayY",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "overFee",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "otherFee",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "punshFee",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "tm2x",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "tm2y",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "tm2x2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "tm2y2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "tm2x3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "tm2y3",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "dsts",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "confOut",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "uIp",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60"
+    },
+    {
+      "fieldName": "can",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "srut",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "anoct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "cepdNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "7"
+    },
+    {
+      "fieldName": "subNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "scnt",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60"
+    },
+    {
+      "fieldName": "dsdm",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "gyResn",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "preson",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "psignDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "asignDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "trDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "confIn",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "uKey",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "tpcoth",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "pcmct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "wkutOld",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "pccMemo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "bgbSumt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bgbDate",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "7"
+    },
+    {
+      "fieldName": "mainItem",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "mDesc",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "mRmk",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "pmrSumt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pmrDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "pmrResm",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BidProject",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

@@ -1,0 +1,20 @@
+ entity GeoCompany(GEO_COMPANY) {
+   @Id geoCompanyId String maxlength(32)
+   companyName String maxlength(510)
+   companyType String maxlength(100)
+   companyId String maxlength(510)
+   contactPerson String maxlength(510)
+   isApprove String maxlength(1)
+   workTel String maxlength(510)
+   email String maxlength(510)
+   remark String maxlength(510)
+   applyDate Instant
+   mobileTel String maxlength(510)
+   updateTime Instant
+   updateUser String maxlength(40)
+   createTime Instant
+   createUser String maxlength(40)
+   transferFrom String maxlength(100)
+   transferTime Instant
+   }
+use mapstruct for *

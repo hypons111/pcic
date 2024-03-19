@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity AdmRoleFunction.
+    -->
+    <changeSet id="20211210035145-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="role_role_id"
+                                 baseTableName="adm_role_function"
+                                 constraintName="fk_adm_role_function__role_id"
+                                 referencedColumnNames="role_id"
+                                 referencedTableName="adm_role"/>
+
+        <addForeignKeyConstraint baseColumnNames="function_id"
+                                 baseTableName="adm_role_function"
+                                 constraintName="fk_adm_role_function__function_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="adm_role"/>
+    </changeSet>
+</databaseChangeLog>

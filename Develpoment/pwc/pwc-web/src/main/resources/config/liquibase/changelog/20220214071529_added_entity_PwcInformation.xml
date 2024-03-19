@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity PwcInformation.
+    -->
+    <changeSet id="20220214071529-1" author="jhipster">
+        <createTable tableName="pwc_information">
+            <column name="pro_information_id" type="bigint" remarks="序號">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="subject" type="varchar(100)" remarks="主旨">
+                <constraints nullable="false" />
+            </column>
+            <column name="text" type="varchar(1000)" remarks="內文">
+                <constraints nullable="false" />
+            </column>
+            <column name="kind" type="varchar(100)" remarks="類別">
+                <constraints nullable="true" />
+            </column>
+            <column name="location" type="varchar(255)" remarks="位置">
+                <constraints nullable="true" />
+            </column>
+            <column name="attributes" type="varchar(255)" remarks="屬性">
+                <constraints nullable="true" />
+            </column>
+            <column name="role" type="varchar(255)" remarks="閱覽權限">
+                <constraints nullable="true" />
+            </column>
+            <column name="appendix_link" type="varchar(255)" remarks="附件檔案">
+                <constraints nullable="true" />
+            </column>
+            <column name="release_date" type="date" remarks="上架日期">
+                <constraints nullable="true" />
+            </column>
+            <column name="down_date" type="date" remarks="下架日期">
+                <constraints nullable="true" />
+            </column>
+            <column name="release_unit" type="varchar(20)" remarks="發布單位">
+                <constraints nullable="true" />
+            </column>
+            <column name="contact_person" type="varchar(20)" remarks="聯絡人">
+                <constraints nullable="true" />
+            </column>
+            <column name="contact_information" type="varchar(50)" remarks="聯絡資訊">
+                <constraints nullable="true" />
+            </column>
+            <column name="enable" type="varchar(255)" remarks="是否啟用">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_time" type="${datetimeType}" remarks="更新時間">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)" remarks="更新人員">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_time" type="${datetimeType}" remarks="建立時間">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_user" type="varchar(20)" remarks="建立人員">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="pwc_information" columnName="update_time" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="pwc_information" columnName="create_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220214071529-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/pwc_information.csv"
+                  separator=";"
+                  tableName="pwc_information">
+            <column name="pro_information_id" type="numeric"/>
+            <column name="subject" type="string"/>
+            <column name="text" type="string"/>
+            <column name="kind" type="string"/>
+            <column name="location" type="string"/>
+            <column name="attributes" type="string"/>
+            <column name="role" type="string"/>
+            <column name="appendix_link" type="string"/>
+            <column name="release_date" type="date"/>
+            <column name="down_date" type="date"/>
+            <column name="release_unit" type="string"/>
+            <column name="contact_person" type="string"/>
+            <column name="contact_information" type="string"/>
+            <column name="enable" type="string"/>
+            <column name="update_time" type="${datetimeType}"/>
+            <column name="update_user" type="string"/>
+            <column name="create_time" type="${datetimeType}"/>
+            <column name="create_user" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

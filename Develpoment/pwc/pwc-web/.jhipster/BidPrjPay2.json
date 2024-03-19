@@ -1,0 +1,126 @@
+{
+  "applications": "*",
+  "changelogDate": "20220706032456",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bid_prj_pay_2",
+  "fields": [
+    {
+      "fieldName": "wkut",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "prjno",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "month",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "trueMon",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "payMonT",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "payMonU",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "tenDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "tenMon",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "payDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "payMon",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "payMonS",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "chkNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "payRmk",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "trueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dsts",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "confOut",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "uIp",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BidPrjPay2",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

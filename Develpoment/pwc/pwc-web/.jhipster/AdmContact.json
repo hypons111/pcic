@@ -1,0 +1,165 @@
+{
+  "applications": "*",
+  "changelogDate": "20220621070400",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "adm_contact",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "chName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "javadoc": "type: NVARCHAR(50)"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60",
+      "javadoc": "type: NVARCHAR(60)"
+    },
+    {
+      "fieldName": "birthday",
+      "fieldType": "Instant",
+      "javadoc": "type: DATE"
+    },
+    {
+      "fieldName": "idno",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: VARCHAR(10)"
+    },
+    {
+      "fieldName": "sex",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1",
+      "javadoc": "type: VARCHAR(1)"
+    },
+    {
+      "fieldName": "workTel",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "mobileTel",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "15",
+      "javadoc": "type: VARCHAR(15)"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100",
+      "javadoc": "type: VARCHAR(100)"
+    },
+    {
+      "fieldName": "homeAddrZip",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: VARCHAR(10)"
+    },
+    {
+      "fieldName": "homeAddrCity",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: NVARCHAR(10)"
+    },
+    {
+      "fieldName": "homeAddrTown",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: NVARCHAR(10)"
+    },
+    {
+      "fieldName": "homeAddrOther",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "javadoc": "type: NVARCHAR(100)"
+    },
+    {
+      "fieldName": "workAddrZip",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: VARCHAR(10)"
+    },
+    {
+      "fieldName": "workAddrCity",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: NVARCHAR(10)"
+    },
+    {
+      "fieldName": "workAddrTown",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: NVARCHAR(10)"
+    },
+    {
+      "fieldName": "workAddrOther",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "javadoc": "type: NVARCHAR(100)"
+    },
+    {
+      "fieldName": "lineToken",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "javadoc": "type: VARCHAR(100)"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: datetime"
+    },
+    {
+      "fieldName": "chNameRome",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(50)"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AdmContact",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

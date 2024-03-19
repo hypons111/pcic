@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20220624071922",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "adm_role",
+  "fields": [
+    {
+      "fieldName": "roleId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: varchar(20)",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "roleName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: nvarchar(20)"
+    },
+    {
+      "fieldName": "roleDescript",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "500",
+      "javadoc": "type: nvarchar(500)"
+    },
+    {
+      "fieldName": "businessCategory",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: varchar(10)"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: varchar(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: datetime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AdmRole",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

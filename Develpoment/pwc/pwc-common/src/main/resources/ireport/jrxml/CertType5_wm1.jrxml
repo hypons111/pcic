@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertType1" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="380480d1-48d8-4b9e-be11-86a87adb6c68">
+	<property name="ireport.zoom" value="1.4641000000000068"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="91"/>
+	<parameter name="certificateWord" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="idno" class="java.lang.String"/>
+	<parameter name="compName" class="java.lang.String"/>
+	<parameter name="compBand" class="java.lang.String"/>
+	<parameter name="content" class="java.lang.String"/>
+	<parameter name="createDate" class="java.lang.String"/>
+	<parameter name="backgroundUrl" class="java.lang.String"/>
+	<parameter name="scope" class="java.lang.String"/>
+	<parameter name="applyType" class="java.lang.String"/>
+	<background>
+		<band height="842" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="595" height="842" uuid="a3604848-212d-42d0-ba7c-0320df1bf88f"/>
+				<imageExpression><![CDATA[$P{backgroundUrl}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Transparent" x="50" y="0" width="495" height="842" forecolor="#CCCCCC" uuid="a3f45000-948a-4f06-b265-03c2b166a1c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="135"/>
+				</textElement>
+				<text><![CDATA[僅
+供
+參
+考]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="228" y="337" width="304" height="60" uuid="9bdc40ed-9d95-46c8-b9ce-151725f2bce4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["："+$P{idno}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="63" y="217" width="469" height="30" uuid="dc1d6a3a-c796-42fc-b65a-da66a448cb71"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["一、公司名稱："+$P{compName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="63" y="247" width="469" height="30" uuid="2e79dfdb-32e1-4180-838c-4ba4c0363728"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["　　公司所在地："+$P{address}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="63" y="277" width="469" height="30" uuid="f0971f96-a92b-4fae-89be-3d7d4a74ade9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["　　公司統一編號："+$P{compBand}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="63" y="307" width="469" height="30" uuid="01ddb834-b447-4780-9f96-5802ba60149a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["二、董事長或代表人姓名："+$P{name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="50" y="742" width="495" height="30" uuid="e03b8dd3-9bc4-490e-8df2-4ec6425b36ae"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{createDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="344" y="128" width="201" height="25" uuid="bf9d2c3f-1d9b-4c09-b4c9-37b7afd4aaea"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{certificateWord}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="50" y="80" width="495" height="45" uuid="ab447e20-2d21-4675-99a2-d7120c7d3e3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="36" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[工程技術顧問公司登記證]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="50" y="787" width="494" height="30" uuid="c5aacd3d-a228-46c5-a9e7-b3012e396f89"/>
+				<textElement>
+					<font size="12" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[※本登記證請懸掛於公司明顯處所；公司如自行停業或受停業處分者，由本會登錄於背面。]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="63" y="157" width="469" height="60" isPrintWhenDetailOverflows="true" uuid="04c36638-1df6-442e-b8b4-edf1a0b2a675"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{applyType}+"工程技術顧問公司登記證本會已予核准特發給登記證摘錄登記事項如下："]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="183" y="427" width="349" height="30" uuid="122461a2-c963-438e-ad73-b55621376250"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{content}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="63" y="337" width="165" height="60" uuid="391a5115-2070-4dc8-8524-2232bcea7dfd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[　　董事長或代表人
+　　身分證統一編號]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="63" y="397" width="469" height="30" uuid="d45d4783-3265-44e4-9c81-8556e6103bac"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[三、營業範圍：I101061工程技術顧問業]]></text>
+			</staticText>
+		</band>
+	</background>
+</jasperReport>

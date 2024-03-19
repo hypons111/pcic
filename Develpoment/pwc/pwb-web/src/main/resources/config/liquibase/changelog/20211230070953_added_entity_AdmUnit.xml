@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmUnit.
+    -->
+    <changeSet id="20211230070953-1" author="jhipster">
+        <createTable tableName="adm_unit">
+            <column name="unit_id" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="master_unit_id" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="adm_org_id" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="unit_name" type="varchar(50)" remarks="type: nvarchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="addr" type="varchar(100)" remarks="type: nvarchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tel" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fax" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="descript" type="varchar(500)" remarks="type: nvarchar(500)">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_unit" columnName="update_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+    <changeSet id="20211230070953-2" author="2004012">
+        <dropColumn tableName="adm_unit" columnName="adm_org_id"/>
+        <addColumn tableName="adm_unit">
+            <column name="admin_org_id" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="true" />
+            </column>
+        </addColumn>
+        <modifyDataType tableName="adm_unit" columnName="unit_name" newDataType="nvarchar(60)"/>
+        <modifyDataType tableName="adm_unit" columnName="addr" newDataType="nvarchar(500)"/>
+    </changeSet>
+
+</databaseChangeLog>

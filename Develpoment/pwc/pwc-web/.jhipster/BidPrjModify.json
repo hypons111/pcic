@@ -1,0 +1,185 @@
+{
+  "applications": "*",
+  "changelogDate": "20220517075640",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bid_prj_modify",
+  "fields": [
+    {
+      "fieldName": "wkut",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "prjno",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "chgDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "mdyPress",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "dsts",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "mdyReson",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "mergeNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "uIp",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60"
+    },
+    {
+      "fieldName": "okNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "mergeName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "180"
+    },
+    {
+      "fieldName": "mdyRemark",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "remark",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "remark1",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "remark2",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "oldDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "newDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "chgRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "oldAddAmt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "oldSubtractAmt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "oldAmt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "addAmt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "subtractAmt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "newAmt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dlyd1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dlyd2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dlyd3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dlyd4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dlyd5",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nDays",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "mergectSum",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BidPrjModify",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

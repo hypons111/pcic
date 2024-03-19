@@ -1,0 +1,80 @@
+{
+  "applications": "*",
+  "changelogDate": "20220318072707",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tec_content",
+  "fields": [
+    {
+      "fieldName": "contentId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIGINT",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "pageId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIGINT"
+    },
+    {
+      "fieldName": "contentTitle",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200",
+      "javadoc": "type: NVARCHAR(200)"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "4000",
+      "javadoc": "type: NVARCHAR(MAX)"
+    },
+    {
+      "fieldName": "isdelete",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIT"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "TEC",
+  "jpaMetamodelFiltering": false,
+  "name": "TecContent",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="clob" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, mssql"/>
+    <property name="datetimeType" value="datetime(6)" dbms="mysql, mariadb"/>
+    <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211105074637_added_entity_CstSubject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211105074638_added_entity_CmsComp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220214071529_added_entity_PwcInformation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220214071530_added_entity_PwcInformationModule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220214071531_added_entity_PwcInformationRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220225033031_added_entity_PwcDownload.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220225033032_added_entity_PwcDownloadModule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220225033033_added_entity_PwcDownloadRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220225033034_added_entity_PwcDownloadAppendix.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220225033035_added_entity_PwcInformationAppendix.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220307091217_added_entity_GeoMember.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220318072707_added_entity_TecContent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220318072708_added_entity_TecPage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220407081650_added_entity_RecTyphoon.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220331041731_added_entity_VwBidProject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220401065722_added_entity_BidUnit10.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220419023002_added_entity_ProInnovativeProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220419023003_added_entity_ProRecommendList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220419023004_added_entity_ProEnginList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220419023005_added_entity_ProOrgSuggestion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220419023006_added_entity_ProNoCommunicateList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220419023007_added_entity_ProOsPersonList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220331033702_added_entity_EngEngrCertificate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220418082547_added_entity_BidProject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220420021027_added_entity_BidPrjMonth.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220426061512_added_entity_BidPrjEquip.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220426061513_added_entity_BidPrjFal.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220517075640_added_entity_BidPrjModify.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220601132643_added_entity_AdmCompany.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220609080300_added_entity_BidPrjStopwk.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220614042124_added_entity_BidProjectUnit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220530093403_added_entity_BidPrjSafe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220518070957_added_entity_BidPrjEnvi.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220531152453_added_entity_BidProjectUnit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220531152454_added_entity_BidPrjSubco.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621075155_added_entity_BidPrjQc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220622071013_added_entity_BidPrjDelete.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621070400_added_entity_AdmContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220623032429_added_entity_AdmPadHis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220613064901_added_entity_EngEngrLicense.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621082420_added_entity_PwbUnitApply.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621082421_added_entity_PwbUnitRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220623095138_added_entity_BidPrjFrwkr.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220506043148_added_entity_RecUserProjectCode.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220524075520_added_entity_RecProject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220620084329_added_entity_GeoJob.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220627062335_added_entity_GeoCompany.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220704062441_added_entity_BidPrjMilestone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220622115138_added_entity_BidPrjSur2.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220622122155_added_entity_BidMdlbas.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220706032456_added_entity_BidPrjPay2.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220629091301_added_entity_BidGovPrecheck.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220624033916_added_entity_AdmAccountRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220624071922_added_entity_AdmRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220711034316_added_entity_PwbUsualfunction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220512083356_added_entity_PwbRoleModule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220713073722_added_entity_BidPrjSegmset.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220712085151_added_entity_BidPrjStc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220711070432_added_entity_BidKpifin.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220718014148_added_entity_BidPrjWksorc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220711034316_added_entity_PwbUsualfunction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220525172343_added_entity_BidPrjSubco.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220725031738_added_entity_BidPrjScequip.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220719141313_added_entity_BidChkapt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220719141314_added_entity_BidOversee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220719141315_added_entity_BidPrjPrice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220725075843_added_entity_BidPrjRescis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220726074318_added_entity_BidPrjRatecf.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220722065358_added_entity_BidPrjDsptch.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

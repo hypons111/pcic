@@ -1,0 +1,121 @@
+entity AdmNumber(Adm_Number) {
+	@Id id Long required /** type: bigint */
+	codeType String maxlength(20) /** type: varchar(20) */
+	codeYear String maxlength(3) /** type: varchar(3) */
+	codeMonth String maxlength(2) /** type: varchar(2) */
+    codeDate String maxlength(2) /** type: varchar(2) */
+    number String maxlength(8) required /** type: varchar(8) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}
+
+entity AdmFile(Adm_File) {
+	@Id id Long required /** type: bigint */
+	moduleType String maxlength(3) required /** type: varchar(3) */
+	businessType String maxlength(30) required /** type: varchar(30) */
+	sourceId String maxlength(30) required /** type: varchar(30) */
+    fileType String maxlength(10) required /** type: varchar(10) */
+    fileNameOri String maxlength(200) required /** type: nvarchar(200) */
+    fileName String maxlength(500) required /** type: nvarchar(500) */
+    fileRemark String maxlength(100) /** type: nvarchar(100) */
+    s3Url String maxlength(100) required /** type: varchar(100) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}
+
+entity AdmMailSend(Adm_Mail_Send) {
+    @Id id Long required /** type: bigint */
+    mailType String maxlength(10) required /** type: varchar(10) */
+    sourceId String maxlength(100) required /** type: varchar(100) */
+    sender String maxlength(50) /** type: varchar(50) */
+    receiver String /** type: varchar(MAX) */
+    subject String maxlength(100) /** type: nvarchar(100) */
+    content String /** type: nvarchar(MAX) */
+    expectSendTime Instant /** type: datetime */
+    realSendTime Instant /** type: datetime */
+    status String maxlength(1) required /** type: varchar(1) */
+    processMessage String /** type: nvarchar(MAX) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}
+
+entity AdmMailSendError(Adm_Mail_Send_Error) {
+    @Id id Long required /** type: bigint */
+    realSendTime Instant required /** type: datetime */
+    sender String maxlength(50) required /** type: varchar(50) */
+    receiver String required /** type: varchar(MAX) */
+    subject String maxlength(100) required /** type: nvarchar(100) */
+    content String required /** type: nvarchar(MAX) */
+    errorMessage String maxlength(100) required /** type: nvarchar(100) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}
+
+entity AdmLineSend(Adm_Line_Send) {
+    @Id id Long required /** type: bigint */
+    lineType String maxlength(10) required /** type: varchar(10) */
+    sourceId String maxlength(100) required /** type: varchar(100) */
+    sender String maxlength(50) /** type: varchar(50) */
+    receiver String /** type: varchar(MAX) */
+    message String maxlength(1000) /** type: nvarchar(1000) */
+    expectSendTime Instant /** type: datetime */
+    realSendTime Instant /** type: datetime */
+    status String maxlength(1) required /** type: varchar(1) */
+    processMessage String /** type: nvarchar(MAX) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}
+
+entity AdmLineSendError(Adm_Line_Send_Error) {
+    @Id id Long required /** type: bigint */
+    realSendTime Instant required /** type: datetime */
+    sender String maxlength(50) required /** type: varchar(50) */
+    receiver String required /** type: varchar(MAX) */
+    message String maxlength(1000) required /** type: nvarchar(1000) */
+    errorMessage String maxlength(100) required /** type: nvarchar(100) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}
+
+entity AdmSmsSend(Adm_Sms_Send) {
+    @Id id Long required /** type: bigint */
+    smsType String maxlength(10) required /** type: varchar(10) */
+    sourceId String maxlength(100) required /** type: varchar(100) */
+    sender String maxlength(50) /** type: varchar(50) */
+    receiver String /** type: varchar(MAX) */
+    supplier String maxlength(30) /** type: nvarchar(30) */
+    message String maxlength(1000) /** type: nvarchar(1000) */
+    expectSendTime Instant /** type: datetime */
+    realSendTime Instant /** type: datetime */
+    status String maxlength(1) required /** type: varchar(1) */
+    processMessage String /** type: nvarchar(MAX) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}
+
+entity AdmSmsSendError(Adm_Sms_Send_Error) {
+    @Id id Long required /** type: bigint */
+    realSendTime Instant required /** type: datetime */
+    sender String maxlength(50) required /** type: varchar(50) */
+    receiver String required /** type: varchar(MAX) */
+    message String maxlength(1000) required /** type: nvarchar(1000) */
+    errorMessage String maxlength(100) required /** type: nvarchar(100) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) /** type: varchar(20) */
+    updateTime Instant /** type: datetime */
+}

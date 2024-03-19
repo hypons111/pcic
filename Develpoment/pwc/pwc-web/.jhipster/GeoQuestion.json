@@ -1,0 +1,90 @@
+{
+  "applications": "*",
+  "changelogDate": "20220512033929",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "geo_question",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "geoQuestionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "roleId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "question",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1530"
+    },
+    {
+      "fieldName": "reply",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1530"
+    },
+    {
+      "fieldName": "transferDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "transferForm",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "isDel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "delAccId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "510"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GeoQuestion",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

@@ -1,0 +1,87 @@
+entity BidPrjSubco(BidPrjSubco){
+    wkut String maxlength(21)
+    prjno String maxlength(40)
+    subcoNo String maxlength(4)
+    subCcut String maxlength(20)
+    coRegNo String maxlength(50)
+    subBdgt1 Double
+    upCcut String maxlength(20)
+    stype String maxlength(2)
+    spcw01 String maxlength(1)
+    spcw02 String maxlength(1)
+    spcw03 String maxlength(1)
+    spcw04 String maxlength(1)
+    spcw05 String maxlength(1)
+    spcw06 String maxlength(1)
+    spcw07 String maxlength(1)
+    spcw08 String maxlength(1)
+    spcw09 String maxlength(1)
+    spcw10 String maxlength(1)
+    spcw11 String maxlength(1)
+    spcw12 String maxlength(1)
+    subcoMemo String maxlength(100)
+    met01 String maxlength(1)
+    met01b String maxlength(1)
+    met01c String maxlength(1)
+    met05 String maxlength(1)
+    met02f String maxlength(1)
+    met01d String maxlength(1)
+    met02 String maxlength(1)
+    met02b String maxlength(1)
+    met04 String maxlength(1)
+    met03 String maxlength(1)
+    met03b String maxlength(1)
+    met02c String maxlength(1)
+    met02d String maxlength(1)
+    met02e String maxlength(1)
+    met01v Double
+    met01bv Double
+    met01cv Double
+    met05v Double
+    met02fv Double
+    met01dv Double
+    met02v Double
+    met02bv Double
+    met04v Double
+    met03v Double
+    met03bv Double
+    met02cv Double
+    met02dv Double
+    met02ev Double
+    qchk String maxlength(1)
+    createDate Instant
+    createUser String maxlength(20)
+    updateDate Instant
+    updateUser String maxlength(20)
+    rmtfil String maxlength(200)
+    uIp String maxlength(60)
+    met06 String maxlength(1)
+    met07 String maxlength(1)
+    met08 String maxlength(1)
+    met09 String maxlength(1)
+    met10 String maxlength(1)
+    met11 String maxlength(1)
+    met12 String maxlength(1)
+    met13 String maxlength(1)
+    met14 String maxlength(1)
+    met15 String maxlength(1)
+    met16 String maxlength(1)
+    met99 String maxlength(1)
+    met06v Double
+    met07v Double
+    met08v Double
+    met09v Double
+    met10v Double
+    met11v Double
+    met12v Double
+    met13v Double
+    met14v Double
+    met15v Double
+    met16v Double
+    met99v Double
+    met99str String maxlength(100)
+    confa String maxlength(1)
+    confb String maxlength(1)
+}
+
+use mapstruct for *

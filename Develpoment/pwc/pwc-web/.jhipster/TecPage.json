@@ -1,0 +1,99 @@
+{
+  "applications": "*",
+  "changelogDate": "20220318072708",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tec_page",
+  "fields": [
+    {
+      "fieldName": "pageId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIGINT",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "menu",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "subMenu",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "contentType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "javadoc": "type: NVARCHAR(50)"
+    },
+    {
+      "fieldName": "pageTitle",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200",
+      "javadoc": "type: NVARCHAR(200)"
+    },
+    {
+      "fieldName": "pageStart",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "pageEnd",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "isdelete",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIT"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TecPage",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

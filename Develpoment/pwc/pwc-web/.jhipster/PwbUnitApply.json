@@ -1,0 +1,98 @@
+{
+  "applications": "*",
+  "changelogDate": "20220621082420",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "pwb_unit_apply",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIGINT",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "unitId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "applyTime",
+      "fieldType": "Instant",
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "approveTime",
+      "fieldType": "Instant",
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1",
+      "javadoc": "type: VARCHAR(1)"
+    },
+    {
+      "fieldName": "moduleType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "3",
+      "javadoc": "type: VARCHAR(3)"
+    },
+    {
+      "fieldName": "businessType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "approveUnit",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: VARCHAR(20)"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PwbUnitApply",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

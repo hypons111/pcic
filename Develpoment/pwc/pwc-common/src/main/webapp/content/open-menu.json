@@ -1,0 +1,383 @@
+[
+  {
+    "id": 1,
+    "path": "/home",
+    "meta": {
+      "directory": true,
+      "functionId": "home",
+      "label": "案件審議資訊"
+    },
+    "children": [
+      {
+        "id": 22,
+        "meta": {
+          "label": "案件審議資訊directory",
+          "directory": true
+        },
+        "children": [
+          {
+            "id": 25,
+            "path": "/sts901w",
+            "meta": {
+              "functionId": "11",
+              "label": "案件審議資訊11"
+            }
+          },
+          {
+            "id": 26,
+            "path": "/sts902w",
+            "meta": {
+              "functionId": "22",
+              "label": "案件審議資訊22"
+            }
+          },
+          {
+            "id": 27,
+            "path": "/sts903w",
+            "meta": {
+              "functionId": "22",
+              "label": "案件審議資訊33"
+            }
+          }
+        ]
+      },
+      {
+        "id": 122,
+        "meta": {
+          "label": "案件審議資訊directory",
+          "directory": true
+        },
+        "children": [
+          {
+            "id": 125,
+            "path": "/sts901w",
+            "meta": {
+              "functionId": "11",
+              "label": "案件審議資訊11"
+            }
+          },
+          {
+            "id": 126,
+            "path": "/sts902w",
+            "meta": {
+              "functionId": "22",
+              "label": "案件審議資訊22"
+            }
+          },
+          {
+            "id": 127,
+            "path": "/sts903w",
+            "meta": {
+              "functionId": "22",
+              "label": "案件審議資訊33"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "path": "/b",
+    "meta": {
+      "functionId": "b",
+      "label": "證照管理資訊",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 225,
+        "path": "/225",
+        "meta": {
+          "functionId": "225",
+          "label": "證照管理資訊1"
+        }
+      },
+      {
+        "id": 226,
+        "path": "/226",
+        "meta": {
+          "functionId": "226",
+          "label": "證照管理資訊2"
+        }
+      },
+      {
+        "id": 227,
+        "path": "/227",
+        "meta": {
+          "functionId": "227",
+          "label": "證照管理資訊3"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "path": "/c",
+    "meta": {
+      "functionId": "c",
+      "label": "災後復建資訊",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 301,
+        "path": "/service/rec0201",
+        "meta": {
+          "functionId": "rec0201",
+          "label": "災後復建案件查詢"
+        }
+      },
+      {
+        "id": 302,
+        "path": "/service/rec0202",
+        "meta": {
+          "functionId": "rec0202",
+          "label": "風災各縣市核列件數及金額統計"
+        }
+      },
+      {
+        "id": 303,
+        "path": "/service/rec0203",
+        "meta": {
+          "functionId": "rec0203",
+          "label": "各風災核列件數及金額統計"
+        }
+      },
+      {
+        "id": 304,
+        "path": "/service/rec0204",
+        "meta": {
+          "functionId": "rec0204",
+          "label": "各年度風災核列件數及金額統計"
+        }
+      },
+      {
+        "id": 305,
+        "path": "/service/rec0205",
+        "meta": {
+          "functionId": "rec0205",
+          "label": "各年度各縣市核列件數及金額統計"
+        }
+      },
+      {
+        "id": 306,
+        "path": "/service/rec0207",
+        "meta": {
+          "functionId": "rec0207",
+          "label": "逾期未完工案件查詢"
+        }
+      },
+      {
+        "id": 307,
+        "path": "/service/rec0208",
+        "meta": {
+          "functionId": "rec0208",
+          "label": "逾期已完工案件查詢"
+        }
+      },
+      {
+        "id": 308,
+        "path": "/service/rec0209",
+        "meta": {
+          "functionId": "rec0209",
+          "label": "調查規劃案件查詢"
+        }
+      },
+      {
+        "id": 309,
+        "path": "/service/rec0210",
+        "meta": {
+          "functionId": "rec0210",
+          "label": "災後復建案件匯出KML檔"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "path": "/d",
+    "meta": {
+      "functionId": "d",
+      "label": "公共工程技術資料庫",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 401,
+        "path": "/service/tec0101R",
+        "meta": {
+          "functionId": "tec0101R",
+          "label": "最新消息"
+        }
+      },
+      {
+        "id": 402,
+        "meta": {
+          "label": "簡介",
+          "directory": true
+        },
+        "children": [
+          {
+            "id": 4021,
+            "path": "/service/tec0201R",
+            "meta": {
+              "functionId": "tec0201R",
+              "label": "公共工程技術資料庫簡介"
+            }
+          },
+          {
+            "id": 4022,
+            "path": "/service/tec0202R",
+            "meta": {
+              "functionId": "tec0202R",
+              "label": "法規參考"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "path": "/e",
+    "meta": {
+      "functionId": "e",
+      "label": "公共工程價格資料庫",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 501,
+        "path": "/501",
+        "meta": {
+          "functionId": "501",
+          "label": "公共工程價格資料庫"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "path": "/f",
+    "meta": {
+      "functionId": "f",
+      "label": "創新產品交流平台查詢",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 601,
+        "path": "/service/proAd0101",
+        "meta": {
+          "functionId": "proAd0101",
+          "label": "創新產品查詢"
+        }
+      },
+      {
+        "id": 82,
+        "path": "/service/eng0813Query",
+        "meta": {
+          "functionId": "ENG0813Query",
+          "label": "課程查詢"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "path": "/g",
+    "meta": {
+      "functionId": "g",
+      "label": "技師與顧問公司管理",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 81,
+        "meta": {
+          "label": "顧問公司",
+          "directory": true
+        },
+        "children": [
+          {
+            "id": 818,
+            "path": "/service/eng0818R1",
+            "meta": {
+              "functionId": "ENG0818",
+              "label": "營業現況及登記執業技師查詢"
+            }
+          },
+          {
+            "id": 819,
+            "path": "/service/eng0819R1",
+            "meta": {
+              "functionId": "ENG0819",
+              "label": "登記分縣市統計表"
+            }
+          },
+          {
+            "id": 821,
+            "path": "/service/eng0821Query",
+            "meta": {
+              "functionId": "ENG0821",
+              "label": "技師公會通訊錄"
+            }
+          },
+          {
+            "id": 822,
+            "path": "/service/eng0822Query",
+            "meta": {
+              "functionId": "ENG0822",
+              "label": "工程技術顧問商業同業公會通訊錄"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "path": "/f",
+    "meta": {
+      "functionId": "f",
+      "label": "帳號申請",
+      "directory": true
+    },
+    "children": [
+      {
+        "id": 12342,
+        "path": "/service/pwc0302",
+        "meta": {
+          "functionId": "pwc0302",
+          "label": "廠商管理員帳號申請"
+        }
+      },
+      {
+        "id": 12341,
+        "path": "/service/pwc0301",
+        "meta": {
+          "functionId": "pwc0301",
+          "label": "機關管理員帳號申請"
+        }
+      },
+      {
+        "id": 12343,
+        "path": "/service/pwc0303",
+        "meta": {
+          "functionId": "pwc0303",
+          "label": "帳號申請(個人)"
+        }
+      },
+      {
+        "id": 12344,
+        "path": "/service/pwc0304",
+        "meta": {
+          "functionId": "pwc0304",
+          "label": "密碼修改"
+        }
+      }
+    ]
+  }
+]

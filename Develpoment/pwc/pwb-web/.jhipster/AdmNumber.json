@@ -1,0 +1,85 @@
+{
+  "name": "AdmNumber",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "javadoc": "type: bigint",
+      "fieldValidateRules": ["required"],
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "codeType",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "codeYear",
+      "fieldType": "String",
+      "javadoc": "type: varchar(3)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "codeMonth",
+      "fieldType": "String",
+      "javadoc": "type: varchar(2)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "codeDate",
+      "fieldType": "String",
+      "javadoc": "type: varchar(2)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "number",
+      "fieldType": "String",
+      "javadoc": "type: varchar(8)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "8"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "javadoc": "type: varchar(20)",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "javadoc": "type: datetime"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "adm_number",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220302035608"
+}

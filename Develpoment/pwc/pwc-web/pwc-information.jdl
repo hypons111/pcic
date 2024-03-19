@@ -1,0 +1,60 @@
+entity PwcInformation(PWC_INFORMATION) {
+    /** 序號 */
+    @Id proInformationId Long required
+    /** 主旨 */
+    subject String maxlength(100) required
+    /** 內文 */
+    text String maxlength(1000) required
+    /** 類別 */
+    kind String maxlength(100)
+    /** 位置 */
+    location String pattern(/[0A-C]/)
+    /** 屬性 */
+    attributes String pattern(/[1-2]/)
+    /** 閱覽權限 */
+    role String pattern(/[0-1]/)
+    /** 附件檔案 */
+    appendixLink String
+    /** 上架日期 */
+    releaseDate LocalDate
+    /** 下架日期 */
+    downDate LocalDate
+    /** 發布單位 */
+    releaseUnit String maxlength(20)
+    /** 聯絡人 */
+    contactPerson String maxlength(20)
+    /** 聯絡資訊 */
+    contactInformation String maxlength(50)
+    /** 是否啟用 */
+    enable String pattern(/[YN]/)
+    /** 更新時間 */
+    updateTime Instant
+    /** 更新人員 */
+    updateUser String maxlength(20)
+    /** 建立時間 */
+    createTime Instant
+    /** 建立人員 */
+    createUser String maxlength(20)
+}
+
+entity PwcInformationModule(PWC_INFORMATION_MODULE) {
+    @Id proInformationModuleId Long required /** 序號 */
+    proInformationId Long /** 訊息資料序號 */
+    module String /** 模組別 */
+    updateTime Instant /** 更新時間 */
+    updateUser String maxlength(20) /** 更新人員 */
+    createTime Instant /** 建立時間 */
+    createUser String maxlength(20) /** 建立人員 */
+}
+
+entity PwcInformationRole(PWC_INFORMATION_ROLE) {
+    @Id proInformationRoleId Long required /** 序號 */
+    proInformationId Long /** 訊息資料序號 */
+    role String /** 角色別 */
+    updateTime Instant /** 更新時間 */
+    updateUser String maxlength(20) /** 更新人員 */
+    createTime Instant /** 建立時間 */
+    createUser String maxlength(20) /** 建立人員 */
+}
+
+use mapstruct for *

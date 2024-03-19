@@ -1,0 +1,34 @@
+ entity VwBidProject(VW_BID_PROJECT) {
+    wkut String maxlength(21) required
+    wkutName String maxlength(60)
+    prjno String maxlength(20) required
+    projectName String maxlength(180)
+    iAdd92 String maxlength(2)
+    pntCtrl String maxlength(1)
+    typeCode String maxlength(2)
+    isUnion String maxlength(1)
+    placeCode String maxlength(4)
+    placeName String maxlength(20)
+    place String maxlength(100)
+    bosCode String maxlength(21)
+    depCode String maxlength(21)
+    isBg String maxlength(1)
+    plnCode String maxlength(21)
+    plnNo String maxlength(20)
+    plnUnicod String maxlength(30)
+    bdgt1 Float
+    aopDate LocalDate
+    aokDate LocalDate
+    actDate LocalDate
+    asDate LocalDate
+    aeDate LocalDate
+    pcmut String maxlength(21)
+    mctmth String maxlength(2)
+    drut String maxlength(21)
+    ctSum Float
+    ctSumF Float
+    pays Float
+ }
+
+ use mapstruct for *
+

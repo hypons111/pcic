@@ -1,0 +1,102 @@
+{
+  "applications": "*",
+  "changelogDate": "20220601132643",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "adm_company",
+  "fields": [
+    {
+      "fieldName": "ban",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "8",
+      "javadoc": "type: varchar(8)",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "rpName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "javadoc": "type: nvarchar(50)"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "javadoc": "type: nvarchar(50)"
+    },
+    {
+      "fieldName": "addressCity",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: nvarchar(10)"
+    },
+    {
+      "fieldName": "addressTown",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: nvarchar(10)"
+    },
+    {
+      "fieldName": "addressVillage",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: nvarchar(10)"
+    },
+    {
+      "fieldName": "addressLin",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: nvarchar(10)"
+    },
+    {
+      "fieldName": "addressRoad",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10",
+      "javadoc": "type: nvarchar(10)"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0",
+      "javadoc": "type: decimal(20,0)"
+    },
+    {
+      "fieldName": "conDate",
+      "fieldType": "Instant",
+      "javadoc": "type: date"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: varchar(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: datetime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AdmCompany",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

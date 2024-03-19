@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20220623032429",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "adm_pad_his",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: bigint",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: varchar(20)"
+    },
+    {
+      "fieldName": "userPadHash",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: varchar(max)"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: datetime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AdmPadHis",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

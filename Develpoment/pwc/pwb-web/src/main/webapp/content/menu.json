@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "meta": {
+      "directory": true,
+      "icon": "tasks",
+      "label": "後臺管理"
+    },
+    "children": [
+      {
+        "id": 2,
+        "meta": {
+          "directory": true,
+          "icon": "male",
+          "label": "後臺帳號管理"
+        },
+        "children": [
+          {
+            "id": 3,
+            "path": "/adm002",
+            "meta": {
+              "functionId": "adm002",
+              "label": "後臺帳號申請",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 4,
+            "path": "/adm003",
+            "meta": {
+              "functionId": "adm003",
+              "label": "後臺帳號審核",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 5,
+            "path": "/adm004",
+            "meta": {
+              "functionId": "adm004",
+              "label": "工程會帳號管理",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 6,
+            "path": "/adm005",
+            "meta": {
+              "functionId": "adm005",
+              "label": "角色管理",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 7,
+            "path": "/adm006",
+            "meta": {
+              "functionId": "adm006",
+              "label": "功能管理",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 8,
+            "path": "/adm007",
+            "meta": {
+              "functionId": "adm007",
+              "label": "延伸功能管理",
+              "icon": "tasks"
+            }
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "meta": {
+          "directory": true,
+          "icon": "cogs",
+          "label": "後臺設定管理"
+        },
+        "children": [
+          {
+            "id": 10,
+            "path": "/adm008",
+            "meta": {
+              "functionId": "adm008",
+              "label": "機關資料同步管理",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 11,
+            "path": "/adm009",
+            "meta": {
+              "functionId": "adm009",
+              "label": "批次服務設定",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 12,
+            "path": "/adm010",
+            "meta": {
+              "functionId": "adm010",
+              "label": "批次紀錄查詢",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 13,
+            "path": "/adm011",
+            "meta": {
+              "functionId": "adm011",
+              "label": "系統參數設定",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 14,
+            "path": "/adm012",
+            "meta": {
+              "functionId": "adm012",
+              "label": "系統代碼設定",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 15,
+            "path": "/adm013",
+            "meta": {
+              "functionId": "adm013",
+              "label": "i18n代碼設定",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 16,
+            "path": "/adm014",
+            "meta": {
+              "functionId": "adm014",
+              "label": "假日設定",
+              "icon": "tasks"
+            }
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "meta": {
+          "directory": true,
+          "icon": "search",
+          "label": "稽核紀錄查詢"
+        },
+        "children": [
+          {
+            "id": 18,
+            "path": "/adm015",
+            "meta": {
+              "functionId": "adm015",
+              "label": "後臺登入歷程查詢",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 19,
+            "path": "/adm016",
+            "meta": {
+              "functionId": "adm016",
+              "label": "後臺功能操作紀錄查詢",
+              "icon": "tasks"
+            }
+          },
+          {
+            "id": 20,
+            "path": "/adm017",
+            "meta": {
+              "functionId": "adm017",
+              "label": "後臺功能點擊紀錄查詢",
+              "icon": "tasks"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

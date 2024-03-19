@@ -1,0 +1,119 @@
+{
+  "applications": "*",
+  "changelogDate": "20220407081650",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "rec_typhoon",
+  "fields": [
+    {
+      "fieldName": "typhoonNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "36",
+      "javadoc": "type: VARCHAR(36)",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "typhoonName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30",
+      "javadoc": "type: NVARCHAR(30)"
+    },
+    {
+      "fieldName": "applyStartTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "applyEndTime",
+      "fieldType": "Instant",
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "isLocalOnly",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIT"
+    },
+    {
+      "fieldName": "finishDate1000",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "finishDate5000",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "bidProjectImportDate",
+      "fieldType": "Instant",
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "centerApprovedDate",
+      "fieldType": "Instant",
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "centerApprovedProgress",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000",
+      "javadoc": "type: VARCHAR(2000)"
+    },
+    {
+      "fieldName": "isEditSubmitData",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIT"
+    },
+    {
+      "fieldName": "isDenyBudgetChange",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: BIT"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "20",
+      "javadoc": "type: NVARCHAR(20)"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "type: DATETIME"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RecTyphoon",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

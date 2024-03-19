@@ -1,0 +1,28 @@
+entity TecContent (TEC_CONTENT) {
+	@Id contentId Long required /** type: BIGINT */
+	pageId Long required /** type: BIGINT */
+	contentTitle String maxlength(200) /** type: NVARCHAR(200) */
+    content String maxlength(4000) required /** type: NVARCHAR(MAX) */
+	isdelete Boolean required /** type: BIT */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+	updateTime Instant required /** type: DATETIME */
+	createUser String maxlength(20) required /** type: NVARCHAR(20) */
+	createTime Instant required /** type: DATETIME */
+}
+
+entity TecPage (TEC_PAGE) {
+	@Id pageId Long required /** type: BIGINT */
+	menu String maxlength(20) required /** type: NVARCHAR(20) */
+	subMenu String maxlength(20) /** type: NVARCHAR(20) */
+	contentType String maxlength(50) /** type: NVARCHAR(50) */
+	pageTitle String maxlength(200) /** type: NVARCHAR(200) */
+	pageStart Instant required /** type: DATETIME */
+    pageEnd Instant required /** type: DATETIME */
+    isdelete Boolean required /** type: BIT */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+	updateTime Instant required /** type: DATETIME */
+	createUser String maxlength(20) required /** type: NVARCHAR(20) */
+	createTime Instant required /** type: DATETIME */
+}
+
+use mapstruct for *

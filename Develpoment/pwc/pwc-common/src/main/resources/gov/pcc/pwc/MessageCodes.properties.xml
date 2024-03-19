@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!--
+ 應用程式訊息代碼表
+
+ 代碼 Pattern: PWC-([A-Z0-9]{4,7})-([0-9]{4})-([SIWE])
+              |系統|元件、功能名稱  |流水號      |等級
+        系統:         固定是 PWC
+        元件、功能名稱: 可以是功能代號或是方便識別的元件名稱
+        流水號:        0001-9999
+        狀態等級:      S-成功, I-資訊, W-警告, E-錯誤
+-->
+<properties>
+    <entry key="PWC-COMMON-0001-S">資料新增成功。</entry>
+    <entry key="PWC-COMMON-0002-S">資料更新成功。</entry>
+    <entry key="PWC-COMMON-0002-E">新增資料時，ID 必須為空值。</entry>
+    <entry key="PWC-COMMON-0003-E">更新資料時，ID 不能為空值。</entry>
+    <entry key="PWC-COMMON-0004-E">ID 不相符。</entry>
+    <entry key="PWC-COMMON-0005-E">欲更新的資料不存在。</entry>
+    <entry key="PWC-COMMON-0006-E">無法載入指定的資源檔。</entry>
+    <entry key="PWC-COMMON-0007-E">鍵值重覆。</entry>
+    <entry key="PWC-COMMON-0008-E">索引鍵重複。</entry>
+    <entry key="PWC-COMMON-0009-E">欄位資料有誤。</entry>
+    <entry key="PWC-COMMON-0010-E">傳入的參數可能有SQLInjection的疑慮，請檢查資料後再執行。</entry>
+
+    <entry key="PWC-COMMON-0011-E">檔案不可超過{0}:{1}</entry>
+    <entry key="PWC-COMMON-0012-E">檔案須為以下格式{0}：{1}</entry>
+    <entry key="PWC-COMMON-0013-E">檔案已存在：{0}</entry>
+
+
+    <entry key="PWC-OGN01-0001-S">{0}-{1}：修改成功。</entry>
+    <entry key="PWC-GEO01-0001-S">{0}-{1}：修改成功。</entry>
+    <entry key="PWC-GEO01-0002-S">{0}-{1}：新增成功。</entry>
+    <entry key="PWB-AMD02-0001-S">帳號--{0}：申請成功，請等待系統管理員通知申請結果。</entry>
+    <entry key="PWB-AMD03-0001-S">帳號--{0}審核結果：通過。</entry>
+    <entry key="PWB-AMD03-0002-S">帳號--{0}審核結果：作廢。</entry>
+    <entry key="PWB-AMD04-0001-S">帳號--{0}：新增成功。</entry>
+    <entry key="PWB-AMD04-0002-S">帳號--{0}：修改成功。</entry>
+    <entry key="PWB-AMD04-0003-S">帳號--{0}：刪除成功。</entry>
+    <entry key="PWB-AMD05-0001-S">角色--{0}：新增成功。</entry>
+    <entry key="PWB-AMD05-0002-S">角色--{0}：修改成功。</entry>
+    <entry key="PWB-AMD05-0003-S">角色--{0}：刪除成功。</entry>
+    <entry key="PWB-AMD05-0004-S">角色--{0}：無法刪除，目前已有帳號授權中。</entry>
+    <entry key="PWB-AMD06-0001-S">功能--{0}：新增成功。</entry>
+    <entry key="PWB-AMD06-0002-S">功能--{0}：修改成功。</entry>
+    <entry key="PWB-AMD06-0003-S">功能--{0}：刪除成功。</entry>
+    <entry key="PWB-AMD06-0004-S">功能--{0}：無法刪除，目前已有角色使用中。</entry>
+    <entry key="PWB-AMD07-0001-S">延伸功能--{0}：新增成功。</entry>
+    <entry key="PWB-AMD07-0002-S">延伸功能--{0}：修改成功。</entry>
+    <entry key="PWB-AMD07-0003-S">延伸功能--{0}：刪除成功。</entry>
+    <entry key="PWB-AMD07-0004-S">延伸功能--{0}：無法刪除，目前已有功能使用中。</entry>
+    <entry key="PWB-AMD09-0001-S">批次服務代碼--{0}：新增成功。</entry>
+    <entry key="PWB-AMD09-0002-S">批次服務代碼--{0}：修改成功。</entry>
+    <entry key="PWB-AMD09-0003-S">批次服務代碼--{0}：刪除成功。</entry>
+    <entry key="PWB-AMD11-0001-S">系統參數--名稱{0}，類型{1}：新增成功。</entry>
+    <entry key="PWB-AMD11-0002-S">系統參數--名稱{0}，類型{1}：修改成功。</entry>
+    <entry key="PWB-AMD11-0003-S">系統參數--名稱{0}，類型{1}：刪除成功。</entry>
+    <entry key="PWB-AMD12-0001-S">系統代碼--模組別{0}，代碼類別{1}，系統代碼{2}：新增成功。</entry>
+    <entry key="PWB-AMD12-0002-S">系統代碼--模組別{0}，代碼類別{1}，系統代碼{2}：修改成功。</entry>
+    <entry key="PWB-AMD12-0003-S">系統代碼--模組別{0}，代碼類別{1}，系統代碼{2}：刪除成功。</entry>
+    <entry key="PWB-AMD13-0001-S">i18n代碼--代碼{0}：新增成功。</entry>
+    <entry key="PWB-AMD13-0002-S">i18n代碼--代碼{0}：修改成功。</entry>
+    <entry key="PWB-AMD13-0003-S">i18n代碼--代碼{0}：刪除成功。</entry>
+    <entry key="PWB-AMD13-0004-S">i18n代碼--代碼{0}：無法新增，目前資料庫已有與新增內容相同之代碼。</entry>
+    <entry key="PWB-AMD13-0005-S">i18n代碼--代碼{0}：無法修改，目前資料庫已有與修改內容相同之代碼。</entry>
+    <entry key="PWB-AMD14-0001-S">假日--{0}：新增成功。</entry>
+    <entry key="PWB-AMD14-0002-S">假日--{0}：修改成功。</entry>
+    <entry key="PWB-AMD14-0003-S">假日--{0}：刪除成功。</entry>
+</properties>

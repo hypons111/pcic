@@ -1,0 +1,250 @@
+{
+  "applications": "*",
+  "changelogDate": "20220524075520",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "rec_project",
+  "fields": [
+    {
+      "fieldName": "projectNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "22"
+    },
+    {
+      "fieldName": "typhoonNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "36"
+    },
+    {
+      "fieldName": "projectCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "applyOrgId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "applySubmitNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "approveNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "projectName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "damageDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "damageDescript",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "dangerousDegree",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dangerousDescript",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "reasonAnalysis",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "44"
+    },
+    {
+      "fieldName": "otherReason",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "applyAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "projectStatus",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "applyUserId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "deleteUserId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "approveDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "reviewAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "reviewDescript",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "isReviewWatch",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isReviewInCalList",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "executionStatus",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "changeAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "changeDescript",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "isReviewChangeAmount",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "reviewChangeDescript",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "isCancelAmount",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "cancelDescript",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "reviewProjectCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "statusChangeDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "centerAllowanceAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "localReservesAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "returnAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "returnStatus",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "isSurveyPlan",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "surveyPlanDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isNoDemand",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "surveyPlanEndDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "surveyPlanDate1",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "surveyPlanDate2",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "surveyPlanDate3",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RecProject",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

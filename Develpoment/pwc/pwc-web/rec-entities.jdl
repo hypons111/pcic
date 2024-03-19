@@ -1,0 +1,78 @@
+entity RecTyphoon (REC_TYPHOON){
+	@Id typhoonNo String required maxlength(36) /** type: VARCHAR(36) */
+    typhoonName String maxlength(30)/** type: NVARCHAR(30) */
+    applyStartTime Instant required /** type: DATETIME */
+    applyEndTime Instant /** type: DATETIME */
+	isLocalOnly Boolean required /** type: BIT */
+    finishDate1000 Instant required /** type: DATETIME */
+    finishDate5000 Instant required /** type: DATETIME */
+    bidProjectImportDate Instant /** type: DATETIME */
+    centerApprovedDate Instant /** type: DATETIME */
+    centerApprovedProgress String maxlength(2000) /** type: VARCHAR(2000) */
+    isEditSubmitData Boolean required /** type: BIT */
+    isDenyBudgetChange Boolean required /** type: BIT */
+	createUser String maxlength(20) required /** type: NVARCHAR(20) */
+	createTime Instant required /** type: DATETIME */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+	updateTime Instant required /** type: DATETIME */
+}
+
+entity RecUserProjectCode(REC_USER_PROJECT_CODE){
+	@Id userId String required maxlength(20) /** type: VARCHAR(20) */
+    projectCode String required maxlength(20) /** type: VARCHAR(20) */
+    createUser String maxlength(20) required /** type: NVARCHAR(20) */
+	createTime Instant required /** type: DATETIME */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+	updateTime Instant required /** type: DATETIME */
+}
+
+entity RecProject (REC_PROJECT) {
+	projectNo String required maxlength(22),
+	typhoonNo String required maxlength(36),
+	projectCode String maxlength(20),
+	applyOrgId String maxlength(20),
+	applySubmitNo String maxlength(3),
+	approveNo String maxlength(3),
+	projectName String maxlength(200),
+	damageDate Instant,
+	damageDescript String maxlength(4000),
+	dangerousDegree Long,
+	dangerousDescript String maxlength(4000),
+	reasonAnalysis String maxlength(44),
+	otherReason String maxlength(4000),
+	applyAmount BigDecimal,
+	projectStatus String maxlength(20),
+	applyUserId String required maxlength(20),
+	deleteUserId String maxlength(20),
+	approveDate Instant,
+	reviewAmount BigDecimal,
+	reviewDescript String maxlength(4000),
+	isReviewWatch Boolean,
+	isReviewInCalList Boolean,
+	executionStatus String maxlength(20),
+	changeAmount BigDecimal,
+	changeDescript String maxlength(4000),
+	isReviewChangeAmount Boolean,
+	reviewChangeDescript String maxlength(4000),
+	isCancelAmount Boolean,
+	cancelDescript String maxlength(4000),
+	reviewProjectCode String maxlength(20),
+	statusChangeDate Instant,
+	centerAllowanceAmount BigDecimal,
+	localReservesAmount BigDecimal,
+	returnAmount BigDecimal,
+	returnStatus String maxlength(20),
+	isSurveyPlan Boolean,
+	surveyPlanDate Instant,
+	isNoDemand Boolean,
+	surveyPlanEndDate Instant,
+	surveyPlanDate1 Instant,
+	surveyPlanDate2 Instant,
+	surveyPlanDate3 Instant,
+	createUser String required maxlength(20),
+	createTime Instant required,
+	updateUser String required maxlength(20),
+	updateTime Instant required
+}
+
+use mapstruct for *

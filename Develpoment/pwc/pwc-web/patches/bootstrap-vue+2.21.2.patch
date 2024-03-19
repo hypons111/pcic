@@ -1,0 +1,275 @@
+diff --git a/node_modules/bootstrap-vue/dist/bootstrap-vue.js b/node_modules/bootstrap-vue/dist/bootstrap-vue.js
+index 3255ed4..36ddc31 100644
+--- a/node_modules/bootstrap-vue/dist/bootstrap-vue.js
++++ b/node_modules/bootstrap-vue/dist/bootstrap-vue.js
+@@ -3912,6 +3912,7 @@
+   });
+ 
+   var CALENDAR_GREGORY = 'gregory';
++  var LOCALE_ROC = 'zh-TW-u-ca-roc';
+   var CALENDAR_LONG = 'long';
+   var CALENDAR_NARROW = 'narrow';
+   var CALENDAR_SHORT = 'short';
+@@ -3938,7 +3939,7 @@
+           month = _date$split$map2[1],
+           day = _date$split$map2[2];
+ 
+-      return createDate(year, month - 1, day);
++      return createDate(year + 1911, month - 1, day);
+     } else if (isDate(date)) {
+       return createDate(date.getFullYear(), date.getMonth(), date.getDate());
+     }
+@@ -3953,7 +3954,7 @@
+       return null;
+     }
+ 
+-    var year = date.getFullYear();
++    var year = date.getFullYear() - 1911;
+     var month = "0".concat(date.getMonth() + 1).slice(-2);
+     var day = "0".concat(date.getDate()).slice(-2);
+     return "".concat(year, "-").concat(month, "-").concat(day);
+@@ -3964,16 +3965,14 @@
+   {
+     var calendar = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : CALENDAR_GREGORY;
+     locales = concat(locales).filter(identity);
+-    var fmt = new Intl.DateTimeFormat(locales, {
+-      calendar: calendar
+-    });
++    var fmt = new Intl.DateTimeFormat(LOCALE_ROC);
+     return fmt.resolvedOptions().locale;
+   }; // Create a `Intl.DateTimeFormat` formatter function
+ 
+   var createDateFormatter = function createDateFormatter(locale, options)
+   /* istanbul ignore next */
+   {
+-    var dtf = new Intl.DateTimeFormat(locale, options);
++    var dtf = new Intl.DateTimeFormat(LOCALE_ROC, options);
+     return dtf.format;
+   }; // Determine if two dates are the same date (ignoring time portion)
+ 
+@@ -4287,9 +4286,7 @@
+         // Needed because IE 11 resolves `ar-IR` as islamic-civil calendar
+         // and IE 11 (and some other browsers) do not support the `calendar` option
+         // And we currently only support the gregorian calendar
+-        var fmt = new Intl.DateTimeFormat(this.computedLocale, {
+-          calendar: CALENDAR_GREGORY
+-        });
++        var fmt = new Intl.DateTimeFormat(LOCALE_ROC);
+         var calendar = fmt.resolvedOptions().calendar;
+         var locale = fmt.resolvedOptions().locale;
+         /* istanbul ignore if: mainly for IE 11 and a few other browsers, hard to test in JSDOM */
+@@ -4298,7 +4295,7 @@
+           // Ensure the locale requests the gregorian calendar
+           // Mainly for IE 11, and currently we can't handle non-gregorian calendars
+           // TODO: Should we always return this value?
+-          locale = locale.replace(/-u-.+$/i, '').concat('-u-ca-gregory');
++          locale = locale.replace(/-u-.+$/i, '').concat('-u-ca-roc');
+         }
+ 
+         return locale;
+@@ -4412,32 +4409,27 @@
+           // As we do not support the time portion (yet)
+           hour: undefined,
+           minute: undefined,
+-          second: undefined,
+-          // Ensure calendar is gregorian
+-          calendar: CALENDAR_GREGORY
++          second: undefined
+         }));
+       },
+       formatYearMonth: function formatYearMonth() {
+         // Returns a date formatter function
+         return createDateFormatter(this.calendarLocale, {
+           year: DATE_FORMAT_NUMERIC,
+-          month: CALENDAR_LONG,
+-          calendar: CALENDAR_GREGORY
++          month: CALENDAR_LONG
+         });
+       },
+       formatWeekdayName: function formatWeekdayName() {
+         // Long weekday name for weekday header aria-label
+         return createDateFormatter(this.calendarLocale, {
+-          weekday: CALENDAR_LONG,
+-          calendar: CALENDAR_GREGORY
++          weekday: CALENDAR_LONG
+         });
+       },
+       formatWeekdayNameShort: function formatWeekdayNameShort() {
+         // Weekday header cell format
+         // defaults to 'short' 3 letter days, where possible
+         return createDateFormatter(this.calendarLocale, {
+-          weekday: this.weekdayHeaderFormat || CALENDAR_SHORT,
+-          calendar: CALENDAR_GREGORY
++          weekday: this.weekdayHeaderFormat || CALENDAR_SHORT
+         });
+       },
+       formatDay: function formatDay() {
+@@ -4928,6 +4920,10 @@
+         }
+       }, [hideDecadeNav ? h() : makeNavBtn($prevDecadeIcon, this.labelPrevDecade, this.gotoPrevDecade, this.prevDecadeDisabled, 'Ctrl+Alt+PageDown'), makeNavBtn($prevYearIcon, this.labelPrevYear, this.gotoPrevYear, this.prevYearDisabled, 'Alt+PageDown'), makeNavBtn($prevMonthIcon, this.labelPrevMonth, this.gotoPrevMonth, this.prevMonthDisabled, 'PageDown'), makeNavBtn($thisMonthIcon, this.labelCurrentMonth, this.gotoCurrentMonth, this.thisMonthDisabled, 'Home'), makeNavBtn($nextMonthIcon, this.labelNextMonth, this.gotoNextMonth, this.nextMonthDisabled, 'PageUp'), makeNavBtn($nextYearIcon, this.labelNextYear, this.gotoNextYear, this.nextYearDisabled, 'Alt+PageUp'), hideDecadeNav ? h() : makeNavBtn($nextDecadeIcon, this.labelNextDecade, this.gotoNextDecade, this.nextDecadeDisabled, 'Ctrl+Alt+PageUp')]); // Caption for calendar grid
+ 
++      var yearMonth = this.formatYearMonth(this.calendarFirstDay);
++      if (yearMonth.length != 8) {
++        yearMonth = '民國' + yearMonth.substring(3, yearMonth.length - 1);
++      }
+       var $gridCaption = h('header', {
+         staticClass: 'b-calendar-grid-caption text-center font-weight-bold',
+         class: {
+@@ -4939,7 +4935,7 @@
+           'aria-atomic': isLive ? 'true' : null
+         },
+         key: 'grid-caption'
+-      }, this.formatYearMonth(this.calendarFirstDay)); // Calendar weekday headings
++      }, yearMonth); // Calendar weekday headings
+ 
+       var $gridWeekDays = h('div', {
+         staticClass: 'b-calendar-grid-weekdays row no-gutters border-bottom',
+diff --git a/node_modules/bootstrap-vue/esm/components/calendar/calendar.js b/node_modules/bootstrap-vue/esm/components/calendar/calendar.js
+index 26c33c1..45f864f 100644
+--- a/node_modules/bootstrap-vue/esm/components/calendar/calendar.js
++++ b/node_modules/bootstrap-vue/esm/components/calendar/calendar.js
+@@ -8,7 +8,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
+ 
+ import { Vue } from '../../vue';
+ import { NAME_CALENDAR } from '../../constants/components';
+-import { CALENDAR_GREGORY, CALENDAR_LONG, CALENDAR_NARROW, CALENDAR_SHORT, DATE_FORMAT_2_DIGIT, DATE_FORMAT_NUMERIC } from '../../constants/date';
++import { CALENDAR_GREGORY, CALENDAR_LONG, CALENDAR_NARROW, CALENDAR_SHORT, DATE_FORMAT_2_DIGIT, DATE_FORMAT_NUMERIC, LOCALE_ROC } from '../../constants/date';
+ import { EVENT_NAME_CONTEXT, EVENT_NAME_SELECTED } from '../../constants/events';
+ import { CODE_DOWN, CODE_END, CODE_ENTER, CODE_HOME, CODE_LEFT, CODE_PAGEDOWN, CODE_PAGEUP, CODE_RIGHT, CODE_SPACE, CODE_UP } from '../../constants/key-codes';
+ import { PROP_TYPE_ARRAY_STRING, PROP_TYPE_BOOLEAN, PROP_TYPE_DATE_STRING, PROP_TYPE_FUNCTION, PROP_TYPE_NUMBER_STRING, PROP_TYPE_OBJECT, PROP_TYPE_STRING } from '../../constants/props';
+@@ -205,9 +205,7 @@ export var BCalendar = Vue.extend({
+       // Needed because IE 11 resolves `ar-IR` as islamic-civil calendar
+       // and IE 11 (and some other browsers) do not support the `calendar` option
+       // And we currently only support the gregorian calendar
+-      var fmt = new Intl.DateTimeFormat(this.computedLocale, {
+-        calendar: CALENDAR_GREGORY
+-      });
++      var fmt = new Intl.DateTimeFormat(LOCALE_ROC);
+       var calendar = fmt.resolvedOptions().calendar;
+       var locale = fmt.resolvedOptions().locale;
+       /* istanbul ignore if: mainly for IE 11 and a few other browsers, hard to test in JSDOM */
+@@ -216,7 +214,7 @@ export var BCalendar = Vue.extend({
+         // Ensure the locale requests the gregorian calendar
+         // Mainly for IE 11, and currently we can't handle non-gregorian calendars
+         // TODO: Should we always return this value?
+-        locale = locale.replace(/-u-.+$/i, '').concat('-u-ca-gregory');
++        locale = locale.replace(/-u-.+$/i, '').concat('-u-ca-roc');
+       }
+ 
+       return locale;
+@@ -330,32 +328,27 @@ export var BCalendar = Vue.extend({
+         // As we do not support the time portion (yet)
+         hour: undefined,
+         minute: undefined,
+-        second: undefined,
+-        // Ensure calendar is gregorian
+-        calendar: CALENDAR_GREGORY
++        second: undefined
+       }));
+     },
+     formatYearMonth: function formatYearMonth() {
+       // Returns a date formatter function
+       return createDateFormatter(this.calendarLocale, {
+         year: DATE_FORMAT_NUMERIC,
+-        month: CALENDAR_LONG,
+-        calendar: CALENDAR_GREGORY
++        month: CALENDAR_LONG
+       });
+     },
+     formatWeekdayName: function formatWeekdayName() {
+       // Long weekday name for weekday header aria-label
+       return createDateFormatter(this.calendarLocale, {
+-        weekday: CALENDAR_LONG,
+-        calendar: CALENDAR_GREGORY
++        weekday: CALENDAR_LONG
+       });
+     },
+     formatWeekdayNameShort: function formatWeekdayNameShort() {
+       // Weekday header cell format
+       // defaults to 'short' 3 letter days, where possible
+       return createDateFormatter(this.calendarLocale, {
+-        weekday: this.weekdayHeaderFormat || CALENDAR_SHORT,
+-        calendar: CALENDAR_GREGORY
++        weekday: this.weekdayHeaderFormat || CALENDAR_SHORT
+       });
+     },
+     formatDay: function formatDay() {
+@@ -846,6 +839,10 @@ export var BCalendar = Vue.extend({
+       }
+     }, [hideDecadeNav ? h() : makeNavBtn($prevDecadeIcon, this.labelPrevDecade, this.gotoPrevDecade, this.prevDecadeDisabled, 'Ctrl+Alt+PageDown'), makeNavBtn($prevYearIcon, this.labelPrevYear, this.gotoPrevYear, this.prevYearDisabled, 'Alt+PageDown'), makeNavBtn($prevMonthIcon, this.labelPrevMonth, this.gotoPrevMonth, this.prevMonthDisabled, 'PageDown'), makeNavBtn($thisMonthIcon, this.labelCurrentMonth, this.gotoCurrentMonth, this.thisMonthDisabled, 'Home'), makeNavBtn($nextMonthIcon, this.labelNextMonth, this.gotoNextMonth, this.nextMonthDisabled, 'PageUp'), makeNavBtn($nextYearIcon, this.labelNextYear, this.gotoNextYear, this.nextYearDisabled, 'Alt+PageUp'), hideDecadeNav ? h() : makeNavBtn($nextDecadeIcon, this.labelNextDecade, this.gotoNextDecade, this.nextDecadeDisabled, 'Ctrl+Alt+PageUp')]); // Caption for calendar grid
+ 
++    var yearMonth = this.formatYearMonth(this.calendarFirstDay);
++    if (yearMonth.length != 8) {
++      yearMonth = '民國' + yearMonth.substring(3, yearMonth.length - 1);
++    }
+     var $gridCaption = h('header', {
+       staticClass: 'b-calendar-grid-caption text-center font-weight-bold',
+       class: {
+@@ -857,7 +854,7 @@ export var BCalendar = Vue.extend({
+         'aria-atomic': isLive ? 'true' : null
+       },
+       key: 'grid-caption'
+-    }, this.formatYearMonth(this.calendarFirstDay)); // Calendar weekday headings
++    }, yearMonth); // Calendar weekday headings
+ 
+     var $gridWeekDays = h('div', {
+       staticClass: 'b-calendar-grid-weekdays row no-gutters border-bottom',
+diff --git a/node_modules/bootstrap-vue/esm/constants/date.js b/node_modules/bootstrap-vue/esm/constants/date.js
+index 1a4d0da..0e358a5 100644
+--- a/node_modules/bootstrap-vue/esm/constants/date.js
++++ b/node_modules/bootstrap-vue/esm/constants/date.js
+@@ -1,4 +1,5 @@
+ export var CALENDAR_GREGORY = 'gregory';
++export var LOCALE_ROC = 'zh-TW-u-ca-roc';
+ export var CALENDAR_LONG = 'long';
+ export var CALENDAR_NARROW = 'narrow';
+ export var CALENDAR_SHORT = 'short';
+diff --git a/node_modules/bootstrap-vue/esm/utils/date.js b/node_modules/bootstrap-vue/esm/utils/date.js
+index b08423a..8014b7f 100644
+--- a/node_modules/bootstrap-vue/esm/utils/date.js
++++ b/node_modules/bootstrap-vue/esm/utils/date.js
+@@ -18,6 +18,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
+ 
+ // Date utility functions
+ import { CALENDAR_GREGORY } from '../constants/date';
++import { LOCALE_ROC } from '../constants/date';
+ import { RX_DATE, RX_DATE_SPLIT } from '../constants/regex';
+ import { concat } from './array';
+ import { identity } from './identity';
+@@ -43,7 +44,7 @@ export var parseYMD = function parseYMD(date) {
+         month = _date$split$map2[1],
+         day = _date$split$map2[2];
+ 
+-    return createDate(year, month - 1, day);
++    return createDate(year + 1911, month - 1, day);
+   } else if (isDate(date)) {
+     return createDate(date.getFullYear(), date.getMonth(), date.getDate());
+   }
+@@ -58,7 +59,7 @@ export var formatYMD = function formatYMD(date) {
+     return null;
+   }
+ 
+-  var year = date.getFullYear();
++  var year = date.getFullYear() - 1911;
+   var month = "0".concat(date.getMonth() + 1).slice(-2);
+   var day = "0".concat(date.getDate()).slice(-2);
+   return "".concat(year, "-").concat(month, "-").concat(day);
+@@ -69,16 +70,14 @@ export var resolveLocale = function resolveLocale(locales)
+ {
+   var calendar = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : CALENDAR_GREGORY;
+   locales = concat(locales).filter(identity);
+-  var fmt = new Intl.DateTimeFormat(locales, {
+-    calendar: calendar
+-  });
++  var fmt = new Intl.DateTimeFormat(LOCALE_ROC);
+   return fmt.resolvedOptions().locale;
+ }; // Create a `Intl.DateTimeFormat` formatter function
+ 
+ export var createDateFormatter = function createDateFormatter(locale, options)
+ /* istanbul ignore next */
+ {
+-  var dtf = new Intl.DateTimeFormat(locale, options);
++  var dtf = new Intl.DateTimeFormat(LOCALE_ROC, options);
+   return dtf.format;
+ }; // Determine if two dates are the same date (ignoring time portion)
+ 

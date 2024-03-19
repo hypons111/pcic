@@ -1,0 +1,25 @@
+entity CstSubject(CST_Subject) {
+    @Id id Long required /** type:numeric(4,0) */
+    name String maxlength(50) /** type: nvarchar(50) */
+}
+
+entity CmsComp(CMS_Comp) {
+    @Id id String maxlength(50) required
+	type String maxlength(1) required
+    name String maxlength(50) required
+    useStatus String maxlength(1) required
+    chairman String maxlength(50)
+    secretaryGeneral String maxlength(50)
+    tel1 String maxlength(50)
+    tel2 String maxlength(50)
+	chairmanTel String maxlength(50)
+  	fax String maxlength(50)
+    address String maxlength(100)
+    mail String maxlength(50)
+    subjectList String maxlength(100)
+    remark String maxlength(4000)
+    createDate Instant
+    modifyDate Instant
+}
+
+use mapstruct for *

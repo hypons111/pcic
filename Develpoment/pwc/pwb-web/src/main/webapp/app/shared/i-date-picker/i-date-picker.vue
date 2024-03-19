@@ -1,0 +1,98 @@
+<template>
+  <div class="b-form-btn-label-control form-control" :class="formState">
+    <date-picker class="col-12 p-0" v-model="date" :lang="langAttr" :formatter="dateFormat" v-bind="$attrs">
+      <template v-if="!isRange" v-slot:header="{ emit }">
+        <div class="w-100 text-center">
+          <button class="mx-btn mx-btn-text" @click="emit(new Date())">今日</button>
+        </div>
+      </template>
+    </date-picker>
+  </div>
+</template>
+
+<script>
+import { ref, computed, reactive, watch } from '@vue/composition-api';
+import { LANG } from './lang';
+import DatePicker from 'vue2-datepicker';
+import 'vue2-datepicker/index.css';
+import { formatDate, parseRocDate } from '@/shared/date/minguo-calendar-utils';
+import { validateState } from '@/shared/form';
+
+export default {
+  name: 'i-date-picker',
+  components: {
+    DatePicker,
+  },
+  props: {
+    lang: {
+      required: false,
+      default: () => LANG,
+    },
+    value: {},
+    state: {
+      required: false,
+      default: null,
+    },
+  },
+  model: {
+    prop: 'value',
+    event: 'update',
+  },
+  setup(props, context) {
+    const date = ref(props.value);
+    watch(
+      computed(() => props.value),
+      newValue => {
+        date.value = newValue;
+      }
+    );
+    const langAttr = computed(() => props.lang);
+    const isRange = computed(() => context.attrs.range !== undefined);
+    const displayType = computed(() => context.attrs.type);
+    const formState = computed(() => {
+      const isValid = props.state ? validateState(props.state) : null;
+      if (isValid === null || isValid) {
+        return '';
+      } else {
+        return 'is-invalid';
+      }
+    });
+
+    const dateFormat = reactive({
+      stringify: original => {
+        const dateString = formatDate(original, '/');
+        switch (displayType.value) {
+          case 'month':
+            return dateString.substring(0, dateString.lastIndexOf('/'));
+          case 'year':
+            return dateString.substring(0, dateString.indexOf('/'));
+          default:
+            return dateString;
+        }
+      },
+      parse: original => {
+        const hasDelimiter = original.indexOf('/') > 0;
+        switch (displayType.value) {
+          case 'month':
+            return parseRocDate(original + (hasDelimiter ? '/01' : '01'));
+          case 'year':
+            return parseRocDate(original + (hasDelimiter ? '/01/01' : '0101'));
+          default:
+            return parseRocDate(original);
+        }
+      },
+    });
+
+    watch(date, () => {
+      context.emit('update', date.value);
+    });
+
+    return { langAttr, date, isRange, dateFormat, formState, validateState };
+  },
+};
+</script>
+<style>
+.b-form-btn-label-control .form-control {
+  border: none !important;
+}
+</style>

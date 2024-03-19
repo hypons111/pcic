@@ -1,0 +1,39 @@
+entity PwbRoleApply (PWB_ROLE_APPLY) {
+    @Id id Long required /** type: BIGINT */
+    userId String maxlength(20) required /** type: VARCHAR(20) */
+    applyTime Instant /** type: DATETIME */
+    approveTime Instant /** type: DATETIME */
+    status String maxlength(1) /** type: VARCHAR(1) */
+    moduleType String maxlength(3) required /** type: VARCHAR(3) */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+    updateTime Instant required /** type: DATETIME */
+    createUser String maxlength(20) required /** type: NVARCHAR(20) */
+    createTime Instant required /** type: DATETIME */
+}
+
+entity PwbRoleApprove (PWB_ROLE_APPROVE) {
+    @Id id Long required /** type: BIGINT */
+    roleType String maxlength(3) required /** type: VARCHAR(3) */
+    moduleType String maxlength(3) required /** type: VARCHAR(3) */
+    businessType String maxlength(20) /** type: VARCHAR(20) */
+    userId String maxlength(20) /** type: VARCHAR(20) */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+    updateTime Instant required /** type: DATETIME */
+    createUser String maxlength(20) required /** type: NVARCHAR(20) */
+    createTime Instant required /** type: DATETIME */
+}
+
+entity PwbRoleModule (PWB_ROLE_MODULE) {
+    @Id id Long required /** type: BIGINT */
+    roleType String maxlength(1) /** type: VARCHAR(1) */
+    moduleType String maxlength(3) required /** type: VARCHAR(3) */
+    roleId String maxlength(20) required /** type: VARCHAR(20) */
+    updateUser String maxlength(20) required /** type: NVARCHAR(20) */
+    updateTime Instant required /** type: DATETIME */
+    createUser String maxlength(20) required /** type: NVARCHAR(20) */
+    createTime Instant required /** type: DATETIME */
+    businessType String maxlength(20) /** type: VARCHAR(20) */
+    approveLevel String maxlength(20) /** type: VARCHAR(20) */
+}
+
+use mapstruct for *

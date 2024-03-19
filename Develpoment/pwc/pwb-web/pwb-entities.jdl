@@ -1,0 +1,277 @@
+entity AdmAccount(Adm_Account) {
+	@Id userId String maxlength(20) required /** type: varchar(20) */
+	pccOrgId String maxlength(20) /** type: varchar(20) */
+	ban String maxlength(8) /** type: varchar(8) */
+	no Long /** type: bigint */
+	userPadHash String /** type: varchar(max) */
+	status String maxlength(1) /** type: varchar(1) */
+	userType String maxlength(1) /** type: varchar(1) */
+	updateUser String maxlength(20) required /** type: varchar(20) */
+	padUpdateTime Instant required /** type: datetime */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmPadHis(Adm_Pad_His) {
+    @Id id Long required /** type: bigint */
+    userId String maxlength(20) required /** type: varchar(20) */
+    userPadHash String required /** type: varchar(max) */
+    createTime Instant required /** type: datetime */
+}
+
+entity AdmContact(Adm_Contact) {
+    @Id userId String maxlength(20) required /** type: varchar(20) */
+    userName String maxlength(20) required /** type: nvarchar(20) */
+    birthday Instant required /** type: date */
+    idno String maxlength(10) required /** type: varchar(10) */
+    sex Boolean required /** type: bit */
+    workTel String maxlength(20) required /** type: varchar(20) */
+    mobileTel String maxlength(15) required /** type: varchar(15) */
+    email String maxlength(100) required /** type: varchar(100) */
+    homeAddr String maxlength(100) required /** type: nvarchar(100) */
+    workAddr String maxlength(100) required /** type: nvarchar(100) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+	updateTime Instant required /** type: datetime */
+}
+
+entity AdmAgent(Adm_Agent) {
+    @Id orgId String maxlength(20) required /** type: varchar(20) */
+    pccOrgId String maxlength(20) required /** type: varchar(20) */
+    orgName String maxlength(100) required /** type: nvarchar(100) */
+    orgNameEn String maxlength(100) /** type: varchar(100) */
+    addr String maxlength(100) /** type: nvarchar(100) */
+    tel String maxlength(20) /** type: varchar(20) */
+    fax String maxlength(20) /** type: varchar(20) */
+    descript String maxlength(500) /** type: nvarchar(500) */
+	adminOrgId String maxlength(20) /** type: varchar(20) */
+    orgLevel BigDecimal min(0) /** type: decimal(1,0) */
+    cutMark String maxlength(1) /** type: varchar(1) */
+    oldOrgId String maxlength(20) /** type: varchar(20) */
+    oldOrgName String maxlength(50) /** type: nvarchar(50) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmUnit(Adm_Unit) {
+    @Id unitId String maxlength(20) required /** type: varchar(20) */
+    masterUnitId String maxlength(20) /** type: varchar(20) */
+    admOrgId String maxlength(20) /** type: varchar(20) */
+    unitName String maxlength(50) /** type: nvarchar(50) */
+    addr String maxlength(100) /** type: nvarchar(100) */
+    tel String maxlength(20) /** type: varchar(20) */
+    fax String maxlength(20) /** type: varchar(20) */
+    descript String maxlength(500) /** type: nvarchar(500) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmCompany(Adm_Company) {
+    @Id ban String maxlength(8) required /** type: varchar(8) */
+    rpName String maxlength(50) /** type: nvarchar(50) */
+    name String maxlength(50) /** type: nvarchar(50) */
+    addressCity String maxlength(10) /** type: nvarchar(10) */
+    addressTown String maxlength(10) /** type: nvarchar(10) */
+    addressVillage String maxlength(10) /** type: nvarchar(10) */
+    addressLin String maxlength(10) /** type: nvarchar(10) */
+    addressRoad String maxlength(10) /** type: nvarchar(10) */
+    amount BigDecimal min(0) /** type: decimal(20,0) */
+    conDate Instant /** type: date */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmRole(Adm_Role) {
+    @Id roleId String maxlength(20) required /** type: varchar(20) */
+    roleName String maxlength(20) required /** type: nvarchar(20) */
+    roleDescript String maxlength(500) required /** type: nvarchar(500) */
+    businessCategory String maxlength(10) required /** type: varchar(10) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmAccountRole(Adm_Account_Role){
+    @Id id Long required /** type: bigint */
+    userId String maxlength(20) required /** type: varchar(20) */
+    roleId String maxlength(20) required /** type: varchar(20) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmFunction(Adm_Function) {
+    @Id id Long required /** type: bigint */
+    functionId String maxlength(20) unique required /** type: varchar(20) */
+    functionName String maxlength(20) required /** type: nvarchar(20) */
+    functionDescript String maxlength(500) required /** type: nvarchar(500) */
+    functionPath String maxlength(500) required /** type: varchar(500) */
+    functionCategory String maxlength(1) required /** type: varchar(1) */
+    sysCategory String maxlength(10) required /** type: varchar(10) */
+    sortNo BigDecimal min(0) max(255) required /** type: decimal(3,0) */
+    masterFunctionId String maxlength(20) required /** type: varchar(20) */
+    status String maxlength(1) required /** type: varchar(1) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmRoleFunction(Adm_Role_Function) {
+    @Id id Long required /** type: bigint */
+    roleId String maxlength(20) required /** type: varchar(20) */
+    functionId String maxlength(20) unique required /** type: varchar(20) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmFunctionExtend(Adm_Function_Extend) {
+    @Id id Long required /** type: bigint */
+    functionExtendId String maxlength(20) required /** type: varchar(20) */
+    functionExtendName String maxlength(20) required /** type: nvarchar(20) */
+    functionExtendDescript String maxlength(500) required /** type: nvarchar(500) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmRoleFunctionExtend(Adm_Role_Function_Extend) {
+    @Id id Long required /** type: bigint */
+    roleId String maxlength(20) required /** type: varchar(20) */
+    functionId String maxlength(20) required /** type: varchar(20) */
+    functionExtendId String maxlength(20) required /** type: varchar(20) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmBatchService(Adm_Batch_Service) {
+    @Id batchServiceNo String maxlength(20) required /** type: varchar(20) */
+    batchServiceName String maxlength(20) required /** type: nvarchar(20) */
+    batchServiceCategory String maxlength(10) required /** type: varchar(10) */
+    isRegular Boolean required /** type: bit */
+    batchServiceProg String maxlength(100) required /** type: varchar(100) */
+    batchServiceStatus String maxlength(1) required /** type: varchar(1) */
+    batchExeStatus String maxlength(1) required /** type: varchar(1) */
+    batchFrequency String maxlength(20) required /** type: varchar(20) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmBatchRecord(Adm_Batch_Record) {
+    @Id id Long required /** type: bigint */
+    batchServiceNo String maxlength(20) required /** type: varchar(20) */
+    batchServiceName String maxlength(20) required /** type: nvarchar(20) */
+    batchServiceCategory String maxlength(10) required /** type: varchar(10) */
+    triggerTime Instant required /** type: datetime */
+    finishTime Instant required /** type: datetime */
+    result String maxlength(1) required /** type: varchar(1) */
+}
+
+entity AdmImportRecord(Adm_Batch_Record) {
+    @Id id Long required /** type: bigint */
+    processDate Instant required /** type: date */
+    processStartTime Instant required /** type: datetime */
+    processEndTime Instant required /** type: datetime */
+    processFileName String maxlength(100) required /** type: nvarchar(100) */
+    originalDataCount BigDecimal required /** type: decimal(10,0) */
+    processedDataCount BigDecimal required /** type: decimal(10,0) */
+    unprocessedDataCount BigDecimal required /** type: decimal(10,0) */
+    insertSuccessDataCount BigDecimal required /** type: decimal(10,0) */
+    insertFailDataCount BigDecimal required /** type: decimal(10,0) */
+    updateSuccessDataCount BigDecimal required /** type: decimal(10,0) */
+    updateFailDataCount BigDecimal required /** type: decimal(10,0) */
+    deleteSuccessDataCount BigDecimal required /** type: decimal(10,0) */
+    deleteFailDataCount BigDecimal required /** type: decimal(10,0) */
+    caseSuccessDataCount BigDecimal required /** type: decimal(10,0) */
+    caseFailDataCount BigDecimal required /** type: decimal(10,0) */
+    interfacingSuccessDataCount BigDecimal required /** type: decimal(10,0) */
+    interfacingFailDataCount BigDecimal required /** type: decimal(10,0) */
+    failedDataMemo String maxlength(1000) /** type: varchar(1000) */
+}
+
+/**
+ * 需手動加複合主鍵(SysName、SysType)
+ */
+entity AdmSysParameter(Adm_Sys_Parameter) {
+    sysName String maxlength(20) required /** type: varchar(20) */
+	sysType String maxlength(20) required /** type: varchar(20) */
+	sysValue String maxlength(50) required /** type: varchar(50) */
+	descript String maxlength(500) required /** type: varchar(500) */
+	status String maxlength(1) required /** type: varchar(1) */
+	updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+/**
+ * 需手動加複合主鍵(moduleType、type、key)
+ */
+ entity AdmSysCode(Adm_Sys_Code) {
+    moduleType String maxlength(3) required /** type: varchar(3) */
+    dataType String maxlength(20) required /** type: varchar(20) */
+    sortNo BigDecimal min(0) max(255) required /** type: decimal(3,0) */
+    dataKey String maxlength(20) required /** type: varchar(20) */
+    descript String maxlength(50) /** type: nvarchar(50) */
+    remark String maxlength(100) /** type: varchar(100) */
+    isValid Boolean required /** type: bit */
+    validFromDate Instant required /** type: date */
+    isModify Boolean required /** type: bit */
+    attr1 String maxlength(10) /** type: varchar(10) */
+    attr2 String maxlength(10) /** type: varchar(10) */
+    createUser String maxlength(20) required /** type: varchar(20) */
+    createTime Instant required /** type: datetime */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+    }
+
+entity AdmHoliday(Adm_Holiday) {
+    @Id id Long required /** type: bigint */
+	holidayDate String maxlength(10) required /** type: varchar(10) */
+	holidayName String maxlength(10) required /** type: nvarchar(10) */
+	updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+entity AdmLoginHis(Adm_Login_His) {
+    @Id id Long required /** type: bigint */
+	sysCategory String maxlength(10) required /** type: varchar(10) */
+	result String maxlength(1) required /** type: varchar(1) */
+	descript String maxlength(100) required /** type: nvarchar(100) */
+	sourceIp String maxlength(100) required /** type: varchar(100) */
+	browser String maxlength(100) required /** type: varchar(100) */
+	createTime Instant required /** type: datetime */
+	createUserSys String maxlength(20) required /** type: varchar(20) */
+}
+
+entity AdmCertRecord(Adm_Cert_Record) {
+    @Id id Long required /** type: bigint */
+    functionId String maxlength(20) required /** type: varchar(20) */
+	certCategory String maxlength(10) required /** type: varchar(10) */
+	certSn String maxlength(20) required /** type: varchar(20) */
+	signOps String maxlength(100) required /** type: varchar(100) */
+	encOps String maxlength(100) required /** type: nvarchar(100) */
+	createTime Instant required /** type: datetime */
+	createUserSys String maxlength(20) required /** type: varchar(20) */
+}
+
+entity AdmFunctionUsedRecord(Adm_Function_Used_Record) {
+    @Id id Long required /** type: bigint */
+    sysCategory String maxlength(10) required /** type: varchar(10) */
+    functionId String maxlength(20) required /** type: varchar(20) */
+    functionExtendId String maxlength(20) required /** type: varchar(20) */
+	recordContent String maxlength(100) required /** type: varchar(100) */
+	createTime Instant required /** type: datetime */
+	createUserSys String maxlength(20) required /** type: varchar(20) */
+}
+
+entity AdmFunctionClick(Adm_Function_Click) {
+    @Id id Long required /** type: bigint */
+    functionId String maxlength(20) required /** type: varchar(20) */
+    functionExtendId String maxlength(20) required /** type: varchar(20) */
+	createTime Instant required /** type: datetime */
+}
+
+entity AdmPostAddr(Adm_Post_Addr) {
+    @Id id Long required /** type: bigint */
+    zip5 String maxlength(5) required /** type: varchar(5) */
+    city String maxlength(100) required /** type: nvarchar(100) */
+    area String maxlength(100) required /** type: nvarchar(100) */
+    road String maxlength(100) required /** type: nvarchar(100) */
+    scope String maxlength(100) required /** type: nvarchar(100) */
+    updateUser String maxlength(20) required /** type: varchar(20) */
+    updateTime Instant required /** type: datetime */
+}
+
+

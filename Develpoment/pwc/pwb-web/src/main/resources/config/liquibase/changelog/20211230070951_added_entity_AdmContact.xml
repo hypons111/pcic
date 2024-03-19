@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmContact.
+    -->
+    <changeSet id="20211230070951-1" author="jhipster">
+        <createTable tableName="adm_contact">
+            <column name="user_id" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_name" type="varchar(20)" remarks="type: nvarchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="birthday" type="${datetimeType}" remarks="type: date">
+                <constraints nullable="false" />
+            </column>
+            <column name="idno" type="varchar(10)" remarks="type: varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="sex" type="boolean" remarks="type: bit">
+                <constraints nullable="false" />
+            </column>
+            <column name="work_tel" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="mobile_tel" type="varchar(15)" remarks="type: varchar(15)">
+                <constraints nullable="false" />
+            </column>
+            <column name="email" type="varchar(100)" remarks="type: varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="home_addr" type="varchar(100)" remarks="type: nvarchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="work_addr" type="varchar(100)" remarks="type: nvarchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_user" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_contact" columnName="birthday" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="adm_contact" columnName="update_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+    <changeSet id="20211230070951-2" author="2004012">
+        <modifyDataType tableName="adm_contact" columnName="user_name" newDataType="varchar(60)"/>
+        <modifyDataType tableName="adm_contact" columnName="sex" newDataType="varchar(1)"/>
+        <dropColumn tableName="adm_contact" columnName="home_addr"/>
+        <dropColumn tableName="adm_contact" columnName="work_addr"/>
+        <addColumn tableName="adm_contact">
+            <column name="title" type="varchar(60)" remarks="type: nvarchar(60)">
+                <constraints nullable="false" />
+            </column>
+            <column name="home_addr_zip" type="varchar(10)" remarks="type: varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="home_addr_city" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="home_addr_town" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="home_addr_other" type="varchar(100)" remarks="type: nvarchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="work_addr_zip" type="varchar(10)" remarks="type: varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="work_addr_city" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="work_addr_town" type="varchar(10)" remarks="type: nvarchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="work_addr_other" type="varchar(100)" remarks="type: nvarchar(100)">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+    <changeSet id="20211230070951-3" author="2004012">
+        <dropColumn tableName="adm_contact" columnName="user_name"/>
+
+        <addColumn tableName="adm_contact">
+            <column name="ch_name" type="varchar(50)" remarks="type: nvarchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ch_name_rome" type="varchar(50)" remarks="type: varchar(50)">
+                <constraints nullable="true" />
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

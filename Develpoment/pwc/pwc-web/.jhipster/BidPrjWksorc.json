@@ -1,0 +1,549 @@
+{
+  "applications": "*",
+  "changelogDate": "20220718014148",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bid_prj_wksorc",
+  "fields": [
+    {
+      "fieldName": "wkut",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "prjno",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "syr",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "month",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "person01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "person02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker03",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker04",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker05",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker06",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker07",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker08",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker09",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker10",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker11",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker12",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "personA01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "personA02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA03",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA04",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA05",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA06",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA07",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA08",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA09",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA10",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA11",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA12",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "personB01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "personB02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB03",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB04",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB05",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB06",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB07",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB08",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB09",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB10",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB11",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB12",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "personC01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "personC02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC03",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC04",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC05",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC06",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC07",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC08",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC09",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC10",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC11",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC12",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "person01Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "person02Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker01Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker02Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker03Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker04Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker05Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker06Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker07Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker08Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker09Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker10Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker11Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "worker12Salary",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "aperson01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aperson02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker03",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker04",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker05",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker06",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker07",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker08",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker09",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker10",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker11",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker12",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype01",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype02",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype03",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype04",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype05",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype06",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype07",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype08",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype09",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype10",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype11",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype12",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype13",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ajobtype14",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "confOut",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "confIn",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "uIp",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60"
+    },
+    {
+      "fieldName": "worker13",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker14",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker15",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "worker16",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA13",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA14",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA15",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerA16",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB13",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB14",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB15",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerB16",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC13",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC14",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC15",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workerC16",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker13",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker14",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker15",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aworker16",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BidPrjWksorc",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

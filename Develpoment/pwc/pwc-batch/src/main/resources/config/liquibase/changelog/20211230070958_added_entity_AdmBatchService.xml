@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmBatchService.
+    -->
+    <changeSet id="20211230070958-1" author="jhipster">
+        <createTable tableName="adm_batch_service">
+            <column name="batch_service_no" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="batch_service_name" type="varchar(20)" remarks="type: nvarchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="batch_service_category" type="varchar(10)" remarks="type: varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="is_regular" type="boolean" remarks="type: bit">
+                <constraints nullable="false" />
+            </column>
+            <column name="batch_service_prog" type="varchar(100)" remarks="type: varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="batch_service_status" type="varchar(1)" remarks="type: varchar(1)">
+                <constraints nullable="false" />
+            </column>
+            <column name="batch_exe_status" type="varchar(1)" remarks="type: varchar(1)">
+                <constraints nullable="false" />
+            </column>
+            <column name="batch_frequency" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_user" type="varchar(20)" remarks="type: varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_batch_service" columnName="update_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+    <changeSet id="20211230070958-2" author="2004012">
+        <modifyDataType tableName="adm_batch_service" columnName="is_regular" newDataType="varchar(1)"/>
+    </changeSet>
+
+</databaseChangeLog>

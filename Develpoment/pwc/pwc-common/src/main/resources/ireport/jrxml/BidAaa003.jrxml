@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e6207cb4-870d-43fa-b4e5-ffa1bfb5defb">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="wkutName" class="java.lang.String"/>
+	<parameter name="prjno" class="java.lang.String"/>
+	<parameter name="man" class="java.lang.String"/>
+	<parameter name="tel" class="java.lang.String"/>
+	<parameter name="bosName" class="java.lang.String"/>
+	<parameter name="deptName" class="java.lang.String"/>
+	<parameter name="bdgt1" class="java.lang.String"/>
+	<parameter name="ctSum" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="count" class="java.lang.Integer"/>
+	<field name="chgDate" class="java.lang.String"/>
+	<field name="okNo" class="java.lang.String"/>
+	<field name="mdyPressValue" class="java.lang.String"/>
+	<field name="mdyReasonValue" class="java.lang.String"/>
+	<field name="mdyRemark" class="java.lang.String"/>
+	<field name="oldAmt" class="java.lang.String"/>
+	<field name="newAmt" class="java.lang.String"/>
+	<field name="subAmt" class="java.lang.String"/>
+	<field name="oldDate" class="java.lang.String"/>
+	<field name="newDate" class="java.lang.String"/>
+	<field name="nDays" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="209" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="550" height="30" uuid="f99d6842-128a-4a4e-9fd9-988c0a48164a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="中推會宋體0字面" size="17"/>
+				</textElement>
+				<text><![CDATA[經費變更或期程一覽表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="40" width="100" height="20" uuid="04524c35-8e84-4279-bc41-e08676c0bcd3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<text><![CDATA[列印日期：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="470" y="40" width="80" height="20" uuid="16f9c5ec-df68-4a40-b152-96618a02fa52"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.valueOf(Integer.parseInt(new java.text.SimpleDateFormat("yyyy").format(new java.util.Date()))-1911)+"年"+new java.text.SimpleDateFormat("MM").format(new java.util.Date())+"月"+new java.text.SimpleDateFormat("dd").format(new java.util.Date())+"日"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="90" width="270" height="25" uuid="fb8e6b58-4d6c-436d-8ddc-afdddde38f85">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["標案編號：" + $P{prjno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="90" width="280" height="25" uuid="98f1a6c9-034d-4707-a040-1e594b558a98">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["執行機關：" + $P{wkutName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="115" width="280" height="25" uuid="813e802a-8f35-4eb1-8ab3-061bc4408068">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["承辦人：" + $P{man}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="165" width="280" height="25" uuid="8d95f458-1955-4cbb-b27c-6e6d03ff6897">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["主管機關：" + $P{bosName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="165" width="270" height="25" uuid="ee0ca369-27c8-4db8-b751-c25450b30d49">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["主辦機關：" + $P{deptName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="115" width="270" height="25" uuid="25c8c620-2107-4ab5-9d59-90d1bda37f75">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["聯絡電話：" + $P{tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="140" width="270" height="25" uuid="e052404f-ed20-4fc7-adec-06d0998ccdb9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["決標金額：" + $P{ctSum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="140" width="280" height="25" uuid="02a74c5a-33f2-4bae-96d2-3224560af492">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["發包預算：" + $P{bdgt1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="65" width="550" height="25" uuid="14222310-c027-4feb-8a83-17629757e3ec"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["標案名稱：" + $P{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="207" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="29" width="360" height="25" uuid="51a536be-8a1a-415d-adfe-0ae2be9e67b6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["核准文號："+$F{okNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="7" y="4" width="540" height="25" uuid="5b329d49-7237-40e3-a4a8-749fbd206617">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["第"+$F{count} +"次變更，"+"變更日期："+ $F{chgDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="ElementGroupBottom" x="187" y="54" width="360" height="25" uuid="0a39316a-aad6-4995-8ce6-b1527a883196">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["原因說明："+$F{mdyRemark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="29" width="180" height="25" uuid="8dc5e553-d946-4bfd-bcbf-89f6e9ad1ae1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["程序："+$F{mdyPressValue}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="ElementGroupBottom" x="7" y="54" width="180" height="25" uuid="20e0fff6-bdd8-42d9-92bd-e7588c868b89">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["變更原因："+$F{mdyReasonValue}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="187" y="79" width="180" height="25" uuid="d90e049f-b508-4e01-ba29-b24362177fab">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["變更後契約金額："+$F{newAmt}+"千元"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="187" y="104" width="360" height="25" uuid="e8cc0b4a-a15e-48b3-a886-455b85bd7e44">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["變更後預定竣工日："+$F{newDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="367" y="79" width="180" height="25" uuid="cc52563f-20ed-4709-ba06-96d538b3da23">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["本次增帳金額："+$F{subAmt}+"千元"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="7" y="129" width="540" height="25" uuid="b4eb77e2-44d9-4e9d-bc39-d002f5491af7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["准延天數："+$F{nDays}+"天"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="7" y="104" width="180" height="25" uuid="63cba61d-5535-446e-bc50-f4f650859383">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["變更前預定竣工日："+$F{oldDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="7" y="79" width="180" height="25" uuid="e0a57266-ef5f-452b-b8ef-0322d4c36078">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="中推會宋體0字面" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["變更前契約金額："+$F{oldAmt}+"千元"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

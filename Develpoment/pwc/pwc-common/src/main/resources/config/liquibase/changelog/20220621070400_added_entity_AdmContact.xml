@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AdmContact.
+    -->
+    <changeSet id="20220621070400-1" author="jhipster">
+        <createTable tableName="adm_contact">
+            <column name="user_id" type="varchar(20)" remarks="type: VARCHAR(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="ch_name" type="varchar(50)" remarks="type: NVARCHAR(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="title" type="varchar(60)" remarks="type: NVARCHAR(60)">
+                <constraints nullable="true" />
+            </column>
+            <column name="birthday" type="${datetimeType}" remarks="type: DATE">
+                <constraints nullable="true" />
+            </column>
+            <column name="idno" type="varchar(10)" remarks="type: VARCHAR(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sex" type="varchar(1)" remarks="type: VARCHAR(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_tel" type="varchar(20)" remarks="type: VARCHAR(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mobile_tel" type="varchar(15)" remarks="type: VARCHAR(15)">
+                <constraints nullable="true" />
+            </column>
+            <column name="email" type="varchar(100)" remarks="type: VARCHAR(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="home_addr_zip" type="varchar(10)" remarks="type: VARCHAR(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="home_addr_city" type="varchar(10)" remarks="type: NVARCHAR(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="home_addr_town" type="varchar(10)" remarks="type: NVARCHAR(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="home_addr_other" type="varchar(100)" remarks="type: NVARCHAR(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_addr_zip" type="varchar(10)" remarks="type: VARCHAR(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_addr_city" type="varchar(10)" remarks="type: NVARCHAR(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_addr_town" type="varchar(10)" remarks="type: NVARCHAR(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="work_addr_other" type="varchar(100)" remarks="type: NVARCHAR(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="line_token" type="varchar(100)" remarks="type: VARCHAR(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)" remarks="type: VARCHAR(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_time" type="${datetimeType}" remarks="type: datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="ch_name_rome" type="varchar(20)" remarks="type: VARCHAR(50)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="adm_contact" columnName="birthday" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="adm_contact" columnName="update_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220621070400-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/adm_contact.csv"
+                  separator=";"
+                  tableName="adm_contact"
+                  usePreparedStatements="true">
+            <column name="user_id" type="string"/>
+            <column name="ch_name" type="string"/>
+            <column name="title" type="string"/>
+            <column name="birthday" type="date"/>
+            <column name="idno" type="string"/>
+            <column name="sex" type="string"/>
+            <column name="work_tel" type="string"/>
+            <column name="mobile_tel" type="string"/>
+            <column name="email" type="string"/>
+            <column name="home_addr_zip" type="string"/>
+            <column name="home_addr_city" type="string"/>
+            <column name="home_addr_town" type="string"/>
+            <column name="home_addr_other" type="string"/>
+            <column name="work_addr_zip" type="string"/>
+            <column name="work_addr_city" type="string"/>
+            <column name="work_addr_town" type="string"/>
+            <column name="work_addr_other" type="string"/>
+            <column name="line_token" type="string"/>
+            <column name="update_user" type="string"/>
+            <column name="update_time" type="date"/>
+            <column name="ch_name_rome" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

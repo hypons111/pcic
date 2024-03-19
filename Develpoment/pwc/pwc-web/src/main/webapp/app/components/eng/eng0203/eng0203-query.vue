@@ -1,0 +1,754 @@
+<template>
+  <div>
+    <section class="container mt-2" v-if="roleRef === RoleEnum.ADMIN">
+      <div class="card">
+        <div class="card-header py-1 text-left">
+          <div class="row align-items-center pl-3">
+            <div class="col-sm-11 p-0">
+              <h5 class="m-0">
+                <font-awesome-icon icon="search"></font-awesome-icon>
+                查詢條件
+              </h5>
+            </div>
+            <div class="col-sm-1 p-0">
+              <b-button class="float-right" @click="stepVisible.step1 = !stepVisible.step1">
+                <font-awesome-icon v-if="stepVisible.step1" icon="chevron-up"></font-awesome-icon>
+                <font-awesome-icon v-if="!stepVisible.step1" icon="chevron-down"></font-awesome-icon>
+              </b-button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body col-11">
+          <b-collapse v-model="stepVisible.step1">
+            <b-form-row>
+              <!-- 年度 -->
+              <i-form-group-check :label="$t('label.engYearreportYyyy') + '：'" :dual1="$v.engYearreportYyyyStart" :dual2="$v.engYearreportYyyyEnd">
+                <b-input-group>
+                  <i-date-picker
+                    v-model="$v.engYearreportYyyyStart.$model"
+                    :disabled-date="notAfterengYearreportYyyyEnd"
+                    placeholder="yyy"
+                    type="year"
+                  ></i-date-picker>
+                  <b-input-group-text>至</b-input-group-text>
+                  <i-date-picker
+                    v-model="$v.engYearreportYyyyEnd.$model"
+                    :disabled-date="notBeforeengYearreportYyyyStart"
+                    placeholder="yyy"
+                    type="year"
+                  ></i-date-picker>
+                </b-input-group>
+              </i-form-group-check>
+            </b-form-row>
+
+            <b-form-row>
+              <!-- 顧問公司 -->
+              <i-form-group-check :label="$t('label.consultantcompany')+'：'" :item="$v.chName">
+                <b-form-input v-model.trim="$v.chName.$model"></b-form-input>
+              </i-form-group-check>
+              <!-- 統一編號 -->
+              <i-form-group-check :label="$t('label.compIdno')+'：'" :item="$v.compIdno">
+                <b-form-input v-model="$v.compIdno.$model" trim></b-form-input>
+              </i-form-group-check>
+            </b-form-row>
+
+            <b-form-row>
+              <!-- 備查狀態 -->
+              <i-form-group-check :label="$t('label.status')+'：'" :item="$v.status">
+                <b-form-select v-model="$v.status.$model" :options="queryOptions.status"> </b-form-select>
+              </i-form-group-check>
+            </b-form-row>
+
+            <b-form-row>
+              <b-col offset="8">
+                <i-button type="search" v-promise-btn="{ promise: dataPromise }" @click="handleQuery"></i-button>
+                <i-button type="x-circle" @click="reset"></i-button>
+              </b-col>
+            </b-form-row>
+          </b-collapse>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-2">
+      <!-- 新增 -->
+      <i-button type="file-earmark-plus" @click="toEditView(FormStatusEnum.CREATE)"></i-button>
+      <!--切換角色按鈕-->
+      <b-button size="md" variant="warning" @click="switchRoles">
+        <font-awesome-icon :icon="['fas', 'people-arrows']" />
+        {{ roleRef }}
+      </b-button>
+      <!--切換角色按鈕-->
+    </section>
+
+    <section class="container mt-2" v-if="queryStatus">
+      <i-table
+        class="table-sm"
+        itemsUndefinedBehavior="loading"
+        :items="table.data"
+        :fields="table.fields_backend"
+        :is-server-side-paging="false"
+        :totalItems="table.totalItems"
+      >
+        <!--              @changePagination="handlePaginationChanged($event)"-->
+        <!--            >-->
+        <template #cell(action)="row">
+          <!-- 檢視 -->
+          <i-button class="mb-1" size="sm" type="binoculars" @click="toEditView(row.item, FormStatusEnum.READONLY, row.index)"></i-button>
+          <!-- 編輯 -->
+          <i-button class="mb-1" size="sm" type="arrow-counterclockwise" @click="toEditView(row.item, FormStatusEnum.EDIT, row.index)"></i-button>
+          <!-- 作廢 -->
+          <i-button
+            v-if="(row.item.status !== '5' || roleRef === RoleEnum.ADMIN) && row.item.status !== '6'"
+            size="sm"
+            type="clipboard-x"
+            @click="discard(row.item)"
+          ></i-button>
+        </template>
+
+        <template #cell(compName1) = "{ item }">
+          {{ item.chName }}
+          <br/>
+          {{ item.compIdno }} 
+        </template>
+      </i-table>
+    </section>
+  </div>
+</template>
+
+<script lang="ts">
+import i18n from '@/shared/i18n';
+import NotificationService from '@/shared/notification/notification-service';
+import { useValidation, validateState } from '@/shared/form';
+import { onActivated, reactive, Ref, ref, toRef } from '@vue/composition-api';
+import { useNotification } from '@/shared/notification';
+import { useBvModal } from '@/shared/modal';
+import { parseRocDate, formatDate } from '@/shared/date/minguo-calendar-utils';
+import { navigateByNameAndParams } from '@/router/router';
+// import axios from 'axios';
+// import { notificationErrorHandler } from '@/shared/http/http-response-helper';
+// import { egrCertificate } from '@/shared/model/cms-comp.model';
+// import { Pagination } from '@/shared/model/pagination.model';
+import { RoleEnum } from '@/shared/enum';
+import { IEngEngrSubjectpoint, EngEngrSubjectpoint } from '@/shared/model/eng/eng-engr-subjectpoint.model';
+import { FormStatusEnum } from '@/shared/enum';
+
+export default {
+  name: 'Eng0203Query',
+  props: {
+    isReload: {
+      type: Boolean,
+      required: false,
+    },
+    form: {
+      type: Object,
+      required: false,
+    },
+  },
+  setup(props, context) {
+    // 手動定義角色
+    const roleRef: Ref<RoleEnum> = ref(RoleEnum.ADMIN);
+
+    // 切換角色
+    const switchRoles = () => {
+      if (roleRef.value === RoleEnum.ADMIN) roleRef.value = RoleEnum.USER;
+      else roleRef.value = RoleEnum.ADMIN;
+    };
+
+    const isReloadProp = toRef(props, 'isReload');
+
+    onActivated(() => {
+      if (isReloadProp.value) {
+        handleQuery();
+      }
+    });
+
+    const queryOptions = reactive({
+      status: [
+        { value: '', text: '請選擇' },
+        { value: '1', text: '作廢' },
+        { value: '3', text: '有效' },
+      ],
+    });
+
+    // 宣告表單物件及初始值，也可以是後端查回來的資料物件
+    const formDefault = {
+      engYearreportYyyy: '',
+      engYearreportYyyyStart: null,
+      engYearreportYyyyEnd: null,
+      consultantcompany: '',
+      compName: '',
+      compIdno: '',
+      notFillDesc: '',
+      chName: '',
+      status: '',
+    };
+
+    // 建立表單物件 ref
+    const form = reactive(Object.assign({}, formDefault));
+
+    // 表單物件驗證規則
+    const rules = {
+      // engYearreportYyyy: {},
+      engYearreportYyyyStart: {},
+      engYearreportYyyyEnd: {},
+      consultantcompany: {},
+      compName: {},
+      compIdno: {},
+      notFillDesc: {},
+      chName: {},
+      status: {},
+    };
+
+    const { $v, checkValidity, reset } = useValidation(rules, form, formDefault);
+
+    const notificationService: NotificationService = useNotification();
+
+    // 區塊是否顯示
+    const stepVisible = reactive({
+      step1: true,
+    });
+
+    // 查詢結果及狀態
+    const queryStatus: Ref<Boolean> = ref(false);
+    const dataPromise = ref(null);
+
+    // modal物件
+    const $bvModal = useBvModal();
+
+    const table = reactive({
+      fields_backend: [
+        // {
+        //   // 序號
+        //   key: 'no',
+        //   label: i18n.t('label.no'),
+        //   sortable: false,
+        //   thClass: 'text-center',
+        //   tdClass: 'text-left align-middle',
+        // },
+        {
+          // 查核日期
+          key: 'checkDate',
+          label: i18n.t('label.checkDate'),
+          sortable: true,
+          thClass: 'text-center',
+          tdClass: 'text-center align-middle',
+          formatter: (value: Date) => formatDate(value, '/'),
+        },
+        {
+          // 事務所/顧問公司
+          key: 'compName1',
+          label: i18n.t('label.consultantcompany'),
+          sortable: true,
+          thClass: 'text-center',
+          tdClass: 'text-left align-middle',
+        },
+        {
+          // 查核案件
+          key: 'caseDesc',
+          label: i18n.t('label.caseDesc'),
+          sortable: true,
+          thClass: 'text-center',
+          tdClass: 'text-left align-middle',
+        },
+        {
+          // 簽核狀態
+          key: 'status',
+          label: i18n.t('label.caseDescstatus'),
+          sortable: true,
+          thClass: 'text-center',
+          tdClass: 'text-left align-middle',
+          formatter: (value: string) => optionsFormatter('status', value),
+        },
+        {
+          // 動作
+          key: 'action',
+          label: i18n.t('label.action'),
+          sortable: false,
+          thClass: 'text-center',
+          tdClass: 'text-left align-middle',
+          // thStyle: { width: '10%' },
+        },
+      ],
+      data: undefined,
+      totalItems: undefined,
+    });
+ 
+    const handleQuery = () => {
+      form.engYearreportYyyyStart = form.engYearreportYyyyStart ? new Date(form.engYearreportYyyyStart.getTime() - offset * 60 * 1000) : null;
+      form.engYearreportYyyyEnd = form.engYearreportYyyyEnd ? new Date(form.engYearreportYyyyEnd.getTime() - offset * 60 * 1000) : null;
+      checkValidity().then((isValid: boolean) => {
+        if (isValid) {
+          table.data = undefined;
+          queryStatus.value = true;
+          // dataPromise.value = axios
+          //   // .post('/cms-comps/criteria', form)           //前端分頁
+          //   .post('/cms-comps/criteria-jpa', form) //後端分頁
+          //   .then(({ data }) => {
+          //     // table.data = data.slice(0, data.length);   //前端分頁
+          //     // table.totalItems = data.length;            //前端分頁
+          //     table.data = data.content.slice(0, data.content.length); //後端分頁
+          //     table.totalItems = data.totalElements; //後端分頁
+          //   })
+          //   .finally(() => (dataPromise.value = null))
+          //   .catch(notificationErrorHandler(notificationService));
+          table.data = [
+            {
+              no: '1',
+              checkDate: parseRocDate('108/06/12', '/'),
+              chName: '台灣世曦工程顧問股份有限公司',
+              compIdno: '16058082',
+              caseDesc: '1 : tet',
+              status: '3',
+              /*engYearreportId: '123456',
+              engYearreportYyyy: '108',
+              compName: 
+              compIdno: '28412550',
+              licenseNo: '工程技顧登字第000048號',
+              
+              fillStatus: '2',
+              status: '3',*/
+             // remark:
+               // '至於何時才會回暖？中央氣象局表示，週五過後冷空氣減弱，水氣明顯減少，天氣將逐漸回暖，恢復為「東偶雨西晴」的天氣型態。而氣象局也特別提醒，這波寒流影響下，北部與東北部2000至2500公尺以上，以及其他地區3000公尺以上高山有望降雪，民眾行駛高山公路務必留意路況安全​。',
+             /* engReviewLog: [
+                {
+                  itemNo: '1',
+                  reviewStatus: '已送出',
+                  reviewStaff: '蔡再發',
+                  reviewTime: '2022-02-02 18:43:36',
+                  reviewDesc: '本服務係為簡政便民提升系統填報效率，委託方如送出同意授權仍得於六月三十日（含）前撤回授權，並自行負責至系統填報相關欄位',
+                },
+                {
+                  itemNo: '2',
+                  reviewStatus: '已收文',
+                  reviewStaff: '王小名',
+                  reviewTime: '2022-02-05 09:23:49',
+                  reviewDesc: 'pass!',
+                },
+              ],*/
+           /*   engYearreportEngr: [
+                {
+                  no: '1',
+                  engrName: '蘇玫心',
+                  engrIdno: 'P220723812',
+                  engrLicenseNo: '技執字第002151號',
+                  subjectList: '3,5',
+                  remark: '又擊斃俄指揮官！烏克蘭打退坦克軍團 畫面超震撼',
+                },
+                {
+                  no: '2',
+                  engrName: '蘇季鴻',
+                  engrIdno: 'A129371472',
+                  engrLicenseNo: '技執字第008174號',
+                  subjectList: '1',
+                  remark: '現代人對車子非常講究，相關的設備知識更要清楚了解，才能安心上路。',
+                },
+                {
+                  no: '3',
+                  engrName: '羅博智',
+                  engrIdno: 'L122269414',
+                  engrLicenseNo: '技執字第006649號',
+                  subjectList: '5,6,7',
+                  remark: '印度神童新預言曝光 這天小心5件事 他苦勸：寧可信其有',
+                },
+              ],
+              changeSituation: [
+                {
+                  no: '1',
+                  name: '巫哲緯',
+                  memberIdno: 'B120518158',
+                  memberTitle: '02',
+                  status: '1',
+                  inDate: parseRocDate('108/11/15', '/'),
+                },
+                {
+                  no: '2',
+                  name: '林忠機',
+                  memberIdno: 'Y120051218	',
+                  memberTitle: '03',
+                  status: '0',
+                  inDate: parseRocDate('107/04/23', '/'),
+                },
+                {
+                  no: '3',
+                  name: '金玉瑩',
+                  memberIdno: 'F220879607',
+                  memberTitle: '04',
+                  status: '1',
+                  inDate: parseRocDate('109/10/03', '/'),
+                },
+              ],
+              engYearreportCase: [
+                {
+                  engYearreportCaseId: '1',
+                  caseName: '台九線蘇花公路南澳和平段新建工程委託監造服務工作',
+                  clientName: '交通部公路總局蘇花公路改善工程處',
+                  price: 845500000,
+                  yearCompletePrice: 80068850,
+                  engYearreportCaseEngr: [
+                    {
+                      engYearreportCaseEngrId: '1',
+                      subjectList: '1,3',
+                      subject: '3',
+                      name: '高健發',
+                      idno: 'E100238072',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask:
+                        '個案分頁工程之設計簽證內容包括預算書、設計圖、施工規範及機關認為必要之項目等；施工簽證內容包括施工廠商品質計畫與施工計畫審查、施工圖說審查、材料與設備抽驗、施工查驗與查核、監造抽查(驗)停留點(含安全衛生事項)、施工廠商估驗計價之查估、設備功能運轉測試之由驗及機關認為必要之項目等。',
+                    },
+                    {
+                      engYearreportCaseEngrId: '2',
+                      subjectList: '2,3,5',
+                      subject: '5',
+                      name: '許力方',
+                      idno: 'S121174163',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask: '個案分頁工程之設計簽證內容包括預算書。',
+                    },
+                  ],
+                },
+                {
+                  engYearreportCaseId: '2',
+                  caseName: '高雄鐵路地下化延伸鳳山計畫工程設計暨配合工作技術服務',
+                  // clientName: '交通部鐵道局',
+                  price: 250000000,
+                  yearCompletePrice: 164500000,
+                },
+                {
+                  engYearreportCaseId: '3',
+                  caseName: '台九線蘇花公路南澳和平段新建工程委託監造服務工作',
+                  clientName: '交通部公路總局蘇花公路改善工程處',
+                  price: 845500000,
+                  yearCompletePrice: 80068850,
+                  isForeignCase: 1,
+                  engYearreportCaseEngr: [
+                    {
+                      engYearreportCaseEngrId: '1',
+                      subjectList: '1,3',
+                      subject: '3',
+                      name: '高健發',
+                      idno: 'E100238072',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask:
+                        '個案分頁工程之設計簽證內容包括預算書、設計圖、施工規範及機關認為必要之項目等；施工簽證內容包括施工廠商品質計畫與施工計畫審查、施工圖說審查、材料與設備抽驗、施工查驗與查核、監造抽查(驗)停留點(含安全衛生事項)、施工廠商估驗計價之查估、設備功能運轉測試之由驗及機關認為必要之項目等。',
+                    },
+                    {
+                      engYearreportCaseEngrId: '2',
+                      subjectList: '2,3,5',
+                      subject: '5',
+                      name: '許力方',
+                      idno: 'S121174163',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask: '個案分頁工程之設計簽證內容包括預算書。',
+                    },
+                  ],
+                },
+              ],*/
+              /*yearreportType: '',
+              compId: '',
+              establishDate: null,
+              addrZip: '',
+              addrCity: '',
+              addrTown: '',
+              addrOther: '',
+              masterName: '',
+              capital: '',
+              saleAreaList: '',
+              execType: '',
+              engrIdno: '',
+              engrName: '',
+              engrSubjectList: '',
+              staffNumForeign: '',
+              incomeTotal: 0,
+              incomeOperating: '',
+              incomeNonOperating: '',
+              incomeTechService: '',
+              incomeTechServiceDomestic: 0,
+              incomeTechServiceForeign: 0,
+              isIncomeTechServiceMatch: '',
+              incomeNonTechService: 0,
+              feeOperating: '',
+              feeNonOperating: '',
+              feeDepreciation: '',
+              feeIndirectTax: '',
+              feeStaff: '',
+              feeRd: '',
+              feeTrain: '',
+              countFinancing: '',
+              feeFinancing: '',
+              originalIncomeTotal: 0,
+              originalIncomeOperating: 0,
+              originalIncomeNonOperating: 0,
+              originalIncomeNonTechService: 0,
+              revenueGrowthRatio: 0,
+              revenueLastYear: 0,
+              staffNumTotal: 0,
+              staffNumAdministration: '',
+              staffNumEngineering: '',
+              staffNumEngr: '',
+              staffOutputValue: 0,
+              netProfitRatio: 0,
+              netProfitAfterTax: '',
+              netIncome: '',
+              netValueTurnoverRatio: 0,
+              income: '',
+              netValue: '',
+              flowRatio: 0,
+              flowAssets: '',
+              flowLiabilities: '',
+              preparedByName: '',
+              preparedByTel: '',
+              notFillDesc: '',
+              reviewStaff: '',
+              reviewTime: '',
+              reviewDesc: '',
+              createUser: '',
+              updateUser: '',
+              updateTime: '',
+              transferFrom: '',
+              transferTime: '',*/
+              /*engYearreportAuth: [
+                {
+                  engYearreportAuthId: 1,
+                  isAuthorize: 1,
+                  createTime: parseRocDate('108/06/12', '/'),
+                },
+                {
+                  engYearreportAuthId: 2,
+                  isAuthorize: 0,
+                  createTime: parseRocDate('109/06/12', '/'),
+                }
+              ]
+            },
+            {
+              no: '2',
+              engYearreportId: '123456',
+              engYearreportYyyy: '105',
+              compName: '',
+              compIdno: '28412550',
+              licenseNo: '工程技顧登字第000048號',
+              createTime: parseRocDate('108/06/12', '/'),
+              fillStatus: '2',
+              status: '3',
+              remark: '123',
+              engReviewLog: [
+                {
+                  itemNo: '1',
+                  reviewStatus: '已送出',
+                  reviewStaff: '蔡再發',
+                  reviewTime: '2022-02-02 18:43:36',
+                  reviewDesc: '本服務係為簡政便民提升系統填報效率，委託方如送出同意授權仍得於六月三十日（含）前撤回授權，並自行負責至系統填報相關欄位',
+                },
+                {
+                  itemNo: '2',
+                  reviewStatus: '已收文',
+                  reviewStaff: '王小名',
+                  reviewTime: '2022-02-05 09:23:49',
+                  reviewDesc: 'pass!',
+                },
+              ],
+              engYearreportEngr: [
+                {
+                  no: '1',
+                  engrName: 'aaaa',
+                  engrIdno: 'P220723812',
+                  engrLicenseNo: '技執字第002151號',
+                  subjectList: '3,5',
+                  remark: 'aaaaaaaaa',
+                },
+                {
+                  no: '2',
+                  engrName: 'bbbb',
+                  engrIdno: 'A129371472',
+                  engrLicenseNo: '技執字第008174號',
+                  subjectList: '1',
+                  remark: 'bbbbbbbbbb',
+                },
+              ],
+              engYearreportCase: [
+                {
+                  engYearreportCaseId: '1',
+                  caseName: '台九線蘇花公路南澳和平段新建工程委託監造服務工作',
+                  clientName: '交通部公路總局蘇花公路改善工程處',
+                  price: 845500000,
+                  yearCompletePrice: 80068850,
+                  engYearreportCaseEngr: [
+                    {
+                      engYearreportCaseEngrId: '1',
+                      subjectList: '1,3',
+                      subject: '3',
+                      name: '高健發',
+                      idno: 'E100238072',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask:
+                        '個案分頁工程之設計簽證內容包括預算書、設計圖、施工規範及機關認為必要之項目等；施工簽證內容包括施工廠商品質計畫與施工計畫審查、施工圖說審查、材料與設備抽驗、施工查驗與查核、監造抽查(驗)停留點(含安全衛生事項)、施工廠商估驗計價之查估、設備功能運轉測試之由驗及機關認為必要之項目等。',
+                    },
+                    {
+                      engYearreportCaseEngrId: '2',
+                      subjectList: '2,3,5',
+                      subject: '5',
+                      name: '許力方',
+                      idno: 'S121174163',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask: '個案分頁工程之設計簽證內容包括預算書。',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              no: '2',
+              engYearreportId: '123456',
+              engYearreportYyyy: '105',
+              compName: '',
+              compIdno: '28412550',
+              licenseNo: '工程技顧登字第000048號',
+              createTime: parseRocDate('108/06/12', '/'),
+              fillStatus: '2',
+              status: '3',
+              remark: '123',
+              engReviewLog: [
+                {
+                  itemNo: '1',
+                  reviewStatus: '已送出',
+                  reviewStaff: '蔡再發',
+                  reviewTime: '2022-02-02 18:43:36',
+                  reviewDesc: '本服務係為簡政便民提升系統填報效率，委託方如送出同意授權仍得於六月三十日（含）前撤回授權，並自行負責至系統填報相關欄位',
+                },
+                {
+                  itemNo: '2',
+                  reviewStatus: '已收文',
+                  reviewStaff: '王小名',
+                  reviewTime: '2022-02-05 09:23:49',
+                  reviewDesc: 'pass!',
+                },
+              ],
+              engYearreportEngr: [
+                {
+                  no: '1',
+                  engrName: 'aaaa',
+                  engrIdno: 'P220723812',
+                  engrLicenseNo: '技執字第002151號',
+                  subjectList: '3,5',
+                  remark: '@@',
+                },
+              ],
+              engYearreportCase: [
+                {
+                  engYearreportCaseId: '1',
+                  caseName: '台九線蘇花公路南澳和平段新建工程委託監造服務工作',
+                  clientName: '交通部公路總局蘇花公路改善工程處',
+                  price: 845500000,
+                  yearCompletePrice: 80068850,
+                  engYearreportCaseEngr: [
+                    {
+                      engYearreportCaseEngrId: '1',
+                      subjectList: '1,3',
+                      subject: '3',
+                      name: '高健發',
+                      idno: 'E100238072',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask:
+                        '個案分頁工程之設計簽證內容包括預算書、設計圖、施工規範及機關認為必要之項目等；施工簽證內容包括施工廠商品質計畫與施工計畫審查、施工圖說審查、材料與設備抽驗、施工查驗與查核、監造抽查(驗)停留點(含安全衛生事項)、施工廠商估驗計價之查估、設備功能運轉測試之由驗及機關認為必要之項目等。',
+                    },
+                    {
+                      engYearreportCaseEngrId: '2',
+                      subjectList: '2,3,5',
+                      subject: '5',
+                      name: '許力方',
+                      idno: 'S121174163',
+                      dateStart: parseRocDate('105/06/12', '/'),
+                      dateEnd: parseRocDate('108/06/12', '/'),
+                      mainTask: '個案分頁工程之設計簽證內容包括預算書。',
+                    },
+                  ],
+                },
+              ],*/
+            },
+          ];
+          table.totalItems = 3;
+        }
+      });
+    };
+
+    // const toEditView = (engYearreport: any) => {
+      // navigateByNameAndParams('Eng0202EditInfo', { engYearreport: engYearreport, role: roleRef.value });
+    // };
+
+    const toEditView = (entity: IEngEngrSubjectpoint, formStatus: FormStatusEnum, index?: number) => {
+      const criteria = Object.assign({}, form);
+      criteria['index'] = index;
+      criteria['totalItems'] = table.totalItems;
+
+      navigateByNameAndParams('Eng0203EditInfo', {
+        engEngrSubjectpoint: entity,
+        formStatus: formStatus,
+        criteria: criteria,
+      });
+    };
+
+    // const deleteEgrCertificate = engEngrCertificateId => {
+    //   $bvModal.msgBoxConfirm(`是否確認刪除技師${engEngrCertificateId}證書資料？`).then((isOK: boolean) => {
+    //     if (isOK) {
+    //     }
+    //   });
+    // };
+
+    // const handlePaginationChanged = (pagination: Pagination) => {
+    //   Object.assign(form, pagination);
+    //   handleQuery();
+    // };
+
+    const optionsFormatter = (option: string, value: string) => {
+      let itemFound = queryOptions[option].find((item: { value: string }) => item.value === value);
+      if (itemFound) {
+        return itemFound.text;
+      } else {
+        return '';
+      }
+    };
+
+    function notBeforeengYearreportYyyyStart(date: Date){
+      if (form.engYearreportYyyyStart) return date > new Date(form.engYearreportYyyyStart);
+    }
+
+    function notAfterengYearreportYyyyEnd(date: Date) {
+      if (form.engYearreportYyyyEnd) return date > new Date(form.engYearreportYyyyEnd);
+    }
+
+    return {
+      validateState,
+      queryOptions,
+      $v,
+      stepVisible,
+      queryStatus,
+      dataPromise,
+      table,
+      reset,
+      handleQuery,
+      toEditView,
+      roleRef,
+      RoleEnum,
+      FormStatusEnum,
+      EngEngrSubjectpoint,
+      ref,
+      switchRoles,
+      formatDate,
+      optionsFormatter,
+      // deleteEgrCertificate,
+      // handlePaginationChanged,
+      notBeforeengYearreportYyyyStart,
+      notAfterengYearreportYyyyEnd,
+      
+    };
+  },
+};
+</script>
+<style></style>

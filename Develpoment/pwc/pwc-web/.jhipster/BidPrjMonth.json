@@ -1,0 +1,509 @@
+{
+  "applications": "*",
+  "changelogDate": "20220420021027",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bid_prj_month",
+  "fields": [
+    {
+      "fieldName": "wkut",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "21"
+    },
+    {
+      "fieldName": "prjno",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "yr",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "mnth",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "syr",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "item",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "ptrate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pexp",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "rate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ypexp",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "yaexp",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "arat",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "aexp",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "atrate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "remark",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "sumt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "stus",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "mdsts",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "sumdat",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "7"
+    },
+    {
+      "fieldName": "nopayamt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nopayresn",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "resumt",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "trdt",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "7"
+    },
+    {
+      "fieldName": "nopaydetel",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "meetCnt",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "meterChk",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "meterChkF",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workChk",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "workChkF",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "replMeth",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "teckind3",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "enviCnt",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "enviFee",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "wsafeCnt",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "wsafeFee",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc1b",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc1c",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc1d",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc5",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "spcw01",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw02",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw03",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw04",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw05",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw06",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw07",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw08",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw09",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw10",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw11",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "spcw12",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp01",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp02",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp03",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp04",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp05",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp06",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp07",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp08",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp09",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp10",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "equp11",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "cosend",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "aTrate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "wdayeds",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3c",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3e",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3a",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc6",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3b5",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3c1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc3d4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "teckind4",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "sorc7",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7use",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7oth",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7tac",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7self",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc8",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "payArr",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "sorc7use2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc7use3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sfrWkr",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sorc9",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dsts",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "confOut",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "confOut2",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updateUser",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BidPrjMonth",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipClient": true,
+  "skipServer": true
+}

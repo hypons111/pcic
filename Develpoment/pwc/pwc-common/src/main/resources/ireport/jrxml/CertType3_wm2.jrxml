@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertType3" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8dcc89c5-4d94-432a-9380-d496a929be2a">
+	<property name="ireport.zoom" value="1.210000000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="certNo" class="java.lang.String"/>
+	<parameter name="cnCreateDate" class="java.lang.String"/>
+	<parameter name="cnName" class="java.lang.String"/>
+	<parameter name="cnSex" class="java.lang.String"/>
+	<parameter name="cnBirthDate" class="java.lang.String"/>
+	<parameter name="idno" class="java.lang.String"/>
+	<parameter name="cnSubject" class="java.lang.String"/>
+	<parameter name="cnPassCertNo" class="java.lang.String"/>
+	<parameter name="enName" class="java.lang.String"/>
+	<parameter name="enSex" class="java.lang.String"/>
+	<parameter name="enBirthDate" class="java.lang.String"/>
+	<parameter name="classification" class="java.lang.String"/>
+	<parameter name="examNum" class="java.lang.String"/>
+	<parameter name="enCreateDate" class="java.lang.String"/>
+	<parameter name="imgUrl" class="java.lang.String"/>
+	<parameter name="backgroundUrl" class="java.lang.String"/>
+	<parameter name="certificateWord" class="java.lang.String"/>
+	<parameter name="changeC1" class="java.lang.String"/>
+	<parameter name="changeC2" class="java.lang.String"/>
+	<parameter name="changeN1" class="java.lang.String"/>
+	<parameter name="changeN2" class="java.lang.String"/>
+	<background>
+		<band height="595" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="842" height="595" uuid="18435473-de2b-474b-b0fb-2b59ac0805f6"/>
+				<imageExpression><![CDATA[$P{backgroundUrl}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="0" width="842" height="595" forecolor="#CCCCCC" uuid="25c87fb6-68ff-42df-92e7-053a89f203ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="135"/>
+				</textElement>
+				<text><![CDATA[已 註 銷]]></text>
+			</staticText>
+			<image onErrorType="Blank">
+				<reportElement stretchType="RelativeToTallestObject" x="700" y="85" width="102" height="129" isRemoveLineWhenBlank="true" uuid="916faa4c-8293-4612-ab79-fa53e284f014">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{imgUrl}]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="72" y="91" width="210" height="30" isPrintWhenDetailOverflows="true" uuid="e7de5282-c09c-415a-bfcc-d7b0a363f211"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{certificateWord}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="72" y="121" width="210" height="25" isPrintWhenDetailOverflows="true" uuid="2dc6ab99-6dc9-4755-9d0c-fd447564f82b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Certificate No.:"+$P{certNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="205" y="141" width="432" height="30" isPrintWhenDetailOverflows="true" uuid="144a688d-2627-471e-8944-8252d26cc525"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Professional Engineer Certificate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="282" y="85" width="278" height="56" isPrintWhenDetailOverflows="true" uuid="6be33059-7286-415d-bb47-1039e0b00382"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="36" isBold="true" isItalic="false" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[技師證書]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="365" width="368" height="49" isPrintWhenDetailOverflows="true" uuid="7ad0a816-d0d5-44a0-9705-beb4661fd106"/>
+				<textElement verticalAlignment="Top">
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[上列申請人經技師考試及格依法請領技師證書
+核與技師法規定相符合行發給證書此證]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="103" y="533" width="192" height="20" isPrintWhenDetailOverflows="true" uuid="cf68df44-883e-44fa-9006-6239c00de7f5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[__________________________]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="103" y="553" width="192" height="20" isPrintWhenDetailOverflows="true" uuid="045e24c0-bf39-43a6-929f-e29db786894c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cnCreateDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="103" y="441" width="192" height="40" isPrintWhenDetailOverflows="true" uuid="27b1d95b-0ac6-4a25-8367-825287ef90b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[行政院公共工程委員會
+ 主   任   委   員 ]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="166" width="237" height="30" isPrintWhenDetailOverflows="true" uuid="736443d9-b4ec-4392-ab0b-cc4694ea0406"/>
+				<textElement>
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["姓名："+$P{cnName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="196" width="368" height="30" isPrintWhenDetailOverflows="true" uuid="003f3d43-fe21-4a80-a492-8c3df3ebf6e0"/>
+				<textElement>
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["性別："+$P{cnSex}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="226" width="368" height="30" isPrintWhenDetailOverflows="true" uuid="618bd303-5626-4d57-b1b6-948c98ccc9ca"/>
+				<textElement>
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["出生日期："+$P{cnBirthDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="256" width="368" height="30" isPrintWhenDetailOverflows="true" uuid="05784b92-5b3a-439f-8340-6bb885223f50"/>
+				<textElement>
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["身分證統一編號："+$P{idno}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="286" width="368" height="30" isPrintWhenDetailOverflows="true" uuid="4e8ccc7a-07a0-4747-91b6-7baba77b760f"/>
+				<textElement>
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["科別："+$P{cnSubject}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="316" width="368" height="48" isPrintWhenDetailOverflows="true" uuid="5c276125-3973-478c-8556-d801591dee19"/>
+				<textElement>
+					<font size="18" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["考試及格證書字號："+$P{cnPassCertNo}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="191" width="350" height="25" isPrintWhenDetailOverflows="true" uuid="82ae5239-a481-4f1b-a56f-c81dc1d423f8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Name:"+$P{enName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="216" width="350" height="25" isPrintWhenDetailOverflows="true" uuid="e31f8095-479b-4899-9bdb-98c4aa324b7d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sex:"+$P{enSex}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="241" width="350" height="25" isPrintWhenDetailOverflows="true" uuid="f7366c72-52ad-415b-a1be-4e59c52326c4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date of Birth:"+$P{enBirthDate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="266" width="350" height="25" isPrintWhenDetailOverflows="true" uuid="f50e90c1-f474-47c2-a2af-21542e353630"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ID No.:"+$P{idno}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="291" width="350" height="25" isPrintWhenDetailOverflows="true" uuid="3426a018-e66b-42c7-a79f-8dc4040123a7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Certification:"+$P{classification}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="316" width="350" height="48" isPrintWhenDetailOverflows="true" uuid="7fe312ad-6b37-49fb-a0d1-38a23fde3d6b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Certification of National Examination Number:"+$P{examNum}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="365" width="350" height="55" isPrintWhenDetailOverflows="true" uuid="430e0072-9fef-441c-8dbb-6b43ae5e3246"/>
+				<textElement verticalAlignment="Top">
+					<font size="12" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[has satisfactorily passed the national examination for
+Professional Engineers conducted in accordance with
+the  Examination   Act.   This    certificate    is    issued
+pursuant to the Professional Engineers Act.]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="546" y="543" width="222" height="20" isPrintWhenDetailOverflows="true" uuid="74678c83-68f8-45d6-abcc-01d4b8266f0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="9" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{enCreateDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="546" y="511" width="222" height="32" isPrintWhenDetailOverflows="true" uuid="92c9b145-eb56-45df-bfed-4034089671bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Chairperson of
+Public Construction Comission, Executive Yuan, ROC]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="414" width="368" height="20" isPrintWhenDetailOverflows="true" uuid="927adb38-1525-4915-a6ed-e87e0bd4d0ad"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="12" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{changeC2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="341" width="308" height="20" isPrintWhenDetailOverflows="true" uuid="d718ef4e-6661-46a4-88c4-08c1b4532f86"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="12" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{changeN1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="208" y="341" width="205" height="20" isPrintWhenDetailOverflows="true" uuid="01cac92a-663a-4f3f-a869-e2ab259f0bbb"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="12" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{changeC1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="420" width="350" height="20" isPrintWhenDetailOverflows="true" uuid="b63ed562-cfc6-4372-87d6-e8498cea6583"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="12" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{changeN2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>

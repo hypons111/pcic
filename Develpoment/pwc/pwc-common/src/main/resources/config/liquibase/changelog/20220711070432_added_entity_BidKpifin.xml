@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity BidKpifin.
+    -->
+    <changeSet id="20220711070432-1" author="jhipster">
+        <createTable tableName="bid_kpifin">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="wkut" type="varchar(21)">
+                <constraints nullable="false" />
+            </column>
+            <column name="prjno" type="varchar(40)">
+                <constraints nullable="false" />
+            </column>
+            <column name="idate" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column name="seq" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="flag" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="conf_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="conf_number" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ka_02" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kb_01" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kb_02" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kc_01" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kc_02" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_01" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_02" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_03" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_04" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_05" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_06" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_07" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_08" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kd_09" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ke_01" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ke_02" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ke_03" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ke_04" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kf_01" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kf_02" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kscore" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qa_02" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qc_01" type="varchar(2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qc_03" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_03_a" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_03_b" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_03_c" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_03_d" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_06" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_07" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_08" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_09" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_01_a" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_01_b" type="varchar(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_021_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_021_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_021_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_022_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_022_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_022_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_023_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_023_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_023_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_03_a" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_03_b" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_04" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_041_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_041_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_041_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_042_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_042_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_042_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_043_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_043_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qe_043_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_01" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_011_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_011_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_011_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_012_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_012_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_012_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_013_s" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_013_e" type="varchar(7)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_013_y" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_02" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_02_a" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_02_b" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_02_c" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qf_02_d" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="item" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="senter" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sentel" type="varchar(30)">
+                <constraints nullable="true" />
+            </column>
+            <column name="admser" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dsts" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recnt" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="rermk" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qd_03_at" type="varchar(5)">
+                <constraints nullable="true" />
+            </column>
+            <column name="publ" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_date" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_user" type="varchar(20)">
+                <constraints nullable="false" />
+            </column>
+            <column name="update_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_user" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="column_1" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="bid_kpifin" columnName="create_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="bid_kpifin" columnName="update_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220711070432-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/bid_kpifin.csv"
+                  separator=";"
+                  tableName="bid_kpifin"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="wkut" type="string"/>
+            <column name="prjno" type="string"/>
+            <column name="idate" type="date"/>
+            <column name="seq" type="numeric"/>
+            <column name="flag" type="string"/>
+            <column name="conf_date" type="date"/>
+            <column name="conf_number" type="string"/>
+            <column name="ka_02" type="numeric"/>
+            <column name="kb_01" type="numeric"/>
+            <column name="kb_02" type="numeric"/>
+            <column name="kc_01" type="numeric"/>
+            <column name="kc_02" type="numeric"/>
+            <column name="kd_01" type="numeric"/>
+            <column name="kd_02" type="numeric"/>
+            <column name="kd_03" type="numeric"/>
+            <column name="kd_04" type="numeric"/>
+            <column name="kd_05" type="numeric"/>
+            <column name="kd_06" type="numeric"/>
+            <column name="kd_07" type="numeric"/>
+            <column name="kd_08" type="numeric"/>
+            <column name="kd_09" type="numeric"/>
+            <column name="ke_01" type="numeric"/>
+            <column name="ke_02" type="numeric"/>
+            <column name="ke_03" type="numeric"/>
+            <column name="ke_04" type="numeric"/>
+            <column name="kf_01" type="numeric"/>
+            <column name="kf_02" type="numeric"/>
+            <column name="kscore" type="numeric"/>
+            <column name="qa_02" type="string"/>
+            <column name="qc_01" type="string"/>
+            <column name="qc_03" type="string"/>
+            <column name="qd_03_a" type="string"/>
+            <column name="qd_03_b" type="string"/>
+            <column name="qd_03_c" type="string"/>
+            <column name="qd_03_d" type="string"/>
+            <column name="qd_06" type="string"/>
+            <column name="qd_07" type="string"/>
+            <column name="qd_08" type="string"/>
+            <column name="qd_09" type="string"/>
+            <column name="qe_01_a" type="string"/>
+            <column name="qe_01_b" type="string"/>
+            <column name="qe_021_s" type="string"/>
+            <column name="qe_021_e" type="string"/>
+            <column name="qe_021_y" type="string"/>
+            <column name="qe_022_s" type="string"/>
+            <column name="qe_022_e" type="string"/>
+            <column name="qe_022_y" type="string"/>
+            <column name="qe_023_s" type="string"/>
+            <column name="qe_023_e" type="string"/>
+            <column name="qe_023_y" type="string"/>
+            <column name="qe_03_a" type="string"/>
+            <column name="qe_03_b" type="string"/>
+            <column name="qe_04" type="string"/>
+            <column name="qe_041_s" type="string"/>
+            <column name="qe_041_e" type="string"/>
+            <column name="qe_041_y" type="string"/>
+            <column name="qe_042_s" type="string"/>
+            <column name="qe_042_e" type="string"/>
+            <column name="qe_042_y" type="string"/>
+            <column name="qe_043_s" type="string"/>
+            <column name="qe_043_e" type="string"/>
+            <column name="qe_043_y" type="string"/>
+            <column name="qf_01" type="string"/>
+            <column name="qf_011_s" type="string"/>
+            <column name="qf_011_e" type="string"/>
+            <column name="qf_011_y" type="string"/>
+            <column name="qf_012_s" type="string"/>
+            <column name="qf_012_e" type="string"/>
+            <column name="qf_012_y" type="string"/>
+            <column name="qf_013_s" type="string"/>
+            <column name="qf_013_e" type="string"/>
+            <column name="qf_013_y" type="string"/>
+            <column name="qf_02" type="string"/>
+            <column name="qf_02_a" type="string"/>
+            <column name="qf_02_b" type="string"/>
+            <column name="qf_02_c" type="string"/>
+            <column name="qf_02_d" type="numeric"/>
+            <column name="item" type="string"/>
+            <column name="senter" type="string"/>
+            <column name="sentel" type="string"/>
+            <column name="admser" type="string"/>
+            <column name="dsts" type="string"/>
+            <column name="recnt" type="numeric"/>
+            <column name="rermk" type="string"/>
+            <column name="qd_03_at" type="string"/>
+            <column name="publ" type="string"/>
+            <column name="create_date" type="date"/>
+            <column name="create_user" type="string"/>
+            <column name="update_date" type="date"/>
+            <column name="update_user" type="string"/>
+            <column name="column_1" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
